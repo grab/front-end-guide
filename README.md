@@ -66,7 +66,7 @@ Being familiar with both ES5 and ES2015 is crucial. ES2015 is still relatively n
 
 Spend a day or two revising ES5 and exploring ES2015. The more heavily used features in ES2015 include "Arrows and Lexical This", "Classes", "Template Strings", "Destructuring", "Default/Rest/Spread operators", and "Importing and Exporting modules".
 
-**Estimated Duration: 1-2 days.** You can learn/lookup the syntax as you learn the other libraries and try building your own app.
+**Estimated Duration: 3-4 days.** You can learn/lookup the syntax as you learn the other libraries and try building your own app.
 
 #### Study Links
 
@@ -98,7 +98,7 @@ We recommend going through the [tutorial](https://facebook.github.io/react/tutor
 
 React is a library, not a framework, and does not deal with the layers below the view - the application state. More on that later.
 
-**Estimated Duration: 3 days.** Try building simple projects like a todo list, Hacker News clone with pure React. You will slowly gain an appreciation for it and perhaps face some problems along the way that isn't solved by React, which brings us to the next topic...
+**Estimated Duration: 3-4 days.** Try building simple projects like a todo list, Hacker News clone with pure React. You will slowly gain an appreciation for it and perhaps face some problems along the way that isn't solved by React, which brings us to the next topic...
 
 #### Study Links
 
@@ -147,7 +147,7 @@ While Redux does not necessarily have to be used with React, it is highly recomm
 
 [react-redux](https://github.com/reactjs/react-redux) is an official React binding for Redux and is very simple to learn.
 
-**Estimated Duration: 2 days.** The egghead courses can be a little time consuming but they are worth spending time on. After learning Redux, you can try incorporating it into the React projects you have built. Does Redux solve some of the state management issues you were struggling with in pure React?
+**Estimated Duration: 4 days.** The egghead courses can be a little time consuming but they are worth spending time on. After learning Redux, you can try incorporating it into the React projects you have built. Does Redux solve some of the state management issues you were struggling with in pure React?
 
 #### Study Links
 
@@ -176,7 +176,7 @@ Jest and Enzyme makes writing front end tests fun and easy. It also helps that R
 
 The documentation for Jest and Enzyme are pretty concise, and it should be sufficient to learn them by reading it.
 
-**Estimated Duration: 1 day.** Try writing Jest + Enzyme tests for your React + Redux application!
+**Estimated Duration: 2-3 days.** Try writing Jest + Enzyme tests for your React + Redux application!
 
 #### Study Links
 
@@ -196,7 +196,7 @@ A linter is a tool to statically analyze code and finds problems with it, potent
 
 For the most part, using ESLint is as simple as tweaking a configuration file in your project folder. There's nothing much to learn about ESLint if you're not writing new rules for it. Just be aware of the errors when they surface and Google it to find out the recommended style.
 
-**Estimated Duration: 1 hour.** Nothing much to learn here. Add ESLint to your project and fix the linting errors!
+**Estimated Duration: 1/2 day.** Nothing much to learn here. Add ESLint to your project and fix the linting errors!
 
 #### Study Links
 
@@ -218,7 +218,7 @@ The two biggest contenders in adding static types for JavaScript are [Flow](http
 
 Flow recently revamped their documentation site and it's pretty neat now!
 
-**Estimated Duration: 1/2 day.** Flow is pretty simple to learn as the type annotations feel like a natural extension of the JavaScript language. Add Flow annotations to your project and embrace the power of type systems.
+**Estimated Duration: 1 day.** Flow is pretty simple to learn as the type annotations feel like a natural extension of the JavaScript language. Add Flow annotations to your project and embrace the power of type systems.
 
 #### Study Links
 
@@ -237,7 +237,7 @@ Fortunately, the front end ecosystem is saturated with tools, and unsurprisingly
 
 If you are a total beginner to CSS, Codecademy's [HTML & CSS course](https://www.codecademy.com/learn/learn-html-css) will be a good introduction to you. Next, read up on the [Sass preprocessor](http://sass-lang.com/), an extension of the CSS language which adds syntactic improvements and encourages style reusability. Study the CSS methodologies mentioned above, and lastly, CSS modules.
 
-**Estimated Duration: 2 days.** Try styling up your application using the SMACSS/BEM approach and/or CSS modules.
+**Estimated Duration: 3-4 days.** Try styling up your application using the SMACSS/BEM approach and/or CSS modules.
 
 #### Study Links
 
@@ -260,7 +260,7 @@ This part will be kept short as setting up webpack can be a tedious process and 
 
 We have found the [webpack walkthrough](https://survivejs.com/webpack/foreword/) by SurviveJS to be the best resource on learning webpack. It is a good complement to the official documentation and we recommend following the walkthrough first and referring to the documentation later when the need for further customization arises.
 
-**Estimated Duration: 1 day (Optional).**
+**Estimated Duration: 2 days (Optional).**
 
 #### Study Links
 
@@ -282,7 +282,7 @@ There was also the problem of non-determinism in the installed packages via `npm
 
 The most common Yarn commands can be found [here](https://yarnpkg.com/en/docs/usage). Most other yarn commands are similar to the `npm` equivalents and it is fine to use the `npm` versions instead.
 
-**Estimated Duration: 1 hour.**
+**Estimated Duration: 2 hours.**
 
 #### Study Links
 
