@@ -104,6 +104,7 @@ React is a library, not a framework, and does not deal with the layers below the
 
 - [React Official Tutorial](https://facebook.github.io/react/tutorial/tutorial.html)
 - [React Fundamentals](https://reacttraining.com/online/react-fundamentals)
+- [Simple React Development in 2017](https://hackernoon.com/simple-react-development-in-2017-113bd563691f)
 - [Presentational and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.5iexphyg5)
 
 #### Alternatives
@@ -246,6 +247,7 @@ If you are a total beginner to CSS, Codecademy's [HTML & CSS course](https://www
 - [SUIT CSS](http://suitcss.github.io/)
 - [CSS Modules Specification](https://github.com/css-modules/css-modules)
 - [Sass Homepage](http://sass-lang.com/)
+- [A pattern for writing CSS to scale](http://www.intelligiblebabble.com/a-pattern-for-writing-css-to-scale)
 
 #### Alternatives
 
@@ -303,10 +305,12 @@ As the front end ecosystem grows, we are actively exploring, experimenting and e
 - [The Hitchhiker's guide to the modern front end development workflow](http://marcobotto.com/the-hitchhikers-guide-to-the-modern-front-end-development-workflow/)
 - [How it feels to learn JavaScript in 2016](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f#.tmy8gzgvp)
 - [Roadmap to becoming a web developer in 2017](https://github.com/kamranahmedse/developer-roadmap#-frontend-roadmap)
+- [Modern JavaScript for Ancient Web Developers](https://trackchanges.postlight.com/modern-javascript-for-ancient-web-developers-58e7cae050f9)
 
 **Other Study Plans**
 
 - [A Study Plan To Cure JavaScript Fatigue](https://medium.freecodecamp.com/a-study-plan-to-cure-javascript-fatigue-8ad3a54f2eb1#.c0wnrrcwd)
+- [JS Stack from Scratch](https://github.com/verekia/js-stack-from-scratch)
 - [A Beginner’s JavaScript Study Plan](https://medium.freecodecamp.com/a-beginners-javascript-study-plan-27f1d698ea5e#.bgf49xno2)
 
 ### Footnotes
