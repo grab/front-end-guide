@@ -53,9 +53,8 @@ JavaScript frameworks have been created to provide higher-level abstractions ove
 
 #### Study Links
 
-- https://msdn.microsoft.com/en-us/magazine/dn463786.aspx
-- http://stackoverflow.com/questions/21862054/single-page-application-advantages-and-disadvantages
-- http://blog.isquaredsoftware.com/presentations/2016-10-revolution-of-web-dev/
+- [Single Page Application: advantages and disadvantages](http://stackoverflow.com/questions/21862054/single-page-application-advantages-and-disadvantages)
+- [The (R)Evolution of Web Development](http://blog.isquaredsoftware.com/presentations/2016-10-revolution-of-web-dev/)
 
 ### New-age JavaScript
 
@@ -71,8 +70,9 @@ Spend a day or two revising ES5 and exploring ES2015. The more heavily used feat
 
 #### Study Links
 
-- Learn ES5: https://www.codecademy.com/learn/learn-javascript
-- Learn ES2015: https://babeljs.io/learn-es2015/
+- [Learn ES5 on Codecademy](https://www.codecademy.com/learn/learn-javascript)
+- [Learn ES2015 on Babel](https://babeljs.io/learn-es2015/)
+- [ES6 Katas](http://es6katas.org/)
 
 ### User Interface - React
 
@@ -102,9 +102,9 @@ React is a library, not a framework, and does not deal with the layers below the
 
 #### Study Links
 
-- https://facebook.github.io/react/tutorial/tutorial.html
-- https://reacttraining.com/online/react-fundamentals
-- https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.5iexphyg5
+- [React Official Tutorial](https://facebook.github.io/react/tutorial/tutorial.html)
+- [React Fundamentals](https://reacttraining.com/online/react-fundamentals)
+- [Presentational and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.5iexphyg5)
 
 #### Alternatives
 
@@ -150,13 +150,12 @@ While Redux does not necessarily have to be used with React, it is highly recomm
 
 #### Study Links
 
-- http://facebook.github.io/flux
-- http://redux.js.org/
-- https://egghead.io/courses/getting-started-with-redux
-- https://egghead.io/courses/building-react-applications-with-idiomatic-redux
-- https://github.com/markerikson/react-redux-links
-- https://egghead.io/courses/react-flux-architecture-es6
-- https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367
+- [Flux Homepage](http://facebook.github.io/flux)
+- [Redux Homepage](http://redux.js.org/)
+- [Egghead Course - Getting Started with Redux](https://egghead.io/courses/getting-started-with-redux)
+- [Egghead Course - Build React Applications with Idiomatic Redux](https://egghead.io/courses/building-react-applications-with-idiomatic-redux)
+- [React Redux Links](https://github.com/markerikson/react-redux-links)
+- [You Might Not Need Redux](https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367)
 
 #### Alternatives
 
@@ -180,10 +179,10 @@ The documentation for Jest and Enzyme are pretty concise, and it should be suffi
 
 #### Study Links
 
-- http://facebook.github.io/jest/
-- https://auth0.com/blog/testing-react-applications-with-jest/
-- http://airbnb.io/enzyme/
-- https://medium.com/airbnb-engineering/enzyme-javascript-testing-utilities-for-react-a417e5e5090f
+- [Jest Homepage](http://facebook.github.io/jest/)
+- [Testing React Applications with Jest](https://auth0.com/blog/testing-react-applications-with-jest/)
+- [Enzyome Homepage](http://airbnb.io/enzyme/)
+- [Enzyme: JavaScript Testing utilities for React](https://medium.com/airbnb-engineering/enzyme-javascript-testing-utilities-for-react-a417e5e5090f)
 
 #### Alternatives
 
@@ -200,8 +199,8 @@ For the most part, using ESLint is as simple as tweaking a configuration file in
 
 #### Study Links
 
-- http://eslint.org/
-- https://github.com/airbnb/javascript
+- [ESLint Homepage](http://eslint.org/)
+- [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
 
 #### Alternatives
 
@@ -222,8 +221,8 @@ Flow recently revamped their documentation site and it's pretty neat now!
 
 #### Study Links
 
-- https://flow.org/
-- https://github.com/niieani/typescript-vs-flowtype
+- [Flow Homepage](https://flow.org/)
+- [TypeScript vs Flow](https://github.com/niieani/typescript-vs-flowtype)
 
 #### Alternatives
 
@@ -238,6 +237,15 @@ Fortunately, the front end ecosystem is saturated with tools, and unsurprisingly
 If you are a total beginner to CSS, Codecademy's [HTML & CSS course](https://www.codecademy.com/learn/learn-html-css) will be a good introduction to you. Next, read up on the [Sass preprocessor](http://sass-lang.com/), an extension of the CSS language which adds syntactic improvements and encourages style reusability. Study the CSS methodologies mentioned above, and lastly, CSS modules.
 
 **Estimated Duration: 2 days.** Try styling up your application using the SMACSS/BEM approach and/or CSS modules.
+
+#### Study Links
+
+- [Learn HTML & CSS course on Codecademy](https://www.codecademy.com/learn/learn-html-css)
+- [SMACSS](https://smacss.com/)
+- [BEM](http://getbem.com/introduction/)
+- [SUIT CSS](http://suitcss.github.io/)
+- [CSS Modules Specification](https://github.com/css-modules/css-modules)
+- [Sass Homepage](http://sass-lang.com/)
 
 #### Alternatives
 
@@ -254,8 +262,8 @@ We have found the [webpack walkthrough](https://survivejs.com/webpack/foreword/)
 
 #### Study Links
 
-- https://webpack.js.org/
-- https://survivejs.com/webpack/foreword/
+- [webpack Homepage](https://webpack.js.org/)
+- [SurviveJS - Webpack: From apprentice to master](https://survivejs.com/webpack/foreword/)
 
 #### Alternatives
 
@@ -276,8 +284,8 @@ The most common Yarn commands can be found [here](https://yarnpkg.com/en/docs/us
 
 #### Study Links
 
-- https://yarnpkg.com/
-- https://code.facebook.com/posts/1840075619545360
+- [Yarn Homepage](https://yarnpkg.com/)
+- [Yarn: A new package manager for JavaScript](https://code.facebook.com/posts/1840075619545360)
 
 ### The Journey has Just Begun
 
@@ -287,19 +295,19 @@ We made our technical decisions based on what was important to a rapidly growing
 
 As the front end ecosystem grows, we are actively exploring, experimenting and evaluating how new technologies can make us a more efficient team and improve our productivity. We hope that this post has given you insights on the front end technologies we use at Grab. If what we are doing interests you, [we are hiring](https://grab.careers)!
 
-### References
+### More Reading
 
 **General**
 
-- http://www.infoq.com/articles/state-of-javascript-2016
-- http://marcobotto.com/the-hitchhikers-guide-to-the-modern-front-end-development-workflow/
-- https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f#.tmy8gzgvp
-- https://github.com/kamranahmedse/developer-roadmap#-frontend-roadmap
+- [State of the JavaScript Landscape: A Map for Newcomers](http://www.infoq.com/articles/state-of-javascript-2016)
+- [The Hitchhiker's guide to the modern front end development workflow](http://marcobotto.com/the-hitchhikers-guide-to-the-modern-front-end-development-workflow/)
+- [How it feels to learn JavaScript in 2016](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f#.tmy8gzgvp)
+- [Roadmap to becoming a web developer in 2017](https://github.com/kamranahmedse/developer-roadmap#-frontend-roadmap)
 
 **Other Study Plans**
 
-- https://medium.freecodecamp.com/a-study-plan-to-cure-javascript-fatigue-8ad3a54f2eb1#.c0wnrrcwd
-- https://medium.freecodecamp.com/a-beginners-javascript-study-plan-27f1d698ea5e#.bgf49xno2
+- [A Study Plan To Cure JavaScript Fatigue](https://medium.freecodecamp.com/a-study-plan-to-cure-javascript-fatigue-8ad3a54f2eb1#.c0wnrrcwd)
+- [A Beginner’s JavaScript Study Plan](https://medium.freecodecamp.com/a-beginners-javascript-study-plan-27f1d698ea5e#.bgf49xno2)
 
 ### Footnotes
 
