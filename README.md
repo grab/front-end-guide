@@ -140,7 +140,7 @@ The creator of Redux, [Dan Abramov](https://github.com/gaearon), has taken great
 
 While Redux does not necessarily have to be used with React, it is highly recommended as they play very well with each other. React and Redux have a lot of ideas and traits in common:
 
-- **Functional composition paradigm** - React composes views (pure functions) while Redux composes pure reducers (also pure functions). Output is predictable given the same set of input, and there are
+- **Functional composition paradigm** - React composes views (pure functions) while Redux composes pure reducers (also pure functions). Output is predictable given the same set of input.
 - **Easy To Reason About** - You may have heard this term many times but what does it actually mean? Through our experience, React and Redux makes debugging simpler. As the data flow is unidirectional, tracing the flow of data (server responses, user input events) is easier and it is straightforward to determine which layer the problem occurs.
 - **Layered Structure** - Each layer in the app / Flux architecture is a pure function, and has clear responsibilities. It is pretty easy to write tests for them.
 - **Development Experience** - A lot of effort has gone into creating tools to help in debugging and inspecting the app while development.
@@ -214,7 +214,7 @@ Static typing brings about many benefits when writing apps. They can catch commo
 
 Adding types to your code comes with the tradeoff of increased verbosity and a learning curve of the syntax. But this learning cost is paid upfront and amortized over time. In complex projects where the maintainability of the code matters and the people working on it change over time, adding types to the code brings about more benefits than disadvantages.
 
-The two biggest contenders in adding static types for JavaScript are [Flow](https://flow.org/) (by Facebook) and [TypeScript](https://www.typescriptlang.org/) (by Microsoft). As of date, there is no clear winner in the battle. For now, we have made the choice of using Flow. We find that Flow has a lower learning curve as compared to TypeScript and it requires relatively less effort to migrate an existing code base to Flow. Being built by Facebook, Flow has better integration has with the React ecosystem out of the box. Anyway, it is also not extremely difficult to move from Flow to TypeScript as the syntax and semantics are quite similar, and we will re-evaluate the situation in time to come. After all, using one is better than not using at all.
+The two biggest contenders in adding static types for JavaScript are [Flow](https://flow.org/) (by Facebook) and [TypeScript](https://www.typescriptlang.org/) (by Microsoft). As of date, there is no clear winner in the battle. For now, we have made the choice of using Flow. We find that Flow has a lower learning curve as compared to TypeScript and it requires relatively less effort to migrate an existing code base to Flow. Being built by Facebook, Flow has better integration with the React ecosystem out of the box. Anyway, it is also not extremely difficult to move from Flow to TypeScript as the syntax and semantics are quite similar, and we will re-evaluate the situation in time to come. After all, using one is better than not using at all.
 
 Flow recently revamped their documentation site and it's pretty neat now!
 
