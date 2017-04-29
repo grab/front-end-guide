@@ -1,9 +1,9 @@
 Introduction to Front End at Grab
 ==
 
-Front end development has never been so complex and exciting in the history of web development. New tools, libraries, frameworks and plugins emerge every other day and there is so much to learn. Fortunately, or unfortunately, at Grab, the web team has been [keeping up](https://blog.daftcode.pl/hype-driven-development-3469fc2e9b22) with the latest best practices and has incorporated the modern JavaScript ecosystem in our web applications.
+Front end development has never been so complex and exciting in the history of web development. New tools, libraries, frameworks and plugins emerge every other day and there is so much to learn. Fortunately, or unfortunately, at Grab, the web team has been [keeping up](https://blog.daftcode.pl/hype-driven-development-3469fc2e9b22) with the latest best practices and has incorporated the modern JavaScript ecosystem in our web apps.
 
-The result of this is that our new hires or back end engineers, who are not necessarily well-acquainted with the modern JavaScript ecosystem, may feel overwhelmed by the barrage of new things that they have to learn just to complete their feature or bug fix in a web application. It is imperative that they are guided to embrace this evolution of the front end, learn to navigate the ecosystem with ease, and get productive in shipping code to our users as fast as possible. We the web team, have come up with a study guide to introduce why we do what we do.
+The result of this is that our new hires or back end engineers, who are not necessarily well-acquainted with the modern JavaScript ecosystem, may feel overwhelmed by the barrage of new things that they have to learn just to complete their feature or bug fix in a web app. It is imperative that they are guided to embrace this evolution of the front end, learn to navigate the ecosystem with ease, and get productive in shipping code to our users as fast as possible. We the web team, have come up with a study guide to introduce why we do what we do.
 
 This study guide is inspired by ["A Study Plan to Cure JavaScript Fatigue"](https://medium.freecodecamp.com/a-study-plan-to-cure-javascript-fatigue-8ad3a54f2eb1#.g9egaapps) and is mildly opinionated in the sense that we recommend certain libraries/frameworks to learn for each aspect of front end development, based on what is currently evaluated to be the most suitable to be used at Grab. We explain why a certain library is chosen and provide links to learning resources to enable the reader to pick it up on their own. Alternative choices that may be better for other use cases are provided as well for reference and further self-exploration.
 
@@ -11,12 +11,12 @@ This study guide is inspired by ["A Study Plan to Cure JavaScript Fatigue"](http
 
 - Good understanding of core programming concepts.
 - Comfortable with basic command line actions and familiarity with source code version control system such as Git.
-- Experience in web development. Have built server-side rendered web applications using frameworks like Ruby on Rails, Django, Express, etc.
+- Experience in web development. Have built server-side rendered web apps using frameworks like Ruby on Rails, Django, Express, etc.
 - Understanding of how the web works. Familiarity with web protocols and conventions like HTTP and RESTful APIs.
 
 ### Table of Contents
 
-- Single-page Applications (SPAs)
+- Single-page Apps (SPAs)
 - New-age JavaScript
 - User Interface
 - State Management
@@ -27,42 +27,42 @@ This study guide is inspired by ["A Study Plan to Cure JavaScript Fatigue"](http
 
 Certain topics can be skipped if you have prior experience in them.
 
-### Single-page Applications (SPAs)
+### Single-page Apps (SPAs)
 
-Web developers these days refer to the products they build as web apps, rather than websites. While there is no strict difference between the two terms, web applications tend to be highly interactive and dynamic, allowing the user to perform actions and receive a response for their action. Traditionally, the browser receives HTML from the server and renders it. When the user navigates to another URL, a full-page refresh is required and the server sends fresh new HTML for the new page. This is called server-side rendering.
+Web developers these days refer to the products they build as web apps, rather than websites. While there is no strict difference between the two terms, web apps tend to be highly interactive and dynamic, allowing the user to perform actions and receive a response for their action. Traditionally, the browser receives HTML from the server and renders it. When the user navigates to another URL, a full-page refresh is required and the server sends fresh new HTML for the new page. This is called server-side rendering.
 
-However in modern SPAs, client-side rendering is used instead. The browser loads the initial page from the server, along with the scripts (frameworks, libraries, application code) and stylesheets required for the whole application. When the user navigates to other pages, a page refresh is not triggered. The URL of the page is updated via the [HTML5 History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API). New data required for the new page, usually in JSON format, is retrieved by the browser via [AJAX](https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started) requests to the server. The SPA then dynamically updates the page with the data via JavaScript, which it has already downloaded in the initial page load. This model is similar to how native mobile applications work.
+However in modern SPAs, client-side rendering is used instead. The browser loads the initial page from the server, along with the scripts (frameworks, libraries, app code) and stylesheets required for the whole app. When the user navigates to other pages, a page refresh is not triggered. The URL of the page is updated via the [HTML5 History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API). New data required for the new page, usually in JSON format, is retrieved by the browser via [AJAX](https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started) requests to the server. The SPA then dynamically updates the page with the data via JavaScript, which it has already downloaded in the initial page load. This model is similar to how native mobile apps work.
 
 The benefits:
 
-- The application feels more responsive and users do not see the flash between page navigations due to full-page refreshes.
+- The app feels more responsive and users do not see the flash between page navigations due to full-page refreshes.
 - Fewer HTTP requests are needed to the server, as the same assets do not have to be downloaded again for each page load.
 - Clear separation of the concerns between the client and the server; you can easily build new clients for different platforms (e.g. mobile, chatbots, smart watches) without having to modify the server code. You can also modify the technology stack on the client and server independently, as long as the API contract is not broken.
 
 The downsides:
 
-- Heavier initial page load due to loading of framework, application code, and assets required for multiple pages [^1].
+- Heavier initial page load due to loading of framework, app code, and assets required for multiple pages [^1].
 - There's an additional step to be done on your server which is to configure it to route all requests to a single entry point and allow client-side routing to take over from there.
-- SPAs are reliant on JavaScript to render content, but not all search engines execute JavaScript during crawling, and they may see empty content on your page. This inadvertently hurts the SEO of your application [^2].
+- SPAs are reliant on JavaScript to render content, but not all search engines execute JavaScript during crawling, and they may see empty content on your page. This inadvertently hurts the SEO of your app [^2].
 
-While traditional server-side rendered applications are still a viable option, a clear client-server separation scales better for larger engineering teams, as the client and server code can be developed and released independently. This is especially so at Grab when we have multiple client applications hitting the same API server.
+While traditional server-side rendered apps are still a viable option, a clear client-server separation scales better for larger engineering teams, as the client and server code can be developed and released independently. This is especially so at Grab when we have multiple client apps hitting the same API server.
 
-As web developers are now building applications rather than pages, organization of client-side JavaScript has become increasingly important. In server-side rendered pages, it is common to use snippets of jQuery to add user interactivity to each page. However, when building large applications, jQuery is not sufficient. After all, jQuery is primarily a library for DOM manipulation and it's not a framework, it does not define a clear structure and organization for your application.
+As web developers are now building apps rather than pages, organization of client-side JavaScript has become increasingly important. In server-side rendered pages, it is common to use snippets of jQuery to add user interactivity to each page. However, when building large apps, jQuery is not sufficient. After all, jQuery is primarily a library for DOM manipulation and it's not a framework, it does not define a clear structure and organization for your app.
 
-JavaScript frameworks have been created to provide higher-level abstractions over the DOM, allowing you to keep state in memory, out of the DOM. Using frameworks also brings the benefits of reusing recommended concepts and best practices for building applications. A new engineer on the team who has experience with a framework but not the application will find it easier to understand the code because it is organized in a structure that he is familiar with. Popular frameworks have a lot of tutorials and guides, and tapping on the knowledge and experience from colleagues and the community will help new engineers get up to speed.
+JavaScript frameworks have been created to provide higher-level abstractions over the DOM, allowing you to keep state in memory, out of the DOM. Using frameworks also brings the benefits of reusing recommended concepts and best practices for building apps. A new engineer on the team who has experience with a framework but not the app will find it easier to understand the code because it is organized in a structure that he is familiar with. Popular frameworks have a lot of tutorials and guides, and tapping on the knowledge and experience from colleagues and the community will help new engineers get up to speed.
 
 #### Study Links
 
-- [Single Page Application: advantages and disadvantages](http://stackoverflow.com/questions/21862054/single-page-application-advantages-and-disadvantages)
+- [Single Page App: advantages and disadvantages](http://stackoverflow.com/questions/21862054/single-page-app-advantages-and-disadvantages)
 - [The (R)Evolution of Web Development](http://blog.isquaredsoftware.com/presentations/2016-10-revolution-of-web-dev/)
 
 ### New-age JavaScript
 
-Before you dive into the various aspects of building a JavaScript web application, it is important to get familiar with the language of the web - JavaScript, or ECMAScript. JavaScript is an incredibly versatile language which you can also use to build [web servers](https://nodejs.org/en/), [native mobile applications](https://facebook.github.io/react-native/) and [desktop applications](https://electron.atom.io/).
+Before you dive into the various aspects of building a JavaScript web app, it is important to get familiar with the language of the web - JavaScript, or ECMAScript. JavaScript is an incredibly versatile language which you can also use to build [web servers](https://nodejs.org/en/), [native mobile apps](https://facebook.github.io/react-native/) and [desktop apps](https://electron.atom.io/).
 
 Prior to 2015, the last major update was ECMAScript 5.1, in 2011. However, in the recent years, JavaScript has suddenly seen a huge burst of improvements within a short span of time. In 2015, ECMAScript 2015 (previously called ECMAScript 6) was released and a huge ton of syntactic constructs were introduced to make writing code less unwieldy. Auth0 has written a [nice history of JavaScript](https://auth0.com/blog/a-brief-history-of-javascript/). Till this day, not all browsers have fully implemented the ES2015 specification. Tools such as [Babel](https://babeljs.io/) enable developers to write ES2015 in their apps and Babel transpiles them down to ES5 to be compatible for browsers.
 
-Being familiar with both ES5 and ES2015 is crucial. ES2015 is still relatively new and a lot of open source code and Node.js applications are still written in ES5. If you are doing debugging in your browser console, you might not be able to use ES2015 syntax. On the other hand, documentation and example code for many modern libraries that we will introduce later below are written in ES2015. At Grab, we use ES2015 (with [Babel Stage-0 preset](https://babeljs.io/docs/plugins/preset-stage-0/)) to embrace the syntactic improvements the future of JavaScript provides and we have been loving it so far.
+Being familiar with both ES5 and ES2015 is crucial. ES2015 is still relatively new and a lot of open source code and Node.js apps are still written in ES5. If you are doing debugging in your browser console, you might not be able to use ES2015 syntax. On the other hand, documentation and example code for many modern libraries that we will introduce later below are written in ES2015. At Grab, we use ES2015 (with [Babel Stage-0 preset](https://babeljs.io/docs/plugins/preset-stage-0/)) to embrace the syntactic improvements the future of JavaScript provides and we have been loving it so far.
 
 Spend a day or two revising ES5 and exploring ES2015. The more heavily used features in ES2015 include "Arrows and Lexical This", "Classes", "Template Strings", "Destructuring", "Default/Rest/Spread operators", and "Importing and Exporting modules".
 
@@ -80,7 +80,7 @@ If any JavaScript project has taken the front end ecosystem by storm in recent y
 
 React brings about many radical ideas and encourages developers to [rethink best practices](https://www.youtube.com/watch?v=DgVS-zXgMTk). For many years, web developers were taught that it was a good practice to write HTML, JavaScript and CSS separately. React does the exact opposite, and encourages that you write your HTML and [CSS in your JavaScript](https://speakerdeck.com/vjeux/react-css-in-js) instead. This sounds like a crazy idea at first, but after trying it out, it actually isn't as weird as it sounds initially. Reason being the front end development scene is shifting towards a paradigm of component-based development. The features of React:
 
-- **Declarative** - You describe what you want to see in your view and not how to achieve it. In the jQuery days, developers would have to come up with a series of steps to manipulate the DOM to get from one application state to the next. In React, you simply change the state within the component and the view will update itself according to the state. It is also easy to determine how the component will look like just by looking at the markup in the `render()` method.
+- **Declarative** - You describe what you want to see in your view and not how to achieve it. In the jQuery days, developers would have to come up with a series of steps to manipulate the DOM to get from one app state to the next. In React, you simply change the state within the component and the view will update itself according to the state. It is also easy to determine how the component will look like just by looking at the markup in the `render()` method.
 
 - **Functional** - The view is a pure function of `props` and `state`. In most cases, a React component is defined by `props` (external parameters) and `state` (internal data). For the same `props` and `state`, the same view is produced. Pure functions are easy to test, and the same goes for functional components. Testing in React is made easy because a component's interfaces are well-defined and you can test the component by supplying different `props` and `state` to it and comparing the rendered output.
 
@@ -92,11 +92,11 @@ React brings about many radical ideas and encourages developers to [rethink best
 
 - **Developer Experience** - There are a number of tools that improves the development experience with React. [React Devtools](https://github.com/facebook/react-devtools) is a browser extension that allows you to inspect your component, view and manipulate its `props` and `state`. [Hot reloading] with webpack allows you to view changes to your code in your browser, without you having to refresh the browser. Front end development involves a lot of tweaking code, saving and then refreshing the browser. Hot reloading helps you by eliminating the last step. When there are library updates, Facebook provides [codemod scripts](https://github.com/reactjs/react-codemod) to help you migrate your code to the new APIs. This makes the upgrading process relatively pain-free. Kudos to the Facebook team for their dedication in making the development experience with React great.
 
-Over the years, new view libraries that are even more performant than React have emerged. React may not be the fastest library out there, but in terms of the ecosystem, overall usage experience and benefits, it is still one of the greatest. Facebook is also channeling efforts into making React even faster with a [rewrite of the underlying reconciliation algorithm](https://github.com/acdlite/react-fiber-architecture). The concepts that React introduced has taught us how to write better code, more maintainable web applications and made us better engineers. We like that.
+Over the years, new view libraries that are even more performant than React have emerged. React may not be the fastest library out there, but in terms of the ecosystem, overall usage experience and benefits, it is still one of the greatest. Facebook is also channeling efforts into making React even faster with a [rewrite of the underlying reconciliation algorithm](https://github.com/acdlite/react-fiber-architecture). The concepts that React introduced has taught us how to write better code, more maintainable web apps and made us better engineers. We like that.
 
 We recommend going through the [tutorial](https://facebook.github.io/react/tutorial/tutorial.html) on building a tic-tac-toe game on the React homepage to get a feel of what React is and what it does. For more in-depth learning, check out the free course [React Fundamental](https://reacttraining.com/online/react-fundamentals) by the creators of React Router. It is highly rated and taught by experts from the React community. It also covers more advanced concepts that are not covered by the React documentation. [Create React App](https://github.com/facebookincubator/create-react-app) by Facebook is a tool to scaffold a React project with minimal configuration and is highly recommended to use for starting new React projects.
 
-React is a library, not a framework, and does not deal with the layers below the view - the application state. More on that later.
+React is a library, not a framework, and does not deal with the layers below the view - the app state. More on that later.
 
 **Estimated Duration: 3-4 days.** Try building simple projects like a todo list, Hacker News clone with pure React. You will slowly gain an appreciation for it and perhaps face some problems along the way that isn't solved by React, which brings us to the next topic...
 
@@ -116,13 +116,13 @@ React is a library, not a framework, and does not deal with the layers below the
 
 ### State Management - Flux/Redux
 
-As your application grows bigger, you may find that the app structure becomes a little messy. Components throughout the app may have to share and display common data but there is no elegant way to handle that in React. After all, React is just the view layer, it does not dictate how you structure the other layers of your app, such as the model and the controller, in traditional MVC paradigms. In an effort to solve this, Facebook invented Flux, an application architecture that complements React's composable view components by utilizing a unidirectional data flow. Read more about how Flux works [here](https://facebook.github.io/flux/docs/in-depth-overview.html). In summary, the Flux pattern has the following characteristics:
+As your app grows bigger, you may find that the app structure becomes a little messy. Components throughout the app may have to share and display common data but there is no elegant way to handle that in React. After all, React is just the view layer, it does not dictate how you structure the other layers of your app, such as the model and the controller, in traditional MVC paradigms. In an effort to solve this, Facebook invented Flux, an app architecture that complements React's composable view components by utilizing a unidirectional data flow. Read more about how Flux works [here](https://facebook.github.io/flux/docs/in-depth-overview.html). In summary, the Flux pattern has the following characteristics:
 
 - **Unidirectional data flow** - Makes the app more predictable as updates can be tracked easily.
 - **Separation of concerns** - Each part in the Flux architecture has clear responsibilities and are highly decoupled.
 - **Works well with declarative programming** - The store can send updates to the view without specifying how to transition views between states.
 
-As Flux is not a framework per se, developers have tried to come up with many implementations of the Flux pattern. Eventually, a clear winner emerged, which was [Redux](http://redux.js.org/). Redux combines the ideas from Flux, [Comamnd pattern](https://www.wikiwand.com/en/Command_pattern) and [Elm architecture](https://guide.elm-lang.org/architecture/) and is the de facto state management developers use with React these days. Its core concepts are:
+As Flux is not a framework per se, developers have tried to come up with many implementations of the Flux pattern. Eventually, a clear winner emerged, which was [Redux](http://redux.js.org/). Redux combines the ideas from Flux, [Command pattern](https://www.wikiwand.com/en/Command_pattern) and [Elm architecture](https://guide.elm-lang.org/architecture/) and is the de facto state management developers use with React these days. Its core concepts are:
 
 - App **state** is described by a single plain old JavaScript object (POJO).
 - Dispatch an **action** (also a POJO) to modify the state.
@@ -131,10 +131,10 @@ As Flux is not a framework per se, developers have tried to come up with many im
 The concepts sound simple, but they are really powerful as they enable apps to:
 
 - Have their state rendered on the server, booted up on the client.
-- Trace, log and backtrack changes in the whole application (made easier with [Redux Devtools](https://github.com/gaearon/redux-devtools))
+- Trace, log and backtrack changes in the whole app (made easier with [Redux Devtools](https://github.com/gaearon/redux-devtools))
 - Implement undo/redo functionality easily.
 
-The creator of Redux, [Dan Abramov](https://github.com/gaearon), has taken great care in writing up detailed documentation for Redux, along with creating comprehensive video tutorials for learning [basic](https://egghead.io/series/getting-started-with-redux) and [advanced](https://egghead.io/courses/building-react-applications-with-idiomatic-redux) Redux. They are extremely helpful resources for learning Redux.
+The creator of Redux, [Dan Abramov](https://github.com/gaearon), has taken great care in writing up detailed documentation for Redux, along with creating comprehensive video tutorials for learning [basic](https://egghead.io/series/getting-started-with-redux) and [advanced](https://egghead.io/courses/building-react-apps-with-idiomatic-redux) Redux. They are extremely helpful resources for learning Redux.
 
 **Combining View and State**
 
@@ -154,7 +154,7 @@ While Redux does not necessarily have to be used with React, it is highly recomm
 - [Flux Homepage](http://facebook.github.io/flux)
 - [Redux Homepage](http://redux.js.org/)
 - [Egghead Course - Getting Started with Redux](https://egghead.io/courses/getting-started-with-redux)
-- [Egghead Course - Build React Applications with Idiomatic Redux](https://egghead.io/courses/building-react-applications-with-idiomatic-redux)
+- [Egghead Course - Build React Apps with Idiomatic Redux](https://egghead.io/courses/building-react-apps-with-idiomatic-redux)
 - [React Redux Links](https://github.com/markerikson/react-redux-links)
 - [You Might Not Need Redux](https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367)
 
@@ -176,12 +176,12 @@ Jest and Enzyme makes writing front end tests fun and easy. It also helps that R
 
 The documentation for Jest and Enzyme are pretty concise, and it should be sufficient to learn them by reading it.
 
-**Estimated Duration: 2-3 days.** Try writing Jest + Enzyme tests for your React + Redux application!
+**Estimated Duration: 2-3 days.** Try writing Jest + Enzyme tests for your React + Redux app!
 
 #### Study Links
 
 - [Jest Homepage](http://facebook.github.io/jest/)
-- [Testing React Applications with Jest](https://auth0.com/blog/testing-react-applications-with-jest/)
+- [Testing React Apps with Jest](https://auth0.com/blog/testing-react-apps-with-jest/)
 - [Enzyome Homepage](http://airbnb.io/enzyme/)
 - [Enzyme: JavaScript Testing utilities for React](https://medium.com/airbnb-engineering/enzyme-javascript-testing-utilities-for-react-a417e5e5090f)
 
@@ -210,7 +210,7 @@ For the most part, using ESLint is as simple as tweaking a configuration file in
 
 ### Types - Flow
 
-Static typing brings about many benefits when writing applications. They can catch common bugs and errors in your code early. Types also serve as a form of documentation for your code and improves the readability of your code. As a code base grows larger, we see the importance of types as they gives us greater confidence when we do refactoring. It is also easier to onboard new members of the team to the project when it is clear what kind of values each object holds and what each function expects.
+Static typing brings about many benefits when writing apps. They can catch common bugs and errors in your code early. Types also serve as a form of documentation for your code and improves the readability of your code. As a code base grows larger, we see the importance of types as they gives us greater confidence when we do refactoring. It is also easier to onboard new members of the team to the project when it is clear what kind of values each object holds and what each function expects.
 
 Adding types to your code comes with the tradeoff of increased verbosity and a learning curve of the syntax. But this learning cost is paid upfront and amortized over time. In complex projects where the maintainability of the code matters and the people working on it change over time, adding types to the code brings about more benefits than disadvantages.
 
@@ -231,13 +231,13 @@ Flow recently revamped their documentation site and it's pretty neat now!
 
 ### Coding with Style - CSS Modules
 
-Writing good CSS is hard. It takes many years of experience and frustration of shooting yourself in the foot before one is able to write maintainable and scalable CSS. CSS, having a global namespace, is fundamentally designed for web documents, and not really for web applications that favour a components architecture. Hence, experienced front end developers have designed methodologies to guide people on how to write organized CSS for complex projects, such as using [SMACSS](https://smacss.com/), [BEM](http://getbem.com/introduction/), [SUIT CSS](http://suitcss.github.io/), etc. However, the encapsulation of styles that these methodologies bring about are artificially enforced by conventions and guidelines. They break the moment developers do not follow them.
+Writing good CSS is hard. It takes many years of experience and frustration of shooting yourself in the foot before one is able to write maintainable and scalable CSS. CSS, having a global namespace, is fundamentally designed for web documents, and not really for web apps that favour a components architecture. Hence, experienced front end developers have designed methodologies to guide people on how to write organized CSS for complex projects, such as using [SMACSS](https://smacss.com/), [BEM](http://getbem.com/introduction/), [SUIT CSS](http://suitcss.github.io/), etc. However, the encapsulation of styles that these methodologies bring about are artificially enforced by conventions and guidelines. They break the moment developers do not follow them.
 
-Fortunately, the front end ecosystem is saturated with tools, and unsurprisingly, tools have been invented to [partially solve some of the problems](https://speakerdeck.com/vjeux/react-css-in-js) with writing CSS at scale. "At scale" means that many developers are working on the same project and touching the same stylesheets. There is no community-agreed approach on writing [CSS in JS](https://github.com/MicheleBertoli/css-in-js) at the moment, and we are hoping that one day a winner would emerge, just like Redux did, among all the Flux implementations. For now, we are banking on [CSS Modules](https://github.com/css-modules/css-modules). CSS modules is an improvement over existing CSS that aims to fix the problem of global namespace in CSS; it enables you to write styles that are local by default and encapsulated to your component. This feature is achieved via tooling. With CSS modules, large teams can write modular and reusable CSS without fear of conflict or overriding other parts of the application. However, at the end of the day, CSS modules are still being compiled into normal globally-namespaced CSS that browsers recognize, and it is still important to learn raw CSS.
+Fortunately, the front end ecosystem is saturated with tools, and unsurprisingly, tools have been invented to [partially solve some of the problems](https://speakerdeck.com/vjeux/react-css-in-js) with writing CSS at scale. "At scale" means that many developers are working on the same project and touching the same stylesheets. There is no community-agreed approach on writing [CSS in JS](https://github.com/MicheleBertoli/css-in-js) at the moment, and we are hoping that one day a winner would emerge, just like Redux did, among all the Flux implementations. For now, we are banking on [CSS Modules](https://github.com/css-modules/css-modules). CSS modules is an improvement over existing CSS that aims to fix the problem of global namespace in CSS; it enables you to write styles that are local by default and encapsulated to your component. This feature is achieved via tooling. With CSS modules, large teams can write modular and reusable CSS without fear of conflict or overriding other parts of the app. However, at the end of the day, CSS modules are still being compiled into normal globally-namespaced CSS that browsers recognize, and it is still important to learn raw CSS.
 
 If you are a total beginner to CSS, Codecademy's [HTML & CSS course](https://www.codecademy.com/learn/learn-html-css) will be a good introduction to you. Next, read up on the [Sass preprocessor](http://sass-lang.com/), an extension of the CSS language which adds syntactic improvements and encourages style reusability. Study the CSS methodologies mentioned above, and lastly, CSS modules.
 
-**Estimated Duration: 3-4 days.** Try styling up your application using the SMACSS/BEM approach and/or CSS modules.
+**Estimated Duration: 3-4 days.** Try styling up your app using the SMACSS/BEM approach and/or CSS modules.
 
 #### Study Links
 
