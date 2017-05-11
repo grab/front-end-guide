@@ -182,7 +182,7 @@ The documentation for Jest and Enzyme are pretty concise, and it should be suffi
 
 - [Jest Homepage](http://facebook.github.io/jest/)
 - [Testing React Apps with Jest](https://auth0.com/blog/testing-react-apps-with-jest/)
-- [Enzyome Homepage](http://airbnb.io/enzyme/)
+- [Enzyme Homepage](http://airbnb.io/enzyme/)
 - [Enzyme: JavaScript Testing utilities for React](https://medium.com/airbnb-engineering/enzyme-javascript-testing-utilities-for-react-a417e5e5090f)
 
 #### Alternatives
