@@ -223,7 +223,7 @@ The documentation for Jest and Enzyme are pretty concise, and it should be suffi
 - [AVA](https://github.com/avajs/ava)
 - [Karma](https://karma-runner.github.io/)
 
-### Linting - ESLint
+### Linting JavaScript - ESLint
 
 A linter is a tool to statically analyze code and finds problems with them, potentially preventing bugs/runtime errors and at the same time, enforcing a coding style. Time is saved during pull request reviews when reviewers do not have to leave nitpicky comments on coding style. [ESLint](http://eslint.org/) is a tool for linting JavaScript code that is highly extensible and customizable. Teams can write their own lint rules to enforce their custom styles. At Grab, we use Airbnb's [`eslint-config-airbnb`](https://www.npmjs.com/package/eslint-config-airbnb) preset, that has already been configured with the common good coding style in the [Airbnb JavaScript style guide](https://github.com/airbnb/javascript).
 
@@ -241,7 +241,7 @@ For the most part, using ESLint is as simple as tweaking a configuration file in
 - [Standard](https://github.com/feross/standard)
 - [JSHint](http://jshint.com/)
 
-### Linting - stylelint
+### Linting CSS - stylelint
 
 As mentioned earlier, good CSS is notoriously hard to write. Usage of static analysis tools on CSS can help to maintain our CSS code quality and coding style. For linting CSS, we use stylelint. Like ESLint, stylelint is designed in a very modular fashion, allowing developers to turn rules on/off and write custom plugins for it. Besides CSS, stylelint is able to parse SCSS and has experimental support for Less, which lowers the barrier for most existing code bases to adopt it.
 
