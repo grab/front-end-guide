@@ -1,3 +1,5 @@
+![Front End at Grab Banner](front-end-at-grab-banner.png)
+
 Introduction to Front End at Grab
 ==
 
