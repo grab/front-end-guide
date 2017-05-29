@@ -351,6 +351,8 @@ As the front end ecosystem grows, we are actively exploring, experimenting and e
 - [JS Stack from Scratch](https://github.com/verekia/js-stack-from-scratch)
 - [A Beginner’s JavaScript Study Plan](https://medium.freecodecamp.com/a-beginners-javascript-study-plan-27f1d698ea5e#.bgf49xno2)
 
+*Many thanks to [Joel Low](https://github.com/lowjoel), [Li Kai](https://github.com/li-kai) and [Tan Wei Seng](https://github.com/xming13) who reviewed drafts of this article.*
+
 ### Footnotes
 
 - [^1]: This can be solved via [webpack code splitting](https://webpack.js.org/guides/code-splitting/).
