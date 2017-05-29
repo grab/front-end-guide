@@ -28,8 +28,8 @@ If your company is exploring a modern JavaScript stack as well, you may find thi
 - New-age JavaScript
 - User Interface
 - State Management
-- Maintainability
 - Coding with Style
+- Maintainability
 - Build System
 - Package Management
 
@@ -170,6 +170,31 @@ While Redux does not necessarily have to be used with React, it is highly recomm
 
 - [MobX](https://github.com/mobxjs/mobx)
 
+### Coding with Style - CSS Modules
+
+Writing good CSS is hard. It takes many years of experience and frustration of shooting yourself in the foot before one is able to write maintainable and scalable CSS. CSS, having a global namespace, is fundamentally designed for web documents, and not really for web apps that favour a components architecture. Hence, experienced front end developers have designed methodologies to guide people on how to write organized CSS for complex projects, such as using [SMACSS](https://smacss.com/), [BEM](http://getbem.com/introduction/), [SUIT CSS](http://suitcss.github.io/), etc. However, the encapsulation of styles that these methodologies bring about are artificially enforced by conventions and guidelines. They break the moment developers do not follow them.
+
+Fortunately, the front end ecosystem is saturated with tools, and unsurprisingly, tools have been invented to [partially solve some of the problems](https://speakerdeck.com/vjeux/react-css-in-js) with writing CSS at scale. "At scale" means that many developers are working on the same project and touching the same stylesheets. There is no community-agreed approach on writing [CSS in JS](https://github.com/MicheleBertoli/css-in-js) at the moment, and we are hoping that one day a winner would emerge, just like Redux did, among all the Flux implementations. For now, we are banking on [CSS Modules](https://github.com/css-modules/css-modules). CSS modules is an improvement over existing CSS that aims to fix the problem of global namespace in CSS; it enables you to write styles that are local by default and encapsulated to your component. This feature is achieved via tooling. With CSS modules, large teams can write modular and reusable CSS without fear of conflict or overriding other parts of the app. However, at the end of the day, CSS modules are still being compiled into normal globally-namespaced CSS that browsers recognize, and it is still important to learn raw CSS.
+
+If you are a total beginner to CSS, Codecademy's [HTML & CSS course](https://www.codecademy.com/learn/learn-html-css) will be a good introduction to you. Next, read up on the [Sass preprocessor](http://sass-lang.com/), an extension of the CSS language which adds syntactic improvements and encourages style reusability. Study the CSS methodologies mentioned above, and lastly, CSS modules.
+
+**Estimated Duration: 3-4 days.** Try styling up your app using the SMACSS/BEM approach and/or CSS modules.
+
+#### Study Links
+
+- [Learn HTML & CSS course on Codecademy](https://www.codecademy.com/learn/learn-html-css)
+- [SMACSS](https://smacss.com/)
+- [BEM](http://getbem.com/introduction/)
+- [SUIT CSS](http://suitcss.github.io/)
+- [CSS Modules Specification](https://github.com/css-modules/css-modules)
+- [Sass Homepage](http://sass-lang.com/)
+- [A pattern for writing CSS to scale](http://www.intelligiblebabble.com/a-pattern-for-writing-css-to-scale)
+
+#### Alternatives
+
+- [JSS](https://github.com/cssinjs/jss)
+- [Styled Components](https://github.com/styled-components/styled-components)
+
 ### Maintainability
 
 Code is read more frequently than it is written. This is especially true at Grab, where the team size is large and we have multiple engineers working across multiple projects. We highly value readability, maintainability and stability of the code and there are a few ways to achieve that: "Extensive testing", "Consistent coding style" and "Typechecking".
@@ -216,6 +241,26 @@ For the most part, using ESLint is as simple as tweaking a configuration file in
 - [Standard](https://github.com/feross/standard)
 - [JSHint](http://jshint.com/)
 
+### Linting - stylelint
+
+As mentioned earlier, good CSS is notoriously hard to write. Usage of static analysis tools on CSS can help to maintain our CSS code quality and coding style. For linting CSS, we use stylelint. Like ESLint, stylelint is designed in a very modular fashion, allowing developers to turn rules on/off and write custom plugins for it. Besides CSS, stylelint is able to parse SCSS and has experimental support for Less, which lowers the barrier for most existing code bases to adopt it.
+
+Once you have learnt ESLint, learning stylelint would be effortless considering their similarities. stylelint is currently being used by big companies like [Facebook](https://code.facebook.com/posts/879890885467584/improving-css-quality-at-facebook-and-beyond/), [Github](https://github.com/primer/stylelint-config-primer) and [Wordpress](https://github.com/WordPress-Coding-Standards/stylelint-config-wordpress).
+
+One downside of stylelint is that the autofix feature is not fully mature yet, and is only able to fix for a limited number of rules. However, this issue should improve with time.
+
+**Estimated Duration: 1/2 day.** Nothing much to learn here. Add stylelint to your project and fix the linting errors!
+
+#### Study Links
+
+- [stylelint Homepage](https://stylelint.io/)
+- [Lint your CSS with stylelint](https://css-tricks.com/stylelint/)
+
+#### Alternatives
+
+- [Sass Lint](https://github.com/sasstools/sass-lint)
+- [CSS Lint](http://csslint.net/)
+
 ### Types - Flow
 
 Static typing brings about many benefits when writing apps. They can catch common bugs and errors in your code early. Types also serve as a form of documentation for your code and improves the readability of your code. As a code base grows larger, we see the importance of types as they gives us greater confidence when we do refactoring. It is also easier to onboard new members of the team to the project when it is clear what kind of values each object holds and what each function expects.
@@ -236,31 +281,6 @@ Flow recently revamped their documentation site and it's pretty neat now!
 #### Alternatives
 
 - [TypeScript](https://www.typescriptlang.org/)
-
-### Coding with Style - CSS Modules
-
-Writing good CSS is hard. It takes many years of experience and frustration of shooting yourself in the foot before one is able to write maintainable and scalable CSS. CSS, having a global namespace, is fundamentally designed for web documents, and not really for web apps that favour a components architecture. Hence, experienced front end developers have designed methodologies to guide people on how to write organized CSS for complex projects, such as using [SMACSS](https://smacss.com/), [BEM](http://getbem.com/introduction/), [SUIT CSS](http://suitcss.github.io/), etc. However, the encapsulation of styles that these methodologies bring about are artificially enforced by conventions and guidelines. They break the moment developers do not follow them.
-
-Fortunately, the front end ecosystem is saturated with tools, and unsurprisingly, tools have been invented to [partially solve some of the problems](https://speakerdeck.com/vjeux/react-css-in-js) with writing CSS at scale. "At scale" means that many developers are working on the same project and touching the same stylesheets. There is no community-agreed approach on writing [CSS in JS](https://github.com/MicheleBertoli/css-in-js) at the moment, and we are hoping that one day a winner would emerge, just like Redux did, among all the Flux implementations. For now, we are banking on [CSS Modules](https://github.com/css-modules/css-modules). CSS modules is an improvement over existing CSS that aims to fix the problem of global namespace in CSS; it enables you to write styles that are local by default and encapsulated to your component. This feature is achieved via tooling. With CSS modules, large teams can write modular and reusable CSS without fear of conflict or overriding other parts of the app. However, at the end of the day, CSS modules are still being compiled into normal globally-namespaced CSS that browsers recognize, and it is still important to learn raw CSS.
-
-If you are a total beginner to CSS, Codecademy's [HTML & CSS course](https://www.codecademy.com/learn/learn-html-css) will be a good introduction to you. Next, read up on the [Sass preprocessor](http://sass-lang.com/), an extension of the CSS language which adds syntactic improvements and encourages style reusability. Study the CSS methodologies mentioned above, and lastly, CSS modules.
-
-**Estimated Duration: 3-4 days.** Try styling up your app using the SMACSS/BEM approach and/or CSS modules.
-
-#### Study Links
-
-- [Learn HTML & CSS course on Codecademy](https://www.codecademy.com/learn/learn-html-css)
-- [SMACSS](https://smacss.com/)
-- [BEM](http://getbem.com/introduction/)
-- [SUIT CSS](http://suitcss.github.io/)
-- [CSS Modules Specification](https://github.com/css-modules/css-modules)
-- [Sass Homepage](http://sass-lang.com/)
-- [A pattern for writing CSS to scale](http://www.intelligiblebabble.com/a-pattern-for-writing-css-to-scale)
-
-#### Alternatives
-
-- [JSS](https://github.com/cssinjs/jss)
-- [Styled Components](https://github.com/styled-components/styled-components)
 
 ### Build System - webpack
 
