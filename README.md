@@ -24,14 +24,18 @@ If your company is exploring a modern JavaScript stack as well, you may find thi
 
 ### Table of Contents
 
-- Single-page Apps (SPAs)
-- New-age JavaScript
-- User Interface
-- State Management
-- Coding with Style
-- Maintainability
-- Build System
-- Package Management
+- [Single-page Apps (SPAs)](#single-page-apps-spas)
+- [New-age JavaScript](#new-age-javascript)
+- [User Interface](#user-interface---react)
+- [State Management](#state-management---fluxredux)
+- [Coding with Style](#coding-with-style---css-modules)
+- [Maintainability](#maintainability)
+  - [Testing](#testing---jest--enzyme)
+  - [Linting JavaScript](#linting-javascript---eslint)
+  - [Linting CSS](#linting-css---stylelint)
+  - [Types](#types---flow)
+- [Build System](#build-system---webpack)
+- [Package Management](#package-management---yarn)
 
 Certain topics can be skipped if you have prior experience in them.
 
