@@ -308,7 +308,9 @@ There was also the problem of non-determinism in the installed packages via `npm
 
 [Yarn](https://yarnpkg.com/) solves these problems. The issue of non-determinism of installed packages via a `yarn.lock` file and it ensures that every install results in the exact same file structure in `node_modules` across all machines. Yarn utilizes a global cache directory within your machine, and packages that have been downloaded before do not have to be downloaded again. This also enables offline installation of dependencies!
 
-The most common Yarn commands can be found [here](https://yarnpkg.com/en/docs/usage). Most other yarn commands are similar to the `npm` equivalents and it is fine to use the `npm` versions instead.
+The most common Yarn commands can be found [here](https://yarnpkg.com/en/docs/usage). Most other yarn commands are similar to the `npm` equivalents and it is fine to use the `npm` versions instead. One of our favourite commands is `yarn upgrade-interactive` which makes updating dependencies a breeze especially when the modern JavaScript project requires so many dependencies these days. Do check it out!
+
+npm@5.0.0 was [released in May 2017](https://github.com/npm/npm/releases/tag/v5.0.0) and it seems to address many of the issues that Yarn aims to solve. Do keep an eye on it!
 
 **Estimated Duration: 2 hours.**
 
@@ -316,6 +318,10 @@ The most common Yarn commands can be found [here](https://yarnpkg.com/en/docs/us
 
 - [Yarn Homepage](https://yarnpkg.com/)
 - [Yarn: A new package manager for JavaScript](https://code.facebook.com/posts/1840075619545360)
+
+#### Alternatives
+
+- [Good old npm](https://github.com/npm/npm/releases/tag/v5.0.0)
 
 ### The Journey has Just Begun
 
