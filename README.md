@@ -1,6 +1,6 @@
 ![Front End at Grab Banner](front-end-at-grab-banner.png)
 
-Introduction to Front End at Grab
+Grab Front End Guide
 ==
 
 [Grab](https://www.grab.com) is Southeast Asia (SEA)'s leading transportation platform and our mission is to drive SEA forward, leveraging on the latest technology and the talented people we have in the company. As of May 2017, we handle [2.3 million rides daily](https://www.bloomberg.com/news/videos/2017-05-11/tans-says-company-has-more-than-850-000-drivers-video) and we are growing and hiring at a rapid scale.
