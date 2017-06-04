@@ -106,7 +106,7 @@ React brings about many radical ideas and encourages developers to [rethink best
 
 Over the years, new view libraries that are even more performant than React have emerged. React may not be the fastest library out there, but in terms of the ecosystem, overall usage experience and benefits, it is still one of the greatest. Facebook is also channeling efforts into making React even faster with a [rewrite of the underlying reconciliation algorithm](https://github.com/acdlite/react-fiber-architecture). The concepts that React introduced has taught us how to write better code, more maintainable web apps and made us better engineers. We like that.
 
-We recommend going through the [tutorial](https://facebook.github.io/react/tutorial/tutorial.html) on building a tic-tac-toe game on the React homepage to get a feel of what React is and what it does. For more in-depth learning, check out the free course [React Fundamental](https://reacttraining.com/online/react-fundamentals) by the creators of React Router. It is highly rated and taught by experts from the React community. It also covers more advanced concepts that are not covered by the React documentation. [Create React App](https://github.com/facebookincubator/create-react-app) by Facebook is a tool to scaffold a React project with minimal configuration and is highly recommended to use for starting new React projects.
+We recommend going through the [tutorial](https://facebook.github.io/react/tutorial/tutorial.html) on building a tic-tac-toe game on the React homepage to get a feel of what React is and what it does. For more in-depth learning, check out the free course [React Fundamentals](https://reacttraining.com/online/react-fundamentals) by the creators of React Router. It is highly rated and taught by experts from the React community. It also covers more advanced concepts that are not covered by the React documentation. [Create React App](https://github.com/facebookincubator/create-react-app) by Facebook is a tool to scaffold a React project with minimal configuration and is highly recommended to use for starting new React projects.
 
 React is a library, not a framework, and does not deal with the layers below the view - the app state. More on that later.
 
@@ -335,6 +335,8 @@ We made our technical decisions based on what was important to a rapidly growing
 
 As the front end ecosystem grows, we are actively exploring, experimenting and evaluating how new technologies can make us a more efficient team and improve our productivity. We hope that this post has given you insights into the front end technologies we use at Grab. If what we are doing interests you, [we are hiring](https://grab.careers)!
 
+*Many thanks to [Joel Low](https://github.com/lowjoel), [Li Kai](https://github.com/li-kai) and [Tan Wei Seng](https://github.com/xming13) who reviewed drafts of this article.*
+
 ### More Reading
 
 **General**
@@ -350,8 +352,6 @@ As the front end ecosystem grows, we are actively exploring, experimenting and e
 - [A Study Plan To Cure JavaScript Fatigue](https://medium.freecodecamp.com/a-study-plan-to-cure-javascript-fatigue-8ad3a54f2eb1#.c0wnrrcwd)
 - [JS Stack from Scratch](https://github.com/verekia/js-stack-from-scratch)
 - [A Beginner’s JavaScript Study Plan](https://medium.freecodecamp.com/a-beginners-javascript-study-plan-27f1d698ea5e#.bgf49xno2)
-
-*Many thanks to [Joel Low](https://github.com/lowjoel), [Li Kai](https://github.com/li-kai) and [Tan Wei Seng](https://github.com/xming13) who reviewed drafts of this article.*
 
 ### Footnotes
 
