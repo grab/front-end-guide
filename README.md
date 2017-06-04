@@ -355,5 +355,5 @@ As the front end ecosystem grows, we are actively exploring, experimenting and e
 
 ### Footnotes
 
-- [^1]: This can be solved via [webpack code splitting](https://webpack.js.org/guides/code-splitting/).
-- [^2]: [Universal JS](https://medium.com/@mjackson/universal-javascript-4761051b7ae9) to the rescue!
+[^1]: This can be solved via [webpack code splitting](https://webpack.js.org/guides/code-splitting/).
+[^2]: [Universal JS](https://medium.com/@mjackson/universal-javascript-4761051b7ae9) to the rescue!
