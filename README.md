@@ -85,6 +85,7 @@ Spend a day or two revising ES5 and exploring ES2015. The more heavily used feat
 - [Learn ES5 on Codecademy](https://www.codecademy.com/learn/learn-javascript)
 - [Learn ES2015 on Babel](https://babeljs.io/learn-es2015/)
 - [ES6 Katas](http://es6katas.org/)
+- [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS) (Advanced content, optional for beginners)
 
 ### User Interface - React
 
@@ -161,6 +162,8 @@ While Redux does not necessarily have to be used with React, it is highly recomm
 - **Layered Structure** - Each layer in the app / Flux architecture is a pure function, and has clear responsibilities. It is pretty easy to write tests for them.
 - **Development Experience** - A lot of effort has gone into creating tools to help in debugging and inspecting the app while development, such as [Redux DevTools](https://github.com/gaearon/redux-devtools). <br> ![Redux Devtools Demo](images/redux-devtools-demo.gif)
 
+Your app will likely have to deal with async calls like making remote API requests. [redux-thunk](https://github.com/gaearon/redux-thunk) and [redux-saga](https://github.com/redux-saga/redux-saga) were created to solve those problems. They may take some time to understand as they require understanding of functional programming and generators. Our advice is to deal with it only when you need it.
+
 [react-redux](https://github.com/reactjs/react-redux) is an official React binding for Redux and is very simple to learn.
 
 **Estimated Duration: 4 days.** The egghead courses can be a little time consuming but they are worth spending time on. After learning Redux, you can try incorporating it into the React projects you have built. Does Redux solve some of the state management issues you were struggling with in pure React?
@@ -193,6 +196,7 @@ If you are a total beginner to CSS, Codecademy's [HTML & CSS course](https://www
 #### Study Links
 
 - [Learn HTML & CSS course on Codecademy](https://www.codecademy.com/learn/learn-html-css)
+- [Intro to HTML/CSS on Khan Academy](https://www.khanacademy.org/computing/computer-programming/html-css)
 - [SMACSS](https://smacss.com/)
 - [BEM](http://getbem.com/introduction/)
 - [SUIT CSS](http://suitcss.github.io/)
