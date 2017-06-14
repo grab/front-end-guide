@@ -152,7 +152,7 @@ The concepts sound simple, but they are really powerful as they enable apps to:
 - Trace, log and backtrack changes in the whole app.
 - Implement undo/redo functionality easily.
 
-The creator of Redux, [Dan Abramov](https://github.com/gaearon), has taken great care in writing up detailed documentation for Redux, along with creating comprehensive video tutorials for learning [basic](https://egghead.io/series/getting-started-with-redux) and [advanced](https://egghead.io/courses/building-react-apps-with-idiomatic-redux) Redux. They are extremely helpful resources for learning Redux.
+The creator of Redux, [Dan Abramov](https://github.com/gaearon), has taken great care in writing up detailed documentation for Redux, along with creating comprehensive video tutorials for learning [basic](https://egghead.io/courses/getting-started-with-redux) and [advanced](https://egghead.io/courses/building-react-applications-with-idiomatic-redux) Redux. They are extremely helpful resources for learning Redux.
 
 **Combining View and State**
 
