@@ -48,7 +48,7 @@ However in modern SPAs, client-side rendering is used instead. The browser loads
 The benefits:
 
 - The app feels more responsive and users do not see the flash between page navigations due to full-page refreshes.
-- Fewer HTTP requests are needed to the server, as the same assets do not have to be downloaded again for each page load.
+- Fewer HTTP requests are made to the server, as the same assets do not have to be downloaded again for each page load.
 - Clear separation of the concerns between the client and the server; you can easily build new clients for different platforms (e.g. mobile, chatbots, smart watches) without having to modify the server code. You can also modify the technology stack on the client and server independently, as long as the API contract is not broken.
 
 The downsides:
@@ -59,9 +59,9 @@ The downsides:
 
 While traditional server-side rendered apps are still a viable option, a clear client-server separation scales better for larger engineering teams, as the client and server code can be developed and released independently. This is especially so at Grab when we have multiple client apps hitting the same API server.
 
-As web developers are now building apps rather than pages, organization of client-side JavaScript has become increasingly important. In server-side rendered pages, it is common to use snippets of jQuery to add user interactivity to each page. However, when building large apps, jQuery is not sufficient. After all, jQuery is primarily a library for DOM manipulation and it's not a framework, it does not define a clear structure and organization for your app.
+As web developers are now building apps rather than pages, organization of client-side JavaScript has become increasingly important. In server-side rendered pages, it is common to use snippets of jQuery to add user interactivity to each page. However, when building large apps, just jQuery insufficient. After all, jQuery is primarily a library for DOM manipulation and it's not a framework; it does not define a clear structure and organization for your app.
 
-JavaScript frameworks have been created to provide higher-level abstractions over the DOM, allowing you to keep state in memory, out of the DOM. Using frameworks also brings the benefits of reusing recommended concepts and best practices for building apps. A new engineer on the team who has experience with a framework but not the app will find it easier to understand the code because it is organized in a structure that he is familiar with. Popular frameworks have a lot of tutorials and guides, and tapping on the knowledge and experience from colleagues and the community will help new engineers get up to speed.
+JavaScript frameworks have been created to provide higher-level abstractions over the DOM, allowing you to keep state in memory, out of the DOM. Using frameworks also brings the benefits of reusing recommended concepts and best practices for building apps. A new engineer on the team who is unfamiliar with the code base, but has experience with a framework, will find it easier to understand the code because it is organized in a structure that he is familiar with. Popular frameworks have a lot of tutorials and guides, and tapping on the knowledge and experience from colleagues and the community will help new engineers get up to speed.
 
 #### Study Links
 
@@ -73,9 +73,9 @@ JavaScript frameworks have been created to provide higher-level abstractions ove
 
 Before you dive into the various aspects of building a JavaScript web app, it is important to get familiar with the language of the web - JavaScript, or ECMAScript. JavaScript is an incredibly versatile language which you can also use to build [web servers](https://nodejs.org/en/), [native mobile apps](https://facebook.github.io/react-native/) and [desktop apps](https://electron.atom.io/).
 
-Prior to 2015, the last major update was ECMAScript 5.1, in 2011. However, in the recent years, JavaScript has suddenly seen a huge burst of improvements within a short span of time. In 2015, ECMAScript 2015 (previously called ECMAScript 6) was released and a ton of syntactic constructs were introduced to make writing code less unwieldy. Auth0 has written a [nice history of JavaScript](https://auth0.com/blog/a-brief-history-of-javascript/). Till this day, not all browsers have fully implemented the ES2015 specification. Tools such as [Babel](https://babeljs.io/) enable developers to write ES2015 in their apps and Babel transpiles them down to ES5 to be compatible for browsers.
+Prior to 2015, the last major update was ECMAScript 5.1, in 2011. However, in the recent years, JavaScript has suddenly seen a huge burst of improvements within a short span of time. In 2015, ECMAScript 2015 (previously called ECMAScript 6) was released and a ton of syntactic constructs were introduced to make writing code less unwieldy. If you are curious about it, Auth0 has written a nice article on the [history of JavaScript](https://auth0.com/blog/a-brief-history-of-javascript/). Till this day, not all browsers have fully implemented the ES2015 specification. Tools such as [Babel](https://babeljs.io/) enable developers to write ES2015 in their apps and Babel transpiles them down to ES5 to be compatible for browsers.
 
-Being familiar with both ES5 and ES2015 is crucial. ES2015 is still relatively new and a lot of open source code and Node.js apps are still written in ES5. If you are doing debugging in your browser console, you might not be able to use ES2015 syntax. On the other hand, documentation and example code for many modern libraries that we will introduce later below are written in ES2015. At Grab, we use ES2015 (with [Babel Stage-0 preset](https://babeljs.io/docs/plugins/preset-stage-0/)) to embrace the syntactic improvements the future of JavaScript provides and we have been loving it so far.
+Being familiar with both ES5 and ES2015 is crucial. ES2015 is still relatively new and a lot of open source code and Node.js apps are still written in ES5. If you are doing debugging in your browser console, you might not be able to use ES2015 syntax. On the other hand, documentation and example code for many modern libraries that we will introduce later below are written in ES2015. At Grab, we use ES2015 (with [Babel Stage-0 preset](https://babeljs.io/docs/plugins/preset-stage-0/)) to enjoy the productivity boost from the syntactic improvements the future of JavaScript provides and we have been loving it so far.
 
 Spend a day or two revising ES5 and exploring ES2015. The more heavily used features in ES2015 include "Arrows and Lexical This", "Classes", "Template Strings", "Destructuring", "Default/Rest/Spread operators", and "Importing and Exporting modules".
 
@@ -159,15 +159,15 @@ The creator of Redux, [Dan Abramov](https://github.com/gaearon), has taken great
 While Redux does not necessarily have to be used with React, it is highly recommended as they play very well with each other. React and Redux have a lot of ideas and traits in common:
 
 - **Functional composition paradigm** - React composes views (pure functions) while Redux composes pure reducers (also pure functions). Output is predictable given the same set of input.
-- **Easy To Reason About** - You may have heard this term many times but what does it actually mean? Through our experience, React and Redux makes debugging simpler. As the data flow is unidirectional, tracing the flow of data (server responses, user input events) is easier and it is straightforward to determine which layer the problem occurs.
-- **Layered Structure** - Each layer in the app / Flux architecture is a pure function, and has clear responsibilities. It is pretty easy to write tests for them.
+- **Easy To Reason About** - You may have heard this term many times but what does it actually mean? We interpret it as having control and understanding over our code - Our code behaves in ways we expect it to, and when there are problems, we can find them easily. Through our experience, React and Redux makes debugging simpler. As the data flow is unidirectional, tracing the flow of data (server responses, user input events) is easier and it is straightforward to determine which layer the problem occurs in.
+- **Layered Structure** - Each layer in the app / Flux architecture is a pure function, and has clear responsibilities. It is relatively easy to write tests for pure functions.
 - **Development Experience** - A lot of effort has gone into creating tools to help in debugging and inspecting the app while development, such as [Redux DevTools](https://github.com/gaearon/redux-devtools). <br> ![Redux Devtools Demo](images/redux-devtools-demo.gif)
 
 Your app will likely have to deal with async calls like making remote API requests. [redux-thunk](https://github.com/gaearon/redux-thunk) and [redux-saga](https://github.com/redux-saga/redux-saga) were created to solve those problems. They may take some time to understand as they require understanding of functional programming and generators. Our advice is to deal with it only when you need it.
 
 [react-redux](https://github.com/reactjs/react-redux) is an official React binding for Redux and is very simple to learn.
 
-**Estimated Duration: 4 days.** The egghead courses can be a little time consuming but they are worth spending time on. After learning Redux, you can try incorporating it into the React projects you have built. Does Redux solve some of the state management issues you were struggling with in pure React?
+**Estimated Duration: 4 days.** The egghead courses can be a little time-consuming but they are worth spending time on. After learning Redux, you can try incorporating it into the React projects you have built. Does Redux solve some of the state management issues you were struggling with in pure React?
 
 #### Study Links
 
@@ -186,11 +186,11 @@ Your app will likely have to deal with async calls like making remote API reques
 
 <img alt="CSS Modules Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/css-modules-logo.svg" width="256px" />
 
-Writing good CSS is hard. It takes many years of experience and frustration of shooting yourself in the foot before one is able to write maintainable and scalable CSS. CSS, having a global namespace, is fundamentally designed for web documents, and not really for web apps that favor a components architecture. Hence, experienced front end developers have designed methodologies to guide people on how to write organized CSS for complex projects, such as using [SMACSS](https://smacss.com/), [BEM](http://getbem.com/), [SUIT CSS](http://suitcss.github.io/), etc.
+CSS (Cascading Style Sheets) are rules to describe how your HTML elements look. Writing good CSS is hard. It usually takes many years of experience and frustration of shooting yourself in the foot before one is able to write maintainable and scalable CSS. CSS, having a global namespace, is fundamentally designed for web documents, and not really for web apps that favor a components architecture. Hence, experienced front end developers have designed methodologies to guide people on how to write organized CSS for complex projects, such as using [SMACSS](https://smacss.com/), [BEM](http://getbem.com/), [SUIT CSS](http://suitcss.github.io/), etc.
 
 However, the encapsulation of styles that these methodologies bring about are artificially enforced by conventions and guidelines. They break the moment developers do not follow them.
 
-Fortunately, the front end ecosystem is saturated with tools, and unsurprisingly, tools have been invented to [partially solve some of the problems](https://speakerdeck.com/vjeux/react-css-in-js) with writing CSS at scale. "At scale" means that many developers are working on the same project and touching the same stylesheets. There is no community-agreed approach on writing [CSS in JS](https://github.com/MicheleBertoli/css-in-js) at the moment, and we are hoping that one day a winner would emerge, just like Redux did, among all the Flux implementations. For now, we are banking on [CSS Modules](https://github.com/css-modules/css-modules). CSS modules is an improvement over existing CSS that aims to fix the problem of global namespace in CSS; it enables you to write styles that are local by default and encapsulated to your component. This feature is achieved via tooling. With CSS modules, large teams can write modular and reusable CSS without fear of conflict or overriding other parts of the app. However, at the end of the day, CSS modules are still being compiled into normal globally-namespaced CSS that browsers recognize, and it is still important to learn raw CSS.
+As you might have realized by now, the front end ecosystem is saturated with tools, and unsurprisingly, tools have been invented to [partially solve some of the problems](https://speakerdeck.com/vjeux/react-css-in-js) with writing CSS at scale. "At scale" means that many developers are working on the same large project and touching the same stylesheets. There is no community-agreed approach on writing [CSS in JS](https://github.com/MicheleBertoli/css-in-js) at the moment, and we are hoping that one day a winner would emerge, just like Redux did, among all the Flux implementations. For now, we are banking on [CSS Modules](https://github.com/css-modules/css-modules). CSS modules is an improvement over existing CSS that aims to fix the problem of global namespace in CSS; it enables you to write styles that are local by default and encapsulated to your component. This feature is achieved via tooling. With CSS modules, large teams can write modular and reusable CSS without fear of conflict or overriding other parts of the app. However, at the end of the day, CSS modules are still being compiled into normal globally-namespaced CSS that browsers recognize, and it is still important to learn and understand how raw CSS works.
 
 If you are a total beginner to CSS, Codecademy's [HTML & CSS course](https://www.codecademy.com/learn/learn-html-css) will be a good introduction to you. Next, read up on the [Sass preprocessor](http://sass-lang.com/), an extension of the CSS language which adds syntactic improvements and encourages style reusability. Study the CSS methodologies mentioned above, and lastly, CSS modules.
 
@@ -220,13 +220,13 @@ Code is read more frequently than it is written. This is especially true at Grab
 
 <img alt="Jest Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/jest-logo.svg" width="164px" />
 
-[Jest](http://facebook.github.io/jest/) is a testing library by Facebook that aims to make the process of testing pain-free. As with Facebook projects, it provides a great development experience out of the box. Tests can be run in parallel for faster speed and during watch mode, only the tests for the changed files are run. One particular feature we like is "Snapshot Testing". Jest can save the generated output of your React component and Redux state and save it as serialized files, so you wouldn't have to manually come up with the expected output yourself. Jest also comes with built-in mocking, assertion and test coverage. One library to rule them all!
+[Jest](http://facebook.github.io/jest/) is a testing library by Facebook that aims to make the process of testing pain-free. As with Facebook projects, it provides a great development experience out of the box. Tests can be run in parallel resulting in shorter duration. During watch mode, by default, only the tests for the changed files are run. One particular feature we like is "Snapshot Testing". Jest can save the generated output of your React component and Redux state and save it as serialized files, so you wouldn't have to manually come up with the expected output yourself. Jest also comes with built-in mocking, assertion and test coverage. One library to rule them all!
 
 ![Jest Demo](images/jest-demo.gif)
 
 React comes with some testing utilities, but [Enzyme](http://airbnb.io/enzyme/) by Airbnb makes it easier to generate, assert, manipulate and traverse your React components' output with a jQuery-like API. It is recommended that Enzyme be used to test React components.
 
-Jest and Enzyme makes writing front end tests fun and easy. It also helps that React components and Redux actions/reducers are relatively easy to test because of clearly defined responsibilities and interfaces. For React components, we can test that given some `props`, the desired DOM is rendered, and that callbacks are fired upon certain simulated user interactions. For Redux reducers, we can test that given a prior state and an action, a resulting state is produced.
+Jest and Enzyme makes writing front end tests fun and easy. When writing tests becomes enjoyable, developers write more tests. It also helps that React components and Redux actions/reducers are relatively easy to test because of clearly defined responsibilities and interfaces. For React components, we can test that given some `props`, the desired DOM is rendered, and that callbacks are fired upon certain simulated user interactions. For Redux reducers, we can test that given a prior state and an action, a resulting state is produced.
 
 The documentation for Jest and Enzyme are pretty concise, and it should be sufficient to learn them by reading it.
 
@@ -296,11 +296,13 @@ Static typing brings about many benefits when writing apps. They can catch commo
 
 Adding types to your code comes with the trade-off of increased verbosity and a learning curve of the syntax. But this learning cost is paid upfront and amortized over time. In complex projects where the maintainability of the code matters and the people working on it change over time, adding types to the code brings about more benefits than disadvantages.
 
+Recently, I had to fix a bug in a code base that I haven’t touched in months. It was thanks to types that I could easily refresh myself on what the code was doing, and gave me confidence in the fix I made.
+
 The two biggest contenders in adding static types to JavaScript are [Flow](https://flow.org/) (by Facebook) and [TypeScript](https://www.typescriptlang.org/) (by Microsoft). As of date, there is no clear winner in the battle. For now, we have made the choice of using Flow. We find that Flow has a lower learning curve as compared to TypeScript and it requires relatively less effort to migrate an existing code base to Flow. Being built by Facebook, Flow has better integration with the React ecosystem out of the box. [James Kyle](https://twitter.com/thejameskyle), one of the authors of Flow, has [written](http://thejameskyle.com/adopting-flow-and-typescript.html) on a comparison between adopting Flow and TypeScript.
 
 Anyway, it is not extremely difficult to move from Flow to TypeScript as the syntax and semantics are quite similar, and we will re-evaluate the situation in time to come. After all, using one is better than not using any at all.
 
-Flow recently revamped their documentation site and it's pretty neat now!
+Flow recently revamped their homepage and it's pretty neat now!
 
 **Estimated Duration: 1 day.** Flow is pretty simple to learn as the type annotations feel like a natural extension of the JavaScript language. Add Flow annotations to your project and embrace the power of type systems.
 
@@ -339,7 +341,7 @@ We have found the [webpack walkthrough](https://survivejs.com/webpack/foreword/)
 
 If you take a peek into your `node_modules` directory, you will be appalled by the number of directories that are contained in it. Each babel plugin, lodash function, is a package on its own. When you have multiple projects, these packages are duplicated across each project and they are largely similar. Each time you run `npm install` in a new project, these packages are downloaded over and over again even though they already exist in some other project in your computer.
 
-There was also the problem of non-determinism in the installed packages via `npm install`. Some of our CI builds fail because at the point of time when the CI server installs the dependencies, it pulled in minor updates to some packages that contained breaking changes. This would not have happened if library authors respected [semver](http://semver.org/) and engineers assumed that API contracts are respected all the time.
+There was also the problem of non-determinism in the installed packages via `npm install`. Some of our CI builds fail because at the point of time when the CI server installs the dependencies, it pulled in minor updates to some packages that contained breaking changes. This would not have happened if library authors respected [semver](http://semver.org/) and engineers did not assume that API contracts would be respected all the time.
 
 [Yarn](https://yarnpkg.com/) solves these problems. The issue of non-determinism of installed packages is handled via a `yarn.lock` file, which ensures that every install results in the exact same file structure in `node_modules` across all machines. Yarn utilizes a global cache directory within your machine, and packages that have been downloaded before do not have to be downloaded again. This also enables offline installation of dependencies!
 
@@ -362,7 +364,7 @@ npm@5.0.0 was [released in May 2017](https://github.com/npm/npm/releases/tag/v5.
 
 Congratulations on making it this far! Front end development today is [hard](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f), but it is also more interesting than before. What we have covered so far will help any new engineer to Grab's web team to get up to speed with our technologies pretty quickly. There are many more things to be learnt, but building up a solid foundation in the essentials will aid in learning the rest of the technologies. This helpful [front end web developer roadmap](https://github.com/kamranahmedse/developer-roadmap#-front-end-roadmap) shows the alternative technologies available for each aspect.
 
-We made our technical decisions based on what was important to a rapidly growing Grab Engineering team - maintainability and stability of the front end code base. These decisions may or may not apply to smaller teams and projects. Do evaluate what works best for you and your company.
+We made our technical decisions based on what was important to a rapidly growing Grab Engineering team - maintainability and stability of the code base. These decisions may or may not apply to smaller teams and projects. Do evaluate what works best for you and your company.
 
 As the front end ecosystem grows, we are actively exploring, experimenting and evaluating how new technologies can make us a more efficient team and improve our productivity. We hope that this post has given you insights into the front end technologies we use at Grab. If what we are doing interests you, [we are hiring](https://grab.careers)!
 
