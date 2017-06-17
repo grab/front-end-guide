@@ -174,7 +174,7 @@ Your app will likely have to deal with async calls like making remote API reques
 - [Flux Homepage](http://facebook.github.io/flux)
 - [Redux Homepage](http://redux.js.org/)
 - [Egghead Course - Getting Started with Redux](https://egghead.io/courses/getting-started-with-redux)
-- [Egghead Course - Build React Apps with Idiomatic Redux](https://egghead.io/courses/building-react-apps-with-idiomatic-redux)
+- [Egghead Course - Build React Apps with Idiomatic Redux](https://egghead.io/courses/building-react-applications-with-idiomatic-redux)
 - [React Redux Links](https://github.com/markerikson/react-redux-links)
 - [You Might Not Need Redux](https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367)
 
