@@ -5,6 +5,7 @@
   "repository": "git@github.com:grab/front-end-guide.git",
   "author": "yangshun.tay@grab.com",
   "license": "MIT",
+  "main": "index.js",
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
