@@ -1,0 +1,40 @@
+{
+  "name": "grab-front-end",
+  "version": "0.1.0",
+  "description": "Libraries, tools and frameworks the Grab front end team uses",
+  "repository": "git@github.com:grab/front-end-guide.git",
+  "author": "yangshun.tay@grab.com",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "redux": "^3.7.0",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-polyfill": "^6.23.0",
+    "babili-webpack-plugin": "^0.1.1",
+    "css-loader": "^0.28.1",
+    "enzyme": "^2.8.2",
+    "eslint": "^4.0.0",
+    "eslint-loader": "^1.7.1",
+    "flow-bin": "^0.48.0",
+    "jest": "^20.0.4",
+    "node-sass": "^4.5.3",
+    "postcss-loader": "^2.0.5",
+    "redux-logger": "^3.0.6",
+    "sass-loader": "^6.0.5",
+    "style-loader": "^0.18.2",
+    "stylelint": "^7.11.1",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}
