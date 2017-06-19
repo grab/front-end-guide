@@ -1,4 +1,4 @@
-![Front End at Grab Banner](images/front-end-at-grab-banner.png)
+![Front End Developer Desk](images/desk.png)
 
 Grab Front End Guide
 ==
