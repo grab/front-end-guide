@@ -36,6 +36,7 @@ If your company is exploring a modern JavaScript stack as well, you may find thi
   - [Types](#types---flow)
 - [Build System](#build-system---webpack)
 - [Package Management](#package-management---yarn)
+- [Hosting](#hosting)
 
 Certain topics can be skipped if you have prior experience in them.
 
@@ -359,6 +360,30 @@ npm@5.0.0 was [released in May 2017](https://github.com/npm/npm/releases/tag/v5.
 #### Alternatives
 
 - [Good old npm](https://github.com/npm/npm/releases/tag/v5.0.0)
+
+### Hosting
+
+Traditionally, web servers that receive a request for a webpage will render the contents on the server, and return a HTML page with dynamic content meant for the requester. This is known as server-side rendering. As mentioned earlier in the section on Single-page Apps, modern web applications do not involve server-side rendering, and it is sufficient to use a web server that serves static asset files. Nginx and Apache are possible options and not much configuration is required to get things up and runnning. The caveat is that the web server will have to be configured to route all requests to a single entry point and allow client-side routing to take over. The flow for front end routing goes like this:
+
+1. Web server receives a HTTP request for a particular route, for example `/user/john`.
+1. Regardless of which route the server receives, serve up `index.html` from the static assets directory.
+1. The `index.html` should contain scripts that load up a JavaScript framework/library that handles client-side routing.
+1. The client-side routing library reads the current route, and communicates to the MVC (or equivalent where relevant) framework about the current route.
+1. The MVC JavaScript framework renders the desired view based on the route, possibly after fetching data from an API if required. Example, load up `UsersController`, fetch user data for the username `john` as JSON, combine the data with the view, and render it on the page.
+
+A good practice for serving static content is to use caching and putting them on a CDN. We use [Amazon Simple Storage Service (S3)](https://aws.amazon.com/s3/) because it can both host and act as a CDN for our static website content. We find that it is an affordable and reliable solution that meets our needs. S3 provides the option to "Use this bucket to host a website", which essentially directs the requests for all routes to the root of the bucket, which means we do not need our own web servers with special routing configurations.
+
+An example of a web app that we host on S3 is [Hub](https://hub.grab.com/).
+
+#### Study Links
+
+- [Amazon S3 Homepage](https://aws.amazon.com/s3/)
+- [Hosting a Static Website on Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html)
+
+#### Alternatives
+
+- [Google Cloud Platform](https://cloud.google.com/storage/docs/hosting-static-website)
+- [Now](https://zeit.co/now)
 
 ### The Journey has Just Begun
 
