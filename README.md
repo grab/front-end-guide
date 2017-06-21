@@ -40,6 +40,7 @@ If your company is exploring a modern JavaScript stack as well, you may find thi
 - [Package Management](#package-management---yarn)
 - [Continuous Integration](#continuous-integration)
 - [Hosting](#hosting---amazon-s3)
+- [Deployment](#deployment)
 
 Certain topics can be skipped if you have prior experience in them.
 
@@ -400,6 +401,8 @@ A good practice for serving static content is to use caching and putting them on
 
 An example of a web app that we host on S3 is [Hub](https://hub.grab.com/).
 
+Other than hosting the website, we also use S3 to host the build `.tar` files generated from each successful Travis build.
+
 #### Study Links
 
 - [Amazon S3 Homepage](https://aws.amazon.com/s3/)
@@ -409,6 +412,25 @@ An example of a web app that we host on S3 is [Hub](https://hub.grab.com/).
 
 - [Google Cloud Platform](https://cloud.google.com/storage/docs/hosting-static-website)
 - [Now](https://zeit.co/now)
+
+## Deployment
+
+The last step in shipping the product to our users is deployment. We use [Ansible Tower](https://www.ansible.com/tower) which is a powerful automation software that enables us to deploy our builds easily.
+
+As mentioned earlier, all our commits, upon successful build, are being uploaded to a central S3 bucket for builds. We follow semver for our releases and have commands to automatically generate release notes for the latest release. When it is time to release, we run a command to tag the latest commit and push to our code hosting environment. Travis will run the CI steps on that tagged commit and upload a tar file (such as `1.0.1.tar`) with the version to our S3 bucket for builds.
+
+On Tower, we simply have to specify the name of the `.tar` we want to deploy to our hosting bucket, and Tower does the following:
+
+1. Download the desired `.tar` file from our builds S3 bucket.
+1. Extracts the contents and swap in the configuration file for specified environment.
+1. Upload the contents to the hosting bucket.
+1. Post a notification to Slack to inform about the successful deployment.
+
+This whole process is done under 30 seconds and using Tower has made deployments and rollbacks easy. If we realize that a faulty deployment has occurred, we can simply find the previous stable tag and deploy it.
+
+#### Study Links
+
+- [Ansible Tower Homepage](https://www.ansible.com/tower)
 
 ### The Journey has Just Begun
 
