@@ -369,7 +369,7 @@ Traditionally, web servers that receive a request for a webpage will render the 
 1. Regardless of which route the server receives, serve up `index.html` from the static assets directory.
 1. The `index.html` should contain scripts that load up a JavaScript framework/library that handles client-side routing.
 1. The client-side routing library reads the current route, and communicates to the MVC (or equivalent where relevant) framework about the current route.
-1. The MVC JavaScript framework renders the desired view based on the route, possibly after fetching data from an API if required.
+1. The MVC JavaScript framework renders the desired view based on the route, possibly after fetching data from an API if required. Example, load up `UsersController`, fetch user data for the username `john` as JSON, combine the data with the view, and render it on the page.
 
 A good practice for serving static content is to use caching and putting them on a CDN. We use [Amazon Simple Storage Service (S3)](https://aws.amazon.com/s3/) because it can both host and act as a CDN for our static website content. We find that it is an affordable and reliable solution that meets our needs. S3 provides the option to "Use this bucket to host a website", which essentially directs the requests for all routes to the root of the bucket, which means we do not need our own web servers with special routing configurations.
 
