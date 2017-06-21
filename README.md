@@ -42,7 +42,7 @@ If your company is exploring a modern JavaScript stack as well, you may find thi
 
 Certain topics can be skipped if you have prior experience in them.
 
-### Single-page Apps (SPAs)
+## Single-page Apps (SPAs)
 
 Web developers these days refer to the products they build as web apps, rather than websites. While there is no strict difference between the two terms, web apps tend to be highly interactive and dynamic, allowing the user to perform actions and receive a response for their action. Traditionally, the browser receives HTML from the server and renders it. When the user navigates to another URL, a full-page refresh is required and the server sends fresh new HTML for the new page. This is called server-side rendering.
 
@@ -72,7 +72,7 @@ JavaScript frameworks have been created to provide higher-level abstractions ove
 - [The (R)Evolution of Web Development](http://blog.isquaredsoftware.com/presentations/2016-10-revolution-of-web-dev/)
 - [Here's Why Client Side Rendering Won](https://medium.freecodecamp.com/heres-why-client-side-rendering-won-46a349fadb52)
 
-### New-age JavaScript
+## New-age JavaScript
 
 Before you dive into the various aspects of building a JavaScript web app, it is important to get familiar with the language of the web - JavaScript, or ECMAScript. JavaScript is an incredibly versatile language which you can also use to build [web servers](https://nodejs.org/en/), [native mobile apps](https://facebook.github.io/react-native/) and [desktop apps](https://electron.atom.io/).
 
@@ -91,7 +91,7 @@ Spend a day or two revising ES5 and exploring ES2015. The more heavily used feat
 - [ES6 Katas](http://es6katas.org/)
 - [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS) (Advanced content, optional for beginners)
 
-### User Interface - React
+## User Interface - React
 
 <img alt="React Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/react-logo.svg" width="256px" />
 
@@ -133,7 +133,7 @@ React is a library, not a framework, and does not deal with the layers below the
 - [Vue](https://vuejs.org/)
 - [Cycle](https://cycle.js.org/)
 
-### State Management - Flux/Redux
+## State Management - Flux/Redux
 
 <img alt="Redux Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/redux-logo.svg" width="256px" />
 
@@ -185,7 +185,7 @@ Your app will likely have to deal with async calls like making remote API reques
 
 - [MobX](https://github.com/mobxjs/mobx)
 
-### Coding with Style - CSS Modules
+## Coding with Style - CSS Modules
 
 <img alt="CSS Modules Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/css-modules-logo.svg" width="256px" />
 
@@ -215,11 +215,11 @@ If you are a total beginner to CSS, Codecademy's [HTML & CSS course](https://www
 - [JSS](https://github.com/cssinjs/jss)
 - [Styled Components](https://github.com/styled-components/styled-components)
 
-### Maintainability
+## Maintainability
 
 Code is read more frequently than it is written. This is especially true at Grab, where the team size is large and we have multiple engineers working across multiple projects. We highly value readability, maintainability and stability of the code and there are a few ways to achieve that: "Extensive testing", "Consistent coding style" and "Typechecking".
 
-### Testing - Jest + Enzyme
+## Testing - Jest + Enzyme
 
 <img alt="Jest Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/jest-logo.svg" width="164px" />
 
@@ -247,7 +247,7 @@ The documentation for Jest and Enzyme are pretty concise, and it should be suffi
 - [AVA](https://github.com/avajs/ava)
 - [Karma](https://karma-runner.github.io/)
 
-### Linting JavaScript - ESLint
+## Linting JavaScript - ESLint
 
 <img alt="ESLint Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/eslint-logo.svg" width="256px" />
 
@@ -267,7 +267,7 @@ For the most part, using ESLint is as simple as tweaking a configuration file in
 - [Standard](https://github.com/feross/standard)
 - [JSHint](http://jshint.com/)
 
-### Linting CSS - stylelint
+## Linting CSS - stylelint
 
 <img alt="stylelint Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/stylelint-logo.svg" width="256px" />
 
@@ -291,7 +291,7 @@ One downside of stylelint is that the autofix feature is not fully mature yet, a
 - [Sass Lint](https://github.com/sasstools/sass-lint)
 - [CSS Lint](http://csslint.net/)
 
-### Types - Flow
+## Types - Flow
 
 <img alt="Flow Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/flow-logo.png" width="256px" />
 
@@ -318,7 +318,7 @@ Flow recently revamped their homepage and it's pretty neat now!
 
 - [TypeScript](https://www.typescriptlang.org/)
 
-### Build System - webpack
+## Build System - webpack
 
 <img alt="webpack Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/webpack-logo.svg" width="256px" />
 
@@ -338,7 +338,7 @@ We have found the [webpack walkthrough](https://survivejs.com/webpack/foreword/)
 - [Rollup](https://rollupjs.org/)
 - [Browserify](http://browserify.org/)
 
-### Package Management - Yarn
+## Package Management - Yarn
 
 <img alt="Yarn Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/yarn-logo.png" width="256px" />
 
@@ -363,7 +363,7 @@ npm@5.0.0 was [released in May 2017](https://github.com/npm/npm/releases/tag/v5.
 
 - [Good old npm](https://github.com/npm/npm/releases/tag/v5.0.0)
 
-### Hosting - Amazon S3
+## Hosting - Amazon S3
 
 Traditionally, web servers that receive a request for a webpage will render the contents on the server, and return a HTML page with dynamic content meant for the requester. This is known as server-side rendering. As mentioned earlier in the section on Single-page Apps, modern web applications do not involve server-side rendering, and it is sufficient to use a web server that serves static asset files. Nginx and Apache are possible options and not much configuration is required to get things up and runnning. The caveat is that the web server will have to be configured to route all requests to a single entry point and allow client-side routing to take over. The flow for front end routing goes like this:
 
