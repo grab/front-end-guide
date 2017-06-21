@@ -36,7 +36,7 @@ If your company is exploring a modern JavaScript stack as well, you may find thi
   - [Types](#types---flow)
 - [Build System](#build-system---webpack)
 - [Package Management](#package-management---yarn)
-- [Hosting](#hosting)
+- [Hosting](#hosting---amazon-s3)
 
 Certain topics can be skipped if you have prior experience in them.
 
@@ -361,7 +361,7 @@ npm@5.0.0 was [released in May 2017](https://github.com/npm/npm/releases/tag/v5.
 
 - [Good old npm](https://github.com/npm/npm/releases/tag/v5.0.0)
 
-### Hosting
+### Hosting - Amazon S3
 
 Traditionally, web servers that receive a request for a webpage will render the contents on the server, and return a HTML page with dynamic content meant for the requester. This is known as server-side rendering. As mentioned earlier in the section on Single-page Apps, modern web applications do not involve server-side rendering, and it is sufficient to use a web server that serves static asset files. Nginx and Apache are possible options and not much configuration is required to get things up and runnning. The caveat is that the web server will have to be configured to route all requests to a single entry point and allow client-side routing to take over. The flow for front end routing goes like this:
 
