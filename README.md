@@ -366,7 +366,7 @@ npm@5.0.0 was [released in May 2017](https://github.com/npm/npm/releases/tag/v5.
 
 ## Continuous Integration
 
-We use [Travis CI](travis-ci.com) for our continuous integration (CI) pipeline. Travis is a highly popular CI on Github and its [build matrix](https://docs.travis-ci.com/user/customizing-the-build#Build-Matrix) feature is useful for repositories which contain multiple projects like Grab's. We configured Travis to do the following:
+We use [Travis CI](https://travis-ci.com/) for our continuous integration (CI) pipeline. Travis is a highly popular CI on Github and its [build matrix](https://docs.travis-ci.com/user/customizing-the-build#Build-Matrix) feature is useful for repositories which contain multiple projects like Grab's. We configured Travis to do the following:
 
 - Run linting for the project.
 - Run unit tests for the project.
