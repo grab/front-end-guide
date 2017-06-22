@@ -270,6 +270,7 @@ For the most part, using ESLint is as simple as tweaking a configuration file in
 
 #### Alternatives
 
+- [Prettier](https://github.com/prettier/prettier)
 - [Standard](https://github.com/feross/standard)
 - [JSHint](http://jshint.com/)
 
