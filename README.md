@@ -214,8 +214,8 @@ If you are a total beginner to CSS, Codecademy's [HTML & CSS course](https://www
 - [SUIT CSS](http://suitcss.github.io/)
 - [CSS Modules Specification](https://github.com/css-modules/css-modules)
 - [Sass Homepage](http://sass-lang.com/)
-- [A pattern for writing CSS to scale](http://www.intelligiblebabble.com/a-pattern-for-writing-css-to-scale)
-- [Answers to Front End Job Interview Questions — CSS](https://github.com/yangshun/interview-handbook/blob/master/front-end/css.md#interview-questions)
+- [Answers to Front End Job Interview Questions — HTML](https://github.com/yangshun/tech-interview-handbook/blob/master/front-end/interview-questions.md#html-questions)
+- [Answers to Front End Job Interview Questions — CSS](https://github.com/yangshun/tech-interview-handbook/blob/master/front-end/interview-questions.md#css-questions)
 
 #### Alternatives
 
