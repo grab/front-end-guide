@@ -64,7 +64,7 @@ The downsides:
 
 - Heavier initial page load due to loading of framework, app code, and assets required for multiple pages.<sup><a href="#fn1" id="ref1">1</a></sup>
 - There's an additional step to be done on your server which is to configure it to route all requests to a single entry point and allow client-side routing to take over from there.
-- SPAs are reliant on JavaScript to render content, but not all search engines execute JavaScript during crawling, and they may see empty content on your page. This inadvertently hurts the SEO of your app. <sup><a href="#fn2" id="ref2">2</a></sup>
+- SPAs are reliant on JavaScript to render content, but not all search engines execute JavaScript during crawling, and they may see empty content on your page. This inadvertently hurts the Search Engine Optimization (SEO) of your app. <sup><a href="#fn2" id="ref2">2</a></sup>. However, most of the time, when you are building apps, SEO is not the most important factor, as not all the content needs to be indexable by search engines.
 
 While traditional server-side rendered apps are still a viable option, a clear client-server separation scales better for larger engineering teams, as the client and server code can be developed and released independently. This is especially so at Grab when we have multiple client apps hitting the same API server.
 
