@@ -224,7 +224,7 @@ If you are a total beginner to CSS, Codecademy's [HTML & CSS course](https://www
 
 ## Maintainability
 
-Code is read more frequently than it is written. This is especially true at Grab, where the team size is large and we have multiple engineers working across multiple projects. We highly value readability, maintainability and stability of the code and there are a few ways to achieve that: "Extensive testing", "Consistent coding style" and "Typechecking".
+Code is read more frequently than it is written. This is especially true at Grab, where the team size is large and we have multiple engineers working across multiple projects. We highly value readability, maintainability and stability of the code and there are a few ways to achieve that: "Extensive testing", "Consistent coding style" and "Typechecking". Also when you are in a team, sharing same practices becomes really important. Check out these [JavaScript Project Guidelines](https://github.com/wearehive/project-guidelines) for instance.
 
 ## Testing - Jest + Enzyme
 
