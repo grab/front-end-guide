@@ -96,6 +96,7 @@ Spend a day or two revising ES5 and exploring ES2015. The more heavily used feat
 - [Learn ES2015 on Babel](https://babeljs.io/learn-es2015/)
 - [ES6 Katas](http://es6katas.org/)
 - [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS) (Advanced content, optional for beginners)
+- [Answers to Front End Job Interview Questions — JavaScript](https://github.com/yangshun/tech-interview-handbook/blob/master/front-end/interview-questions.md#js-questions)
 
 ## User Interface - React
 
