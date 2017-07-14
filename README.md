@@ -120,7 +120,7 @@ React brings about many radical ideas and encourages developers to [rethink best
 
 Over the years, new view libraries that are even more performant than React have emerged. React may not be the fastest library out there, but in terms of the ecosystem, overall usage experience and benefits, it is still one of the greatest. Facebook is also channeling efforts into making React even faster with a [rewrite of the underlying reconciliation algorithm](https://github.com/acdlite/react-fiber-architecture). The concepts that React introduced has taught us how to write better code, more maintainable web apps and made us better engineers. We like that.
 
-We recommend going through the [tutorial](https://facebook.github.io/react/tutorial/tutorial.html) on building a tic-tac-toe game on the React homepage to get a feel of what React is and what it does. For more in-depth learning, check out the highly-rated free course, [React Fundamentals](https://reacttraining.com/online/react-fundamentals) by the creators of [React Router](https://github.com/ReactTraining/react-router/), who are experts from the React community. It also covers more advanced concepts that are not covered by the React documentation. [Create React App](https://github.com/facebookincubator/create-react-app) by Facebook is a tool to scaffold a React project with minimal configuration and is highly recommended to use for starting new React projects.
+We recommend going through the [tutorial](https://facebook.github.io/react/tutorial/tutorial.html) on building a tic-tac-toe game on the React homepage to get a feel of what React is and what it does. For more in-depth learning, check out the Egghead course, [Build Your First Production Quality React App](https://egghead.io/courses/build-your-first-production-quality-react-app). It covers some advanced concepts and real-world usages that are not covered by the React documentation. [Create React App](https://github.com/facebookincubator/create-react-app) by Facebook is a tool to scaffold a React project with minimal configuration and is highly recommended to use for starting new React projects.
 
 React is a library, not a framework, and does not deal with the layers below the view - the app state. More on that later.
 
@@ -129,7 +129,7 @@ React is a library, not a framework, and does not deal with the layers below the
 #### Study Links
 
 - [React Official Tutorial](https://facebook.github.io/react/tutorial/tutorial.html)
-- [React Fundamentals](https://reacttraining.com/online/react-fundamentals)
+- [Egghead Course - Build Your First Production Quality React App](https://egghead.io/courses/build-your-first-production-quality-react-app)
 - [Simple React Development in 2017](https://hackernoon.com/simple-react-development-in-2017-113bd563691f)
 - [Presentational and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.5iexphyg5)
 
