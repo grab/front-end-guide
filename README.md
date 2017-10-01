@@ -39,6 +39,7 @@ If your company is exploring a modern JavaScript stack as well, you may find thi
   - [Testing](#testing---jest--enzyme)
   - [Linting JavaScript](#linting-javascript---eslint)
   - [Linting CSS](#linting-css---stylelint)
+  - [Formatting Code](#formatting-code---prettier)
   - [Types](#types---flow)
 - [Build System](#build-system---webpack)
 - [Package Management](#package-management---yarn)
@@ -299,7 +300,7 @@ One downside of stylelint is that the autofix feature is not fully mature yet, a
 - [Sass Lint](https://github.com/sasstools/sass-lint)
 - [CSS Lint](http://csslint.net/)
 
-## Code Formatter - Prettier
+## Formatting Code - Prettier
 
 <img alt="Prettier Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/prettier-logo.png" width="256px" />
 
