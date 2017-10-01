@@ -272,7 +272,6 @@ For the most part, using ESLint is as simple as tweaking a configuration file in
 
 #### Alternatives
 
-- [Prettier](https://github.com/prettier/prettier)
 - [Standard](https://github.com/feross/standard)
 - [JSHint](http://jshint.com/)
 
@@ -299,6 +298,24 @@ One downside of stylelint is that the autofix feature is not fully mature yet, a
 
 - [Sass Lint](https://github.com/sasstools/sass-lint)
 - [CSS Lint](http://csslint.net/)
+
+## Code Formatter - Prettier
+
+<img alt="Prettier Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/prettier-logo.png" width="256px" />
+
+Another tool for enforcing consistent coding style for JavaScript and CSS is [Prettier](https://github.com/prettier/prettier).
+
+In most cases, it is recommended to setup Prettier on top of ESLint and stylelint and integrate it into the workflow. This allows the code to be formatted into consistent style automatically via commit hooks, so that developers do not need to spend time formatting the coding style manually.
+
+Note that Prettier only enforces coding style, but does not check for logic errors in the code. Hence it is not a replacement for linters.
+
+**Estimated Duration: 1/2 day.** Nothing much to learn here. Add Prettier to your project and add hooks to enforce the coding style!
+
+#### Study Links
+
+- [Prettier Homepage](https://prettier.io/)
+- [Prettier GitHub repo](https://github.com/prettier/prettier)
+- [Comparison between tools that allow you to use ESLint and Prettier together](https://gist.github.com/yangshun/318102f525ec68033bf37ac4a010eb0c)
 
 ## Types - Flow
 
