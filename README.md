@@ -192,6 +192,7 @@ Your app will likely have to deal with async calls like making remote API reques
 #### Alternatives
 
 - [MobX](https://github.com/mobxjs/mobx)
+- [Vuex](https://vuex.vuejs.org/)
 
 ## Coding with Style - CSS Modules
 
