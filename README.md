@@ -274,7 +274,7 @@ For the most part, using ESLint is as simple as tweaking a configuration file in
 
 #### Alternatives
 
-- [Standard](https://github.com/feross/standard)
+- [Standard](https://github.com/standard/standard)
 - [JSHint](http://jshint.com/)
 
 ## Linting CSS - stylelint
