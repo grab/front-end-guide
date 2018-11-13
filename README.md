@@ -44,7 +44,7 @@ If your company is exploring a modern JavaScript stack as well, you may find thi
 - [Build System](#build-system---webpack)
 - [Package Management](#package-management---yarn)
 - [Continuous Integration](#continuous-integration)
-- [Hosting](#hosting-and-cdn)
+- [Hosting and CDN](#hosting-and-cdn)
 - [Deployment](#deployment)
 - [Monitoring](#monitoring)
 
