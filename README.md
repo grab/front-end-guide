@@ -44,8 +44,9 @@ If your company is exploring a modern JavaScript stack as well, you may find thi
 - [Build System](#build-system---webpack)
 - [Package Management](#package-management---yarn)
 - [Continuous Integration](#continuous-integration)
-- [Hosting](#hosting---amazon-s3)
+- [Hosting](#hosting-and-cdn)
 - [Deployment](#deployment)
+- [Monitoring](#monitoring)
 
 Certain topics can be skipped if you have prior experience in them.
 
@@ -416,7 +417,7 @@ We used [Travis CI](https://travis-ci.com/) for our continuous integration (CI) 
 - [CircleCI](https://circleci.com/)
 - [GitLab CI/CD](https://about.gitlab.com/product/continuous-integration/)
 
-## Hosting and CDN - Amazon S3 and Amazon CloudFront
+## Hosting and CDN
 
 Traditionally, web servers that receive a request for a webpage will render the contents on the server, and return a HTML page with dynamic content meant for the requester. This is known as server-side rendering. As mentioned earlier in the section on Single-page Apps, modern web applications do not involve server-side rendering, and it is sufficient to use a web server that serves static asset files. Nginx and Apache are possible options and not much configuration is required to get things up and runnning. The caveat is that the web server will have to be configured to route all requests to a single entry point and allow client-side routing to take over. The flow for front end routing goes like this:
 
