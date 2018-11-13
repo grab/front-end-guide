@@ -366,6 +366,7 @@ We have found the [webpack walkthrough](https://survivejs.com/webpack/foreword/)
 
 - [Rollup](https://rollupjs.org/)
 - [Browserify](http://browserify.org/)
+- [Parcel](https://parceljs.org/)
 
 ## Package Management - Yarn
 
@@ -394,7 +395,7 @@ npm@5.0.0 was [released in May 2017](https://github.com/npm/npm/releases/tag/v5.
 
 ## Continuous Integration
 
-We use [Travis CI](https://travis-ci.com/) for our continuous integration (CI) pipeline. Travis is a highly popular CI on Github and its [build matrix](https://docs.travis-ci.com/user/customizing-the-build#Build-Matrix) feature is useful for repositories which contain multiple projects like Grab's. We configured Travis to do the following:
+We used [Travis CI](https://travis-ci.com/) for our continuous integration (CI) pipeline. Travis is a highly popular CI on Github and its [build matrix](https://docs.travis-ci.com/user/customizing-the-build#Build-Matrix) feature is useful for repositories which contain multiple projects like Grab's. We configured Travis to do the following:
 
 - Run linting for the project.
 - Run unit tests for the project.
@@ -413,8 +414,9 @@ We use [Travis CI](https://travis-ci.com/) for our continuous integration (CI) p
 
 - [Jenkins](https://jenkins.io/)
 - [CircleCI](https://circleci.com/)
+- [GitLab CI/CD](https://about.gitlab.com/product/continuous-integration/)
 
-## Hosting - Amazon S3
+## Hosting and CDN - Amazon S3 and Amazon CloudFront
 
 Traditionally, web servers that receive a request for a webpage will render the contents on the server, and return a HTML page with dynamic content meant for the requester. This is known as server-side rendering. As mentioned earlier in the section on Single-page Apps, modern web applications do not involve server-side rendering, and it is sufficient to use a web server that serves static asset files. Nginx and Apache are possible options and not much configuration is required to get things up and runnning. The caveat is that the web server will have to be configured to route all requests to a single entry point and allow client-side routing to take over. The flow for front end routing goes like this:
 
@@ -424,11 +426,13 @@ Traditionally, web servers that receive a request for a webpage will render the 
 1. The client-side routing library reads the current route, and communicates to the MVC (or equivalent where relevant) framework about the current route.
 1. The MVC JavaScript framework renders the desired view based on the route, possibly after fetching data from an API if required. Example, load up `UsersController`, fetch user data for the username `john` as JSON, combine the data with the view, and render it on the page.
 
-A good practice for serving static content is to use caching and putting them on a CDN. We use [Amazon Simple Storage Service (S3)](https://aws.amazon.com/s3/) because it can both host and act as a CDN for our static website content. We find that it is an affordable and reliable solution that meets our needs. S3 provides the option to "Use this bucket to host a website", which essentially directs the requests for all routes to the root of the bucket, which means we do not need our own web servers with special routing configurations.
+A good practice for serving static content is to use caching and putting them on a CDN. We use [Amazon Simple Storage Service (S3)](https://aws.amazon.com/s3/) for hosting our static website content and [Amazon CloudFront](https://aws.amazon.com/cloudfront/) as the CDN. We find that it is an affordable and reliable solution that meets our needs.
+
+S3 provides the option to "Use this bucket to host a website", which essentially directs the requests for all routes to the root of the bucket, which means we do not need our own web servers with special routing configurations.
 
 An example of a web app that we host on S3 is [Hub](https://hub.grab.com/).
 
-Other than hosting the website, we also use S3 to host the build `.tar` files generated from each successful Travis build.
+Other than hosting the website, we also use S3 to host the build `.tar` files generated from each successful CI build.
 
 #### Study Links
 
@@ -442,7 +446,7 @@ Other than hosting the website, we also use S3 to host the build `.tar` files ge
 
 ## Deployment
 
-The last step in shipping the product to our users is deployment. We use [Ansible Tower](https://www.ansible.com/tower) which is a powerful automation software that enables us to deploy our builds easily.
+The last step in shipping the product to our users is deployment. We used [Ansible Tower](https://www.ansible.com/tower) which is a powerful automation software that enables us to deploy our builds easily.
 
 As mentioned earlier, all our commits, upon successful build, are being uploaded to a central S3 bucket for builds. We follow semver for our releases and have commands to automatically generate release notes for the latest release. When it is time to release, we run a command to tag the latest commit and push to our code hosting environment. Travis will run the CI steps on that tagged commit and upload a tar file (such as `1.0.1.tar`) with the version to our S3 bucket for builds.
 
@@ -458,6 +462,20 @@ This whole process is done under 30 seconds and using Tower has made deployments
 #### Study Links
 
 - [Ansible Tower Homepage](https://www.ansible.com/tower)
+
+#### Alternatives
+
+- [Jenkins](https://jenkins.io/)
+
+## Monitoring
+
+After shipping the product, you would also want to monitor it for any errors.
+
+Apart from network level monitoring from our CDN service provider and hosting provider, we use [Sentry](https://sentry.io/) to monitor errors that originates from the app logic.
+
+#### Study Links
+
+- [Sentry Homepage](https://sentry.io/)
 
 ### The Journey has Just Begun
 
