@@ -28,6 +28,8 @@ Se sua empresa também estiver explorando uma pilha javascript moderna, você ta
 - Experiência em desenvolvimento web.Construíram aplicativos da web renderizados pelo servidor usando estruturas como Ruby on Rails, Django, Express, etc.
 - Compreensão de como a web funciona.Familiaridade com protocolos da Web e convenções como HTTP e APIs RESTful.
 
+## Tabela de conteúdos
+
 - [Aplicativos de página única (SPAs)](#single-page-apps-spas)
 - [JavaScript de nova era](#new-age-javascript)
 - [Interface de usuário](#user-interface---react)
