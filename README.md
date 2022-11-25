@@ -1,511 +1,509 @@
-Grab Front End Guide
+Guia Grab Front-End
 ==
 
 [![Front End Developer Desk](images/desk.png)](https://dribbble.com/shots/3577639-Isometric-Developer-Desk)
 
-_Credits: [Illustration](https://dribbble.com/shots/3577639-Isometric-Developer-Desk) by [@yangheng](https://dribbble.com/yangheng)_
+_Créditos: [Illustration](https://dribbble.com/shots/3577639-Isometric-Developer-Desk) por [@yangheng](https://dribbble.com/yangheng)_
 
-_This guide has been cross-posted on [Free Code Camp](https://medium.freecodecamp.com/grabs-front-end-guide-for-large-teams-484d4033cc41)._
+_Esse guia foi postado no [Free Code Camp](https://medium.freecodecamp.com/grabs-front-end-guide-for-large-teams-484d4033cc41)._
 
-[Grab](https://www.grab.com) is Southeast Asia (SEA)'s leading transportation platform and our mission is to drive SEA forward, leveraging on the latest technology and the talented people we have in the company. As of May 2017, we handle [2.3 million rides daily](https://www.bloomberg.com/news/videos/2017-05-11/tans-says-company-has-more-than-850-000-drivers-video) and we are growing and hiring at a rapid scale.
+[Grab](https://www.grab.com) é a principal plataforma de transporte do sudeste da Ásia (SEA) e nossa missão é impulsionar o mar, aproveitando a mais recente tecnologia e as pessoas talentosas que temos na empresa.Em maio de 2017, lidamos com [2,3 milhões de passeios diariamente](https://www.bloomberg.com/news/videos/2017-05-11/tans-says-company-has-more-than-850-000-drivers-video) E estamos crescendo e contratando em uma escala rápida.
 
-To keep up with Grab's phenomenal growth, our web team and web platforms have to grow as well. Fortunately, or unfortunately, at Grab, the web team has been [keeping up](https://blog.daftcode.pl/hype-driven-development-3469fc2e9b22) with the latest best practices and has incorporated the modern JavaScript ecosystem in our web apps.
+Para acompanhar o crescimento fenomenal de Grab, nossa equipe e plataformas da web também precisam crescer.Felizmente, ou infelizmente, na Grab, a equipe da web foi [Mantendo -se](https://blog.daftcode.pl/hype-driven-development-3469fc2e9b22) Com as melhores práticas mais recentes e incorporou o ecossistema javascript moderno em nossos aplicativos da web.
 
-The result of this is that our new hires or back end engineers, who are not necessarily well-acquainted with the modern JavaScript ecosystem, may feel overwhelmed by the barrage of new things that they have to learn just to complete their feature or bug fix in a web app. Front end development has never been so complex and exciting as it is today. New tools, libraries, frameworks and plugins emerge every other day and there is so much to learn. It is imperative that newcomers to the web team are guided to embrace this evolution of the front end, learn to navigate the ecosystem with ease, and get productive in shipping code to our users as fast as possible. We have come up with a study guide to introduce why we do what we do, and how we handle front end at scale.
+O resultado disso é que nossos novos contratados ou engenheiros de back-end, que não estão necessariamente bem-falados com o ecossistema javascript moderno, podem se sentir sobrecarregados com a enxurrada de coisas novas que eles precisam aprender apenas para concluir seu recurso ou correção de bug.um aplicativo da web.O desenvolvimento do front -end nunca foi tão complexo e emocionante como é hoje.Novas ferramentas, bibliotecas, estruturas e plug -ins emergem a cada dois dias e há muito a aprender.É imperativo que os recém -chegados à equipe da web sejam guiados a adotar essa evolução do front end, aprender a navegar no ecossistema com facilidade e se torne produtivo no código de remessa para nossos usuários o mais rápido possível.Criamos um guia de estudo para introduzir por que fazemos o que fazemos e como lidamos com o front -end em escala.
 
-This study guide is inspired by ["A Study Plan to Cure JavaScript Fatigue"](https://medium.freecodecamp.com/a-study-plan-to-cure-javascript-fatigue-8ad3a54f2eb1#.g9egaapps) and is mildly opinionated in the sense that we recommend certain libraries/frameworks to learn for each aspect of front end development, based on what is currently deemed most suitable at Grab. We explain why a certain library/framework/tool is chosen and provide links to learning resources to enable the reader to pick it up on their own. Alternative choices that may be better for other use cases are provided as well for reference and further self-exploration.
+Este guia de estudo é inspirado por ["Um plano de estudo para curar fadiga de JavaScript"](https://medium.freecodecamp.com/a-study-plan-to-cure-javascript-fatigue-8ad3a54f2eb1#.g9egaapps) e é levemente opinativo no sentido de que recomendamos certas bibliotecas/estruturas para aprender para cada aspecto do desenvolvimento do front end, com base no que é atualmente considerado mais adequado no Grab.Explicamos por que uma determinada biblioteca/estrutura/ferramenta é escolhida e fornecemos links para recursos de aprendizagem para permitir que o leitor a busque por conta própria.Escolhas alternativas que podem ser melhores para outros casos de uso também são fornecidas para referência e auto-exploração adicional.
 
-If you are familiar with front end development and have been consistently keeping up with the latest developments, this guide will probably not be that useful to you. It is targeted at newcomers to front end.
+Se você estiver familiarizado com o desenvolvimento do front end e tem acompanhado constantemente os desenvolvimentos mais recentes, este guia provavelmente não será tão útil para você.É direcionado aos recém -chegados Equipe ao front 
 
-If your company is exploring a modern JavaScript stack as well, you may find this study plan useful to your company too! Feel free to adapt it to your needs. We will update this study plan periodically, according to our latest work and choices.
+Se sua empresa também estiver explorando uma pilha javascript moderna, você também pode achar este plano de estudo útil para sua empresa!Sinta -se à vontade para adaptá -lo às suas necessidades.Atualizaremos este plano de estudo periodicamente, de acordo com nosso trabalho e Equipe opções mais
 
-*- Grab Web Team*
+*- Equipe Grab Web*
 
-**Pre-requisites**
+**Pre-requisítos**
 
-- Good understanding of core programming concepts.
-- Comfortable with basic command line actions and familiarity with source code version control systems such as Git.
-- Experience in web development. Have built server-side rendered web apps using frameworks like Ruby on Rails, Django, Express, etc.
-- Understanding of how the web works. Familiarity with web protocols and conventions like HTTP and RESTful APIs.
+- Boa compreensão dos principais conceitos de programação.
+- confortável com ações básicas da linha de comando e familiaridade com sistemas de controle de versão do código -fonte, como o Git.
+- Experiência em desenvolvimento web.Construíram aplicativos da web renderizados pelo servidor usando estruturas como Ruby on Rails, Django, Express, etc.
+- Compreensão de como a web funciona.Familiaridade com protocolos da Web e convenções como HTTP e APIs RESTful.
 
-### Table of Contents
+## Tabela de conteúdos
 
-- [Single-page Apps (SPAs)](#single-page-apps-spas)
-- [New-age JavaScript](#new-age-javascript)
-- [User Interface](#user-interface---react)
-- [State Management](#state-management---fluxredux)
-- [Coding with Style](#coding-with-style---css-modules)
-- [Maintainability](#maintainability)
-  - [Testing](#testing---jest--enzyme)
-  - [Linting JavaScript](#linting-javascript---eslint)
-  - [Linting CSS](#linting-css---stylelint)
-  - [Formatting Code](#formatting-code---prettier)
-  - [Types](#types---flow)
-- [Build System](#build-system---webpack)
-- [Package Management](#package-management---yarn)
-- [Continuous Integration](#continuous-integration)
-- [Hosting and CDN](#hosting-and-cdn)
-- [Deployment](#deployment)
-- [Monitoring](#monitoring)
+- [Aplicativos de página única (SPAs)](#single-page-apps-spas)
+- [JavaScript de nova era](#new-age-javascript)
+- [Interface de usuário](#user-interface---react)
+- [Gerenciamento do Estadot](#state-management---fluxredux)
+- [Codificação com estilo](#coding-with-style---css-modules)
+- [Manutenção](#maintainability)
+  - [Teste](#testing---jest--enzyme)
+  - [JavaScript de linhat](#linting-javascript---eslint)
+  - [CSS de linha](#linting-css---stylelint)
+  - [Código de formatação](#formatting-code---prettier)
+  - [Tipos](#types---flow)
+- [Sistema de construção](#build-system---webpack)
+- [Gerenciamento de pacotes](#package-management---yarn)
+- [Integração contínua](#continuous-integration)
+- [Hospedagem e CDN](#hosting-and-cdn)
+- [Implantação](#deployment)
+- [Monitoramento](#monitoring)
 
-Certain topics can be skipped if you have prior experience in them.
+Certos tópicos podem ser ignorados se você tiver experiência anterior neles.
 
-## Single-page Apps (SPAs)
+## Aplicativos de página única (SPAs)
 
-Web developers these days refer to the products they build as web apps, rather than websites. While there is no strict difference between the two terms, web apps tend to be highly interactive and dynamic, allowing the user to perform actions and receive a response for their action. Traditionally, the browser receives HTML from the server and renders it. When the user navigates to another URL, a full-page refresh is required and the server sends fresh new HTML for the new page. This is called server-side rendering.
+Atualmente, os desenvolvedores da Web se referem aos produtos que eles criam como aplicativos da Web, em vez de sites.Embora não haja diferença estrita entre os dois termos, os aplicativos da Web tendem a ser altamente interativos e dinâmicos, permitindo que o usuário execute ações e receba uma resposta por sua ação.Tradicionalmente, o navegador recebe HTML do servidor e o renderiza.Quando o usuário navega para outra URL, é necessária uma atualização de página inteira e o servidor envia novos novos HTML para a nova página.Isso é chamado de renderização do lado do servidor.
 
-However in modern SPAs, client-side rendering is used instead. The browser loads the initial page from the server, along with the scripts (frameworks, libraries, app code) and stylesheets required for the whole app. When the user navigates to other pages, a page refresh is not triggered. The URL of the page is updated via the [HTML5 History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API). New data required for the new page, usually in JSON format, is retrieved by the browser via [AJAX](https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started) requests to the server. The SPA then dynamically updates the page with the data via JavaScript, which it has already downloaded in the initial page load. This model is similar to how native mobile apps work.
+No entanto, nos spas modernos, a renderização do lado do cliente é usada.O navegador carrega a página inicial do servidor, juntamente com os scripts (estruturas, bibliotecas, código do aplicativo) e folhas de estilo necessárias para o aplicativo inteiro.Quando o usuário navega para outras páginas, uma atualização de página não é acionada.O URL da página é atualizado através do [HTML5 API da história](https://developer.mozilla.org/en-US/docs/Web/API/History_API). Novos dados necessários para a nova página, geralmente no formato JSON, são recuperados pelo navegador via [AJAX](https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started) solicitações ao servidor.O spa atualiza dinamicamente a página com os dados via JavaScript, que já baixou na página inicial do carregamento.Este modelo é semelhante ao funcionamento dos aplicativos móveis nativos.
 
-The benefits:
+Os benefícios:
 
-- The app feels more responsive and users do not see the flash between page navigations due to full-page refreshes.
-- Fewer HTTP requests are made to the server, as the same assets do not have to be downloaded again for each page load.
-- Clear separation of the concerns between the client and the server; you can easily build new clients for different platforms (e.g. mobile, chatbots, smart watches) without having to modify the server code. You can also modify the technology stack on the client and server independently, as long as the API contract is not broken.
+- O aplicativo parece mais responsivo e os usuários não vêem o flash entre as navegações da página devido a atualizações de página inteira.
+- Menos solicitações HTTP são feitas ao servidor, pois os mesmos ativos não precisam ser baixados novamente para cada carregamento de página.
+- Clear separação das preocupações entre o cliente e o servidor;Você pode criar facilmente novos clientes para diferentes plataformas (por exemplo, móveis, chatbots, relógios inteligentes) sem precisar modificar o código do servidor.Você também pode modificar a pilha de tecnologia no cliente e no servidor de forma independente, desde que o contrato da API não esteja quebrado.
 
-The downsides:
+As desvantagens:
 
-- Heavier initial page load due to loading of framework, app code, and assets required for multiple pages.<sup><a href="#fn1" id="ref1">1</a></sup>
-- There's an additional step to be done on your server which is to configure it to route all requests to a single entry point and allow client-side routing to take over from there.
-- SPAs are reliant on JavaScript to render content, but not all search engines execute JavaScript during crawling, and they may see empty content on your page. This inadvertently hurts the Search Engine Optimization (SEO) of your app. <sup><a href="#fn2" id="ref2">2</a></sup>. However, most of the time, when you are building apps, SEO is not the most important factor, as not all the content needs to be indexable by search engines. To overcome this, you can either server-side render your app or use services such as [Prerender](https://prerender.io/) to "render your javascript in a browser, save the static HTML, and return that to the crawlers".
+- Carga de página inicial mais pesada devido ao carregamento da estrutura, código do aplicativo e ativos necessários para várias páginas.<sup><a href="#fn1" id="ref1">1</a></sup>
+- Há uma etapa adicional a ser feita no seu servidor, que é configurá-lo para rotear todas as solicitações para um único ponto de entrada e permitir que o roteamento do lado do cliente assuma o seu lugar.
+- Os spas dependem do JavaScript para renderizar o conteúdo, mas nem todos os mecanismos de pesquisa executam JavaScript durante o rastreamento e podem ver conteúdo vazio na sua página.Isso prejudica inadvertidamente a otimização do mecanismo de pesquisa (SEO) do seu aplicativo. <sup><a href="#fn2" id="ref2">2</a></sup>. No entanto, na maioria das vezes, quando você está criando aplicativos, o SEO não é o fator mais importante, pois nem todo o conteúdo precisa ser indexível pelos mecanismos de pesquisa.Para superar isso, você pode renderizar seu aplicativo ou usar serviços como [Prerender](https://prerender.io/) Para "renderizar seu javascript em um navegador, salve o HTML estático e retorne isso aos rastreadores".
 
-While traditional server-side rendered apps are still a viable option, a clear client-server separation scales better for larger engineering teams, as the client and server code can be developed and released independently. This is especially so at Grab when we have multiple client apps hitting the same API server.
+Embora os aplicativos renderizados do servidor tradicionais ainda sejam uma opção viável, uma clara escala de separação do cliente-servidor melhor para equipes de engenharia maiores, pois o código do cliente e do servidor pode ser desenvolvido e lançado de forma independente. Isso é especialmente verdadeiro quando temos vários aplicativos de clientes atingindo o mesmo servidor de API.
 
-As web developers are now building apps rather than pages, organization of client-side JavaScript has become increasingly important. In server-side rendered pages, it is common to use snippets of jQuery to add user interactivity to each page. However, when building large apps, just jQuery is insufficient. After all, jQuery is primarily a library for DOM manipulation and it's not a framework; it does not define a clear structure and organization for your app.
+Como os desenvolvedores da Web agora estão construindo aplicativos em vez de páginas, a organização do JavaScript do lado do cliente se tornou cada vez mais importante. Nas páginas renderizadas do lado do servidor, é comum usar trechos de jQuery para adicionar interatividade do usuário a cada página. No entanto, ao criar grandes aplicativos, apenas o JQuery é insuficiente. Afinal, o JQuery é principalmente uma biblioteca para manipulação de Dom e não é uma estrutura; Ele não define uma estrutura e organização claras para o seu aplicativo.
 
-JavaScript frameworks have been created to provide higher-level abstractions over the DOM, allowing you to keep state in memory, out of the DOM. Using frameworks also brings the benefits of reusing recommended concepts and best practices for building apps. A new engineer on the team who is unfamiliar with the code base, but has experience with a framework, will find it easier to understand the code because it is organized in a structure that they are familiar with. Popular frameworks have a lot of tutorials and guides, and tapping on the knowledge and experience from colleagues and the community will help new engineers get up to speed.
+As estruturas JavaScript foram criadas para fornecer abstrações de nível mais alto sobre o DOM, permitindo que você mantenha o estado na memória, fora do DOM. O uso de estruturas também traz os benefícios de reutilizar conceitos recomendados e práticas recomendadas para a criação de aplicativos. Um novo engenheiro da equipe que não está familiarizado com a base de código, mas tem experiência com uma estrutura, achará mais fácil entender o código porque está organizado em uma estrutura com a qual eles estão familiarizados. As estruturas populares têm muitos tutoriais e guias, e explorar o conhecimento e a experiência de colegas e a comunidade ajudará os novos engenheiros a se atualizar.
 
-#### Study Links
+#### Links de estudo
 
-- [Single Page App: advantages and disadvantages](http://stackoverflow.com/questions/21862054/single-page-app-advantages-and-disadvantages)
-- [The (R)Evolution of Web Development](http://blog.isquaredsoftware.com/presentations/2016-10-revolution-of-web-dev/)
-- [Here's Why Client Side Rendering Won](https://medium.freecodecamp.com/heres-why-client-side-rendering-won-46a349fadb52)
+- [App de página única: vantagens e desvantagens](http://stackoverflow.com/questions/21862054/single-page-app-advantages-and-disadvantages)
+- [A (r) evolução do desenvolvimento da web](http://blog.isquaredsoftware.com/presentations/2016-10-revolution-of-web-dev/)
+- [Eis por que a renderização do lado do cliente venceu](https://medium.freecodecamp.com/heres-why-client-side-rendering-won-46a349fadb52)
 
-## New-age JavaScript
+## JavaScript de nova era
 
-Before you dive into the various aspects of building a JavaScript web app, it is important to get familiar with the language of the web - JavaScript, or ECMAScript. JavaScript is an incredibly versatile language which you can also use to build [web servers](https://nodejs.org/en/), [native mobile apps](https://facebook.github.io/react-native/) and [desktop apps](https://electron.atom.io/).
+Antes de mergulhar nos vários aspectos da criação de um aplicativo da Web JavaScript, é importante se familiarizar com o idioma da web - JavaScript ou Ecmascript.JavaScript é uma linguagem incrivelmente versátil que você também pode usar para construir [Servidores da Web](https://nodejs.org/en/), [Aplicativos móveis nativos](https://facebook.github.io/react-native/) e [Aplicativos de mesa](https://electron.atom.io/).
 
-Prior to 2015, the last major update was ECMAScript 5.1, in 2011. However, in the recent years, JavaScript has suddenly seen a huge burst of improvements within a short span of time. In 2015, ECMAScript 2015 (previously called ECMAScript 6) was released and a ton of syntactic constructs were introduced to make writing code less unwieldy. If you are curious about it, Auth0 has written a nice article on the [history of JavaScript](https://auth0.com/blog/a-brief-history-of-javascript/). Till this day, not all browsers have fully implemented the ES2015 specification. Tools such as [Babel](https://babeljs.io/) enable developers to write ES2015 in their apps and Babel transpiles them down to ES5 to be compatible for browsers.
+Antes de 2015, a última grande atualização foi o ECMAScript 5.1, em 2011. No entanto, nos últimos anos, o JavaScript viu de repente uma grande explosão de melhorias em um curto período de tempo.Em 2015, o ECMAScript 2015 (previamente chamado ECMAScript 6) foi lançado e uma tonelada de construções sintáticas foi introduzida para tornar o código de escrita menos pesado.Se você está curioso sobre isso, o Auth0 escreveu um bom artigo sobre o [História do JavaScript](https://auth0.com/blog/a-brief-history-of-javascript/). Até hoje, nem todos os navegadores implementaram totalmente a especificação ES2015.Ferramentas como [Babel](https://babeljs.io/) Permita que os desenvolvedores escrevam o ES2015 em seus aplicativos e Babel transpilizam -os para o ES5 para serem compatíveis para navegadores.
 
-Being familiar with both ES5 and ES2015 is crucial. ES2015 is still relatively new and a lot of open source code and Node.js apps are still written in ES5. If you are doing debugging in your browser console, you might not be able to use ES2015 syntax. On the other hand, documentation and example code for many modern libraries that we will introduce later below are still written in ES2015. At Grab, we use [babel-preset-env](https://github.com/babel/babel-preset-env) to enjoy the productivity boost from the syntactic improvements the future of JavaScript provides and we have been loving it so far. `babel-preset-env` intelligently determines which Babel plugins are necessary (which new language features are not supported and have to be transpiled) as browsers increase native support for more ES language features. If you prefer using language features that are already stable, you may find that [babel-preset-stage-3](https://babeljs.io/docs/plugins/preset-stage-3/), which is a complete specification that will most likely be implemented in browsers, will be more suitable.
+Estar familiarizado com o ES5 e o ES2015 é crucial.O ES2015 ainda é relativamente novo e muitos aplicativos de código de código aberto e node.js ainda estão escritos no ES5.Se você estiver em depuração no console do navegador, talvez não consiga usar a sintaxe ES2015.Por outro lado, a documentação e o código de exemplo para muitas bibliotecas modernas que apresentaremos mais tarde ainda estão escritas no ES2015.No Grab, nós usamos [babel-preset-env](https://github.com/babel/babel-preset-env) Para aproveitar o aumento da produtividade das melhorias sintáticas que o futuro do JavaScript oferece e estamos adorando até agora. `babel-preset-env` Determina de forma inteligente quais plug -ins Babel são necessários (quais novos recursos de idioma não são suportados e precisam ser transpilados) à medida que os navegadores aumentam o suporte nativo para mais recursos da linguagem ES.Se você preferir usar recursos de idioma que já estão estáveis, você pode achar que [babel-preset-stage-3](https://babeljs.io/docs/plugins/preset-stage-3/), que é uma especificação completa que provavelmente será implementada nos navegadores, será mais adequada.
 
-Spend a day or two revising ES5 and exploring ES2015. The more heavily used features in ES2015 include "Arrows and Lexical This", "Classes", "Template Strings", "Destructuring", "Default/Rest/Spread operators", and "Importing and Exporting modules".
+Passe um ou dois dias revisando o ES5 e explorando o ES2015.Os recursos mais usados no ES2015 incluem "Arrows e Lexical This", "Classes", "Model Strings", "Destructuring", "Padrão/Rest/Spread Operadores" e "Módulos de Importação e Exportação".
 
-**Estimated Duration: 3-4 days.** You can learn/lookup the syntax as you learn the other libraries and try building your own app.
+**Duração estimada: 3-4 dias.** Você pode aprender/procurar a sintaxe ao aprender as outras bibliotecas e tentar criar seu próprio aplicativo.
 
-#### Study Links
+#### Links de estudo
 
-- [Learn ES5 on Codecademy](https://www.codecademy.com/learn/learn-javascript)
-- [Learn ES6 on Codecademy](https://www.codecademy.com/learn/introduction-to-javascript)
-- [Learn ES2015 on Babel](https://babeljs.io/learn-es2015/)
-- [ES6 Katas](http://es6katas.org/)
-- [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS) (Advanced content, optional for beginners)
-- [Answers to Front End Job Interview Questions — JavaScript](https://github.com/yangshun/front-end-interview-handbook/blob/master/questions/javascript-questions.md)
+- [Aprenda ES5 no codecademy](https://www.codecademy.com/learn/learn-javascript)
+- [Aprenda ES6 na Codecademy](https://www.codecademy.com/learn/introduction-to-javascript)
+- [Aprenda ES2015 em Babel](https://babeljs.io/learn-es2015/)
+- [ES6 Patas](http://es6katas.org/)
+- [Você não conhece JS](https://github.com/getify/You-Dont-Know-JS) (Conteúdo avançado, opcional para iniciantes)
+- [Respostas às perguntas da entrevista de emprego no front -end - JavaScript](https://github.com/yangshun/front-end-interview-handbook/blob/master/questions/javascript-questions.md)
 
-## User Interface - React
+## Interface do usuário - React
 
 <img alt="React Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/react-logo.svg" width="256px" />
 
-If any JavaScript project has taken the front end ecosystem by storm in recent years, that would be [React](https://facebook.github.io/react/). React is a library built and open-sourced by the smart people at Facebook. In React, developers write components for their web interface and compose them together.
+Se algum projeto JavaScript adotou o ecossistema de front -end por tempestade nos últimos anos, isso seria [Reagir](https://facebook.github.io/react/). O React é uma biblioteca construída e de origem aberta pelas pessoas inteligentes no Facebook.No React, os desenvolvedores escrevem componentes para sua interface da web e os compõem.
 
-React brings about many radical ideas and encourages developers to [rethink best practices](https://www.youtube.com/watch?v=DgVS-zXgMTk). For many years, web developers were taught that it was a good practice to write HTML, JavaScript and CSS separately. React does the exact opposite, and encourages that you write your HTML and [CSS in your JavaScript](https://speakerdeck.com/vjeux/react-css-in-js) instead. This sounds like a crazy idea at first, but after trying it out, it actually isn't as weird as it sounds initially. Reason being the front end development scene is shifting towards a paradigm of component-based development. The features of React:
+React traz muitas idéias radicais e incentiva os desenvolvedores a [Repensar as melhores práticas](https://www.youtube.com/watch?v=DgVS-zXgMTk). Por muitos anos, os desenvolvedores da Web foram ensinados que era uma boa prática escrever HTML, JavaScript e CSS separadamente.React faz exatamente o oposto e incentiva que você escreve seu HTML e [CSS em seu JavaScript](https://speakerdeck.com/vjeux/react-css-in-js) em vez de.Parece uma ideia louca no começo, mas depois de experimentá -la, na verdade não é tão estranho quanto parece inicialmente.A razão é a cena do desenvolvimento do front end está mudando para um paradigma de desenvolvimento baseado em componentes.As características do React:
 
-- **Declarative** - You describe what you want to see in your view and not how to achieve it. In the jQuery days, developers would have to come up with a series of steps to manipulate the DOM to get from one app state to the next. In React, you simply change the state within the component and the view will update itself according to the state. It is also easy to determine how the component will look like just by looking at the markup in the `render()` method.
+- **Declarativa** - Você descreve o que deseja ver em sua opinião e não como alcançá -lo.Nos dias de jQuery, os desenvolvedores teriam que apresentar uma série de etapas para manipular o DOM para obter de um estado de aplicativo para o outro.No React, você simplesmente altera o estado dentro do componente e a visualização se atualizará de acordo com o estado.Também é fácil determinar como o componente ficará apenas olhando para a marcação no `render()` método.
 
-- **Functional** - The view is a pure function of `props` and `state`. In most cases, a React component is defined by `props` (external parameters) and `state` (internal data). For the same `props` and `state`, the same view is produced. Pure functions are easy to test, and the same goes for functional components. Testing in React is made easy because a component's interfaces are well-defined and you can test the component by supplying different `props` and `state` to it and comparing the rendered output.
+- **Funcional** - A visão é uma função pura de `props` e `state`. Na maioria dos casos, um componente de reação é definido por `props` (parâmetros externos) e `state` (ISSO INTERNOa). Para o mesmo `props` e `state`, A mesma visão é produzida.Funções puras são fáceis de testar e o mesmo vale para componentes funcionais.Os testes no React são facilitados porque as interfaces de um componente são bem definidas e você pode testar o componente fornecendo diferentes `props` and `state` para ele e comparar a saída renderizada.
 
-- **Maintainable** - Writing your view in a component-based fashion encourages reusability. We find that defining a component's `propTypes` make React code self-documenting as the reader can know clearly what is needed to use that component. Lastly, your view and logic is self-contained within the component, and should not be affected nor affect other components. That makes it easy to shift components around during large-scale refactoring, as long as the same `props` are supplied to the component.
+- **Manutenção** - Escrever sua visão de maneira baseada em componentes incentiva a reutilização.Descobrimos que definir o de um componente`propTypes` Faça o código React Auto-documentação, pois o leitor pode saber claramente o que é necessário para usar esse componente.Por fim, sua visão e lógica são independentes no componente e não devem ser afetadas nem afetar outros componentes.Isso facilita a mudança dos componentes durante a refatoração em larga escala, desde que o mesmo `props` são fornecidos ao componente.
 
-- **High Performance** - You might have heard that React uses a virtual DOM (not to be confused with [shadow DOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Shadow_DOM)) and it re-renders everything when there is a change in state. Why is there a need for a virtual DOM? While modern JavaScript engines are fast, reading from and writing to the DOM is slow. React keeps a lightweight virtual representation of the DOM in memory. Re-rendering everything is a misleading term. In React it actually refers to re-rendering the in-memory representation of the DOM, not the actual DOM itself. When there's a change in the underlying data of the component, a new virtual representation is created, and compared against the previous representation. The difference (minimal set of changes required) is then patched to the real browser DOM.
+- **Alta performance** - Você deve ter ouvido dizer que o React usa um DOM virtual (não deve ser confundido com [Shadow Dom](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Shadow_DOM)) E renderiza tudo quando há uma mudança no estado.Por que há necessidade de um DOM virtual?Enquanto os motores javascript modernos são rápidos, ler e escrever para o DOM é lento.O React mantém uma representação virtual leve do DOM na memória.Reestringir tudo é um termo enganoso.Na reação, ele realmente se refere a renderizar a representação na memória do DOM, não o próprio DOM.Quando há uma alteração nos dados subjacentes do componente, uma nova representação virtual é criada e comparada com a representação anterior.A diferença (conjunto mínimo de alterações necessárias) é então corrigido no navegador real DOM.
 
-- **Ease of Learning** - Learning React is pretty simple. The React API surface is relatively small compared to [this](https://angular.io/docs/ts/latest/api/); there are only a few APIs to learn and they do not change often. The React community is one of the largest, and along with that comes a vibrant ecosystem of tools, open-sourced UI components, and a ton of great resources online to get you started on learning React.
+- **Facilidade de aprender** - Aprender o React é bem simples.A superfície da API do React é relativamente pequena em comparação com [isto](https://angular.io/docs/ts/latest/api/); Existem apenas algumas APIs para aprender e elas não mudam com frequência.A comunidade React é uma das maiores, e junto com isso vem um vibrante ecossistema de ferramentas, componentes da interface do usuário de código aberto e uma tonelada de ótimos recursos on-line para começar a aprender a reagir.
 
-- **Developer Experience** - There are a number of tools that improves the development experience with React. [React Developer Tools](https://github.com/facebook/react-devtools) is a browser extension that allows you to inspect your component, view and manipulate its `props` and `state`. [Hot reloading](https://github.com/gaearon/react-hot-loader) with webpack allows you to view changes to your code in your browser, without you having to refresh the browser. Front end development involves a lot of tweaking code, saving and then refreshing the browser. Hot reloading helps you by eliminating the last step. When there are library updates, Facebook provides [codemod scripts](https://github.com/reactjs/react-codemod) to help you migrate your code to the new APIs. This makes the upgrading process relatively pain-free. Kudos to the Facebook team for their dedication in making the development experience with React great. <br> ![React Devtools Demo](images/react-devtools-demo.gif)
+- **Experiência do desenvolvedor** - Existem várias ferramentas que melhoram a experiência de desenvolvimento com o React. [REACT RECONSTENSORDENTES FERRAMENTAS](https://github.com/facebook/react-devtools) é uma extensão do navegador que permite inspecionar seu componente, visualizar e manipular seu `props` e `state`. [Recarregamento a quente](https://github.com/gaearon/react-hot-loader) Com o WebPack, permite visualizar alterações no seu código no seu navegador, sem precisar atualizar o navegador.O desenvolvimento do front -end envolve muito código de ajuste, economizando e atualizando o navegador.A recarga a quente ajuda você a eliminar a última etapa.Quando há atualizações da biblioteca, o Facebook fornece [codemod scripts](https://github.com/reactjs/react-codemod) para ajudá -lo a migrar seu código para as novas APIs.Isso torna o processo de atualização relativamente livre de dor.Parabéns ao time do Facebook por sua dedicação em tornar a experiência de desenvolvimento com reagir ótimo. <br> ![Demonstração do React Devtools](images/react-devtools-demo.gif)
 
-Over the years, new view libraries that are even more performant than React have emerged. React may not be the fastest library out there, but in terms of the ecosystem, overall usage experience and benefits, it is still one of the greatest. Facebook is also channeling efforts into making React even faster with a [rewrite of the underlying reconciliation algorithm](https://github.com/acdlite/react-fiber-architecture). The concepts that React introduced has taught us how to write better code, more maintainable web apps and made us better engineers. We like that.
+Ao longo dos anos, surgiram novas bibliotecas de visualização que são ainda mais performantes que o React surgiram.O React pode não ser a biblioteca mais rápida do mercado, mas em termos do ecossistema, experiência geral de uso e benefícios, ainda é um dos maiores.O Facebook também está canalizando esforços para tornar o React ainda mais rápido com um [reescrever o algoritmo de reconciliação subjacente](https://github.com/acdlite/react-fiber-architecture). Os conceitos que o React introduziu nos ensinaram a escrever um código melhor, aplicativos da Web mais sustentáveis e nos tornaram melhores engenheiros.Nós gostamos disso.
 
-We recommend going through the [tutorial](https://facebook.github.io/react/tutorial/tutorial.html) on building a tic-tac-toe game on the React homepage to get a feel of what React is and what it does. For more in-depth learning, check out the Egghead course, [Build Your First Production Quality React App](https://egghead.io/courses/build-your-first-production-quality-react-app). It covers some advanced concepts and real-world usages that are not covered by the React documentation. [Create React App](https://github.com/facebookincubator/create-react-app) by Facebook is a tool to scaffold a React project with minimal configuration and is highly recommended to use for starting new React projects.
+Recomendamos passar pelo [tutorial](https://facebook.github.io/react/tutorial/tutorial.html) Ao construir um jogo tic-tac-toe na página inicial do React para ter uma idéia do que é reagir e o que faz.Para um aprendizado mais aprofundado, confira o curso Egghead, [Crie seu primeiro aplicativo de reação de qualidade de produção](https://egghead.io/courses/build-your-first-production-quality-react-app). Ele abrange alguns conceitos avançados e usos do mundo real que não são cobertos pela documentação do React. [Criar aplicativo React](https://github.com/facebookincubator/create-react-app) pelo Facebook é uma ferramenta para andaime um projeto de reação com configuração mínima e é altamente recomendável usar para iniciar novos projetos de reação.
 
-React is a library, not a framework, and does not deal with the layers below the view - the app state. More on that later.
+O React é uma biblioteca, não uma estrutura, e não lida com as camadas abaixo da visualização - o estado do aplicativo.Mais sobre isso mais tarde.
 
-**Estimated Duration: 3-4 days.** Try building simple projects like a to-do list, Hacker News clone with pure React. You will slowly gain an appreciation for it and perhaps face some problems along the way that isn't solved by React, which brings us to the next topic...
+**Duração estimada: 3-4 dias.** Tente construir projetos simples, como uma lista de tarefas, clone de notícias de hackers com React Pure React.Você se apreciará lentamente por isso e talvez enfrente alguns problemas ao longo do caminho que não são resolvidos pelo React, o que nos leva ao próximo tópico...
 
-#### Study Links
+#### Links de estudo
 
-- [React Official Tutorial](https://facebook.github.io/react/tutorial/tutorial.html)
-- [Egghead Course - Build Your First Production Quality React App](https://egghead.io/courses/build-your-first-production-quality-react-app)
-- [Simple React Development in 2017](https://hackernoon.com/simple-react-development-in-2017-113bd563691f)
-- [Presentational and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.5iexphyg5)
+- [Reaja o tutorial oficial](https://facebook.github.io/react/tutorial/tutorial.html)
+- [Curso EGGHEAD - Construa seu primeiro aplicativo de reação de qualidade de produção](https://egghead.io/courses/build-your-first-production-quality-react-app)
+- [Desenvolvimento simples do React em 2017](https://hackernoon.com/simple-react-development-in-2017-113bd563691f)
+- [Componentes de apresentação e contêiner](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.5iexphyg5)
 
-#### Alternatives
+#### Alternativas
 
 - [Angular](https://angular.io/)
 - [Ember](https://www.emberjs.com/)
 - [Vue](https://vuejs.org/)
 - [Cycle](https://cycle.js.org/)
 
-## State Management - Flux/Redux
+## Gerenciamento de Estado - Flux/Redux
 
 <img alt="Redux Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/redux-logo.svg" width="256px" />
 
-As your app grows bigger, you may find that the app structure becomes a little messy. Components throughout the app may have to share and display common data but there is no elegant way to handle that in React. After all, React is just the view layer, it does not dictate how you structure the other layers of your app, such as the model and the controller, in traditional MVC paradigms. In an effort to solve this, Facebook invented Flux, an app architecture that complements React's composable view components by utilizing a unidirectional data flow. Read more about how Flux works [here](https://facebook.github.io/flux/docs/in-depth-overview.html). In summary, the Flux pattern has the following characteristics:
+À medida que seu aplicativo aumenta, você pode achar que a estrutura do aplicativo se torna um pouco confusa.Os componentes em todo o aplicativo podem ter que compartilhar e exibir dados comuns, mas não há uma maneira elegante de lidar com isso no React.Afinal, o React é apenas a camada de visualização, não dita como você estrutura as outras camadas do seu aplicativo, como o modelo e o controlador, nos paradigmas tradicionais do MVC.Em um esforço para resolver isso, o Facebook inventou o Flux, uma arquitetura de aplicativos que complementa os componentes de visualização composível da React, utilizando um fluxo de dados unidirecional.Leia mais sobre como o flux funciona [aqui](https://facebook.github.io/flux/docs/in-depth-overview.html). Em resumo, o padrão de flux tem as seguintes características:
 
-- **Unidirectional data flow** - Makes the app more predictable as updates can be tracked easily.
-- **Separation of concerns** - Each part in the Flux architecture has clear responsibilities and are highly decoupled.
-- **Works well with declarative programming** - The store can send updates to the view without specifying how to transition views between states.
+- **Fluxo de dados unidirecionais** - Torna o aplicativo mais previsível, pois as atualizações podem ser rastreadas facilmente.
+- **Separação de preocupações** - Cada parte da arquitetura de fluxo tem responsabilidades claras e é altamente dissociada.
+- **Funciona bem com programação declarativa** - A loja pode enviar atualizações para a visualização sem especificar como visualizações de transição entre os estados.
 
-As Flux is not a framework per se, developers have tried to come up with many implementations of the Flux pattern. Eventually, a clear winner emerged, which was [Redux](http://redux.js.org/). Redux combines the ideas from Flux, [Command pattern](https://www.wikiwand.com/en/Command_pattern) and [Elm architecture](https://guide.elm-lang.org/architecture/) and is the de facto state management library developers use with React these days. Its core concepts are:
+Como o Flux não é uma estrutura em si, os desenvolvedores tentaram criar muitas implementações do padrão de fluxo.Eventualmente, surgiu um vencedor claro, o que foi [Redux](http://redux.js.org/). Redux combina as idéias de Flux, [Padrão de comando](https://www.wikiwand.com/en/Command_pattern) e [Arquitetura de Elm](https://guide.elm-lang.org/architecture/) e é o de fato que os desenvolvedores da Biblioteca de Gerenciamento Estadual usam com o React atualmente.Seus conceitos principais são:
 
-- App **state** is described by a single plain old JavaScript object (POJO).
-- Dispatch an **action** (also a POJO) to modify the state.
-- **Reducer** is a pure function that takes in current state and action to produce a new state.
+- Aplicativa **Estado** é descrito por um único objeto JavaScript antigo e simples (POJO).
+- Despacho um **ação** (também um pojo) para modificar o estado.
+- **Redutor** é uma função pura que adota o estado atual e a ação para produzir um novo estado.
+Os conceitos parecem simples, mas são realmente poderosos, pois permitem que os aplicativos:
 
-The concepts sound simple, but they are really powerful as they enable apps to:
+- Tenha seu estado renderizado no servidor, inicializado com o cliente.
+- Alterações de rastreamento, log e backtrack em todo o aplicativo.
+- Implementar a funcionalidade Desfazer/refazer facilmente.
+O criador do Redux, [Dan Abramov](https://github.com/gaearon), teve muito cuidado ao escrever uma documentação detalhada para o Redux, além de criar tutoriais em vídeo abrangentes para aprender [básica](https://egghead.io/courses/getting-started-with-redux) e [avançada](https://egghead.io/courses/building-react-applications-with-idiomatic-redux) Restaurado.Eles são recursos extremamente úteis para aprender redux.
 
-- Have their state rendered on the server, booted up on the client.
-- Trace, log and backtrack changes in the whole app.
-- Implement undo/redo functionality easily.
+**Combinando visão e estado**
 
-The creator of Redux, [Dan Abramov](https://github.com/gaearon), has taken great care in writing up detailed documentation for Redux, along with creating comprehensive video tutorials for learning [basic](https://egghead.io/courses/getting-started-with-redux) and [advanced](https://egghead.io/courses/building-react-applications-with-idiomatic-redux) Redux. They are extremely helpful resources for learning Redux.
+Embora o Redux não precise necessariamente ser usado com o React, é altamente recomendado, pois eles jogam muito bem um com o outro.React e Redux têm muitas idéias e características em comum:
 
-**Combining View and State**
+- **Paradigma de composição funcional** - O REACT compõe visualizações (funções puras) enquanto o Redux compõe redutores puros (também funções puras). A saída é previsível, dado o mesmo conjunto de entrada.
+- **Fácil de raciocinar sobre** - Você pode ter ouvido esse termo muitas vezes, mas o que realmente significa? Nós o interpretamos como tendo controle e entendimento sobre o nosso código - nosso código se comporta de maneiras que esperamos e, quando há problemas, podemos encontrá -los com facilidade. Através de nossa experiência, o React e o Redux sim a depuração mais simples. Como o fluxo de dados é unidirecional, rastrear o fluxo de dados (respostas ao servidor, eventos de entrada do usuário) é mais fácil e é simples determinar em qual camada o problema ocorre.
+- **Estrutura em camadas** - Cada camada na arquitetura App / Flux é uma função pura e tem responsabilidades claras. É relativamente fácil escrever testes para funções puras. Você precisa centralizar as alterações no seu aplicativo dentro do redutor e a única maneira de desencadear uma alteração é despachar uma ação.
+- **Experiência de desenvolvimento** - Muito esforço foi feito para criar ferramentas para ajudar na depuração e inspeção do aplicativo durante o desenvolvimento, como [Redux DevTools](https://github.com/gaearon/redux-devtools). <br> ![Redux Devtools Demo](images/redux-devtools-demo.gif)
 
-While Redux does not necessarily have to be used with React, it is highly recommended as they play very well with each other. React and Redux have a lot of ideas and traits in common:
+Seu aplicativo provavelmente terá que lidar com chamadas assíncronas, como fazer solicitações de API remotas. [redux-thunk](https://github.com/gaearon/redux-thunk) e [redux-saga](https://github.com/redux-saga/redux-saga) foram criados para resolver esses problemas.Eles podem levar algum tempo para entender, pois exigem compreensão da programação e geradores funcionais.Nosso conselho é lidar com isso apenas quando você precisar.
 
-- **Functional composition paradigm** - React composes views (pure functions) while Redux composes pure reducers (also pure functions). Output is predictable given the same set of input.
-- **Easy To Reason About** - You may have heard this term many times but what does it actually mean? We interpret it as having control and understanding over our code - Our code behaves in ways we expect it to, and when there are problems, we can find them easily. Through our experience, React and Redux makes debugging simpler. As the data flow is unidirectional, tracing the flow of data (server responses, user input events) is easier and it is straightforward to determine which layer the problem occurs in.
-- **Layered Structure** - Each layer in the app / Flux architecture is a pure function, and has clear responsibilities. It is relatively easy to write tests for pure functions. You have to centralize changes to your app within the reducer, and the only way to trigger a change is to dispatch an action.
-- **Development Experience** - A lot of effort has gone into creating tools to help in debugging and inspecting the app while development, such as [Redux DevTools](https://github.com/gaearon/redux-devtools). <br> ![Redux Devtools Demo](images/redux-devtools-demo.gif)
+[react-redux](https://github.com/reactjs/react-redux) é uma ligação oficial do React para Redux e é muito simples de aprender.
 
-Your app will likely have to deal with async calls like making remote API requests. [redux-thunk](https://github.com/gaearon/redux-thunk) and [redux-saga](https://github.com/redux-saga/redux-saga) were created to solve those problems. They may take some time to understand as they require understanding of functional programming and generators. Our advice is to deal with it only when you need it.
+**Duração estimada: 4 dias.** Os cursos de Egghead podem ser um pouco demorados, mas valem a pena passar tempo.Depois de aprender o Redux, você pode tentar incorporá -lo aos projetos do React que você criou.O Redux resolve alguns dos problemas de gerenciamento do estado com os quais você estava lutando no Pure React?
 
-[react-redux](https://github.com/reactjs/react-redux) is an official React binding for Redux and is very simple to learn.
+#### Links de estudo
 
-**Estimated Duration: 4 days.** The egghead courses can be a little time-consuming but they are worth spending time on. After learning Redux, you can try incorporating it into the React projects you have built. Does Redux solve some of the state management issues you were struggling with in pure React?
+- [Flux Pagina inicial](http://facebook.github.io/flux)
+- [Redux Pagina inicial](http://redux.js.org/)
+- [Curso egghead - Começando com Redux](https://egghead.io/courses/getting-started-with-redux)
+- [Curso egghead - Construa aplicativos React com redux idiomático](https://egghead.io/courses/building-react-applications-with-idiomatic-redux)
+- [Reaja links redux](https://github.com/markerikson/react-redux-links)
+- [Você pode não precisar de redux](https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367)
 
-#### Study Links
-
-- [Flux Homepage](http://facebook.github.io/flux)
-- [Redux Homepage](http://redux.js.org/)
-- [Egghead Course - Getting Started with Redux](https://egghead.io/courses/getting-started-with-redux)
-- [Egghead Course - Build React Apps with Idiomatic Redux](https://egghead.io/courses/building-react-applications-with-idiomatic-redux)
-- [React Redux Links](https://github.com/markerikson/react-redux-links)
-- [You Might Not Need Redux](https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367)
-
-#### Alternatives
+#### Alternativas
 
 - [MobX](https://github.com/mobxjs/mobx)
 
-## Coding with Style - CSS Modules
+## Codificação com estilo - módulos CSS
 
 <img alt="CSS Modules Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/css-modules-logo.svg" width="256px" />
 
-CSS (Cascading Style Sheets) are rules to describe how your HTML elements look. Writing good CSS is hard. It usually takes many years of experience and frustration of shooting yourself in the foot before one is able to write maintainable and scalable CSS. CSS, having a global namespace, is fundamentally designed for web documents, and not really for web apps that favor a components architecture. Hence, experienced front end developers have designed methodologies to guide people on how to write organized CSS for complex projects, such as using [SMACSS](https://smacss.com/), [BEM](http://getbem.com/), [SUIT CSS](http://suitcss.github.io/), etc.
+CSS (folhas de estilo em cascata) são regras para descrever como seus elementos HTML parecem.Escrever um bom CSS é difícil.Geralmente, é preciso muitos anos de experiência e frustração de se atirar no pé antes que alguém seja capaz de escrever CSS sustentável e escalável.O CSS, com um espaço de nome global, é fundamentalmente projetado para documentos da Web, e não para aplicativos da Web que favorecem uma arquitetura de componentes.Portanto, desenvolvedores de front -end experientes projetaram metodologias para orientar as pessoas sobre como escrever CSs organizados para projetos complexos, como o uso [SMACSS](https://smacss.com/), [BEM](http://getbem.com/), [SUIT CSS](http://suitcss.github.io/), etc.
 
-However, the encapsulation of styles that these methodologies bring about are artificially enforced by conventions and guidelines. They break the moment developers do not follow them.
+No entanto, o encapsulamento de estilos que essas metodologias provocam são artificialmente aplicados por convenções e diretrizes.Eles quebram o momento em que os desenvolvedores não os seguem.
 
-As you might have realized by now, the front end ecosystem is saturated with tools, and unsurprisingly, tools have been invented to [partially solve some of the problems](https://speakerdeck.com/vjeux/react-css-in-js) with writing CSS at scale. "At scale" means that many developers are working on the same large project and touching the same stylesheets. There is no community-agreed approach on writing [CSS in JS](https://github.com/MicheleBertoli/css-in-js) at the moment, and we are hoping that one day a winner would emerge, just like Redux did, among all the Flux implementations. For now, we are banking on [CSS Modules](https://github.com/css-modules/css-modules). CSS modules is an improvement over existing CSS that aims to fix the problem of global namespace in CSS; it enables you to write styles that are local by default and encapsulated to your component. This feature is achieved via tooling. With CSS modules, large teams can write modular and reusable CSS without fear of conflict or overriding other parts of the app. However, at the end of the day, CSS modules are still being compiled into normal globally-namespaced CSS that browsers recognize, and it is still important to learn and understand how raw CSS works.
+Como você já deve ter percebido, o ecossistema de front -end está saturado com ferramentas e, sem surpresa, as ferramentas foram inventadas para [Resolva parcialmente alguns dos problemas](https://speakerdeck.com/vjeux/react-css-in-js) com a escrita de CSS em escala."Em escala" significa que muitos desenvolvedores estão trabalhando no mesmo projeto grande e tocando nas mesmas folhas de estilo.Não há abordagem de acordos comunitários para escrever [CSS no JS](https://github.com/MicheleBertoli/css-in-js) No momento, e esperamos que um dia um vencedor surja, assim como o Redux, entre todas as implementações de fluxo.Por enquanto, estamos apostando [Módulos CSS](https://github.com/css-modules/css-modules). Os módulos CSS são uma melhoria em relação ao CSS existente que visa corrigir o problema do espaço para nome global no CSS;Ele permite que você escreva estilos locais por padrão e encapsulados ao seu componente.Esse recurso é alcançado por meio de ferramentas.Com os módulos CSS, equipes grandes podem escrever CSs modulares e reutilizáveis sem medo de conflito ou substituir outras partes do aplicativo.No entanto, no final do dia, os módulos CSS ainda estão sendo compilados em CSS normais de names globalmente que os navegadores reconhecem, e ainda é importante aprender e entender como o CSS bruto funciona.
 
-If you are a total beginner to CSS, Codecademy's [HTML & CSS course](https://www.codecademy.com/learn/learn-html-css) will be a good introduction to you. Next, read up on the [Sass preprocessor](http://sass-lang.com/), an extension of the CSS language which adds syntactic improvements and encourages style reusability. Study the CSS methodologies mentioned above, and lastly, CSS modules.
+Se você é um iniciante total do CSS, codecademy's [Curso HTML & CSS](https://www.codecademy.com/learn/learn-html-css) Será uma boa introdução a você.Em seguida, leia no [Pré -processador SASS](http://sass-lang.com/), Uma extensão da linguagem CSS que adiciona melhorias sintáticas e incentiva a reutilização de estilo.Estude as metodologias CSS mencionadas acima e, finalmente, os módulos CSS.
 
-**Estimated Duration: 3-4 days.** Try styling up your app using the SMACSS/BEM approach and/or CSS modules.
+**Duração estimada: 3-4 dias.** Experimente o seu aplicativo usando a abordagem SMACSS/BEM e/ou módulos CSS.
 
-#### Study Links
+#### Links de estudo
 
-- [Learn HTML & CSS course on Codecademy](https://www.codecademy.com/learn/learn-html-css)
-- [Intro to HTML/CSS on Khan Academy](https://www.khanacademy.org/computing/computer-programming/html-css)
+- [Aprenda o curso HTML & CSS no Codecademy](https://www.codecademy.com/learn/learn-html-css)
+- [Introdução ao HTML/CSS na Khan Academy](https://www.khanacademy.org/computing/computer-programming/html-css)
 - [SMACSS](https://smacss.com/)
 - [BEM](http://getbem.com/introduction/)
 - [SUIT CSS](http://suitcss.github.io/)
-- [CSS Modules Specification](https://github.com/css-modules/css-modules)
-- [Sass Homepage](http://sass-lang.com/)
-- [Answers to Front End Job Interview Questions — HTML](https://github.com/yangshun/tech-interview-handbook/blob/master/front-end/interview-questions.md#html-questions)
-- [Answers to Front End Job Interview Questions — CSS](https://github.com/yangshun/tech-interview-handbook/blob/master/front-end/interview-questions.md#css-questions)
+- [Especificação de módulos CSS](https://github.com/css-modules/css-modules)
+- [Página inicial sass](http://sass-lang.com/)
+- [Respostas às perguntas da entrevista de emprego no front -end - HTML](https://github.com/yangshun/tech-interview-handbook/blob/master/front-end/interview-questions.md#html-questions)
+- [Respostas às perguntas da entrevista de emprego no front -end - CSS](https://github.com/yangshun/tech-interview-handbook/blob/master/front-end/interview-questions.md#css-questions)
 
-#### Alternatives
+#### Alternativas
 
 - [JSS](https://github.com/cssinjs/jss)
-- [Styled Components](https://github.com/styled-components/styled-components)
+- [Componentes com estilo](https://github.com/styled-components/styled-components)
 
-## Maintainability
+## Manutenção
 
-Code is read more frequently than it is written. This is especially true at Grab, where the team size is large and we have multiple engineers working across multiple projects. We highly value readability, maintainability and stability of the code and there are a few ways to achieve that: "Extensive testing", "Consistent coding style" and "Typechecking". Also when you are in a team, sharing same practices becomes really important. Check out these [JavaScript Project Guidelines](https://github.com/wearehive/project-guidelines) for instance.
+O código é lido com mais frequência do que está escrito.Isso é especialmente verdadeiro no Grab, onde o tamanho da equipe é grande e temos vários engenheiros trabalhando em vários projetos.Valorizamos muito a legibilidade, a manutenção e a estabilidade do código e existem algumas maneiras de conseguir isso: "testes extensos", "estilo de codificação consistente" e "TypeCecking".Além disso, quando você está em uma equipe, compartilhar as mesmas práticas se torna realmente importante.Confira isso [Diretrizes do projeto JavaScript](https://github.com/wearehive/project-guidelines) por exemplo.
 
-## Testing - Jest + Enzyme
+## Testando - Jest + Enzyme
 
 <img alt="Jest Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/jest-logo.svg" width="164px" />
 
-[Jest](http://facebook.github.io/jest/) is a testing library by Facebook that aims to make the process of testing pain-free. As with Facebook projects, it provides a great development experience out of the box. Tests can be run in parallel resulting in shorter duration. During watch mode, by default, only the tests for the changed files are run. One particular feature we like is "Snapshot Testing". Jest can save the generated output of your React component and Redux state and save it as serialized files, so you wouldn't have to manually come up with the expected output yourself. Jest also comes with built-in mocking, assertion and test coverage. One library to rule them all!
+[Jest](http://facebook.github.io/jest/) é uma biblioteca de testes do Facebook que visa tornar o processo de teste sem dor.Como nos projetos do Facebook, ele oferece uma ótima experiência de desenvolvimento pronta para uso.Os testes podem ser executados em paralelo, resultando em menor duração.Durante o modo de relógio, por padrão, apenas os testes para os arquivos alterados são executados.Um recurso específico que gostamos é "Teste de instantâneo".O JEST pode salvar a saída gerada do seu componente React e Redux State e salvá -lo como arquivos serializados, para que você não precise criar manualmente a saída esperada.O JEST também vem com mancais embutidos, afirmação e cobertura de teste.Uma biblioteca para governar todos eles!
 
 ![Jest Demo](images/jest-demo.gif)
 
-React comes with some testing utilities, but [Enzyme](http://airbnb.io/enzyme/) by Airbnb makes it easier to generate, assert, manipulate and traverse your React components' output with a jQuery-like API. It is recommended that Enzyme be used to test React components.
+O React vem com alguns utilitários de teste, mas [Enzyme](http://airbnb.io/enzyme/) O Airbnb facilita a geração, a reivindicação, a manipulação e a interrupção da saída dos componentes do seu React com uma API do tipo jQuery.Recomenda -se que a enzima seja usada para testar os componentes do React.
 
-Jest and Enzyme makes writing front end tests fun and easy. When writing tests becomes enjoyable, developers write more tests. It also helps that React components and Redux actions/reducers are relatively easy to test because of clearly defined responsibilities and interfaces. For React components, we can test that given some `props`, the desired DOM is rendered, and that callbacks are fired upon certain simulated user interactions. For Redux reducers, we can test that given a prior state and an action, a resulting state is produced.
+Jest e Enzyme tornam os testes de front -end da escrita divertidos e fáceis.Ao escrever testes, os desenvolvedores escrevem mais testes.Também ajuda a reagir componentes e ações/redutores reduxantes são relativamente fáceis de testar devido a responsabilidades e interfaces claramente definidas.Para os componentes do React, podemos testar isso com alguns `props`,O DOM desejado é renderizado e que os retornos de chamada são disparados sobre certas interações simuladas do usuário.Para redutores Redux, podemos testar que, dado um estado anterior e uma ação, um estado resultante é produzido.
 
-The documentation for Jest and Enzyme are pretty concise, and it should be sufficient to learn them by reading it.
+A documentação para Jest e Enzyme é bastante concisa e deve ser suficiente aprendê -los lendo -a.
 
-**Estimated Duration: 2-3 days.** Try writing Jest + Enzyme tests for your React + Redux app!
+**Duração estimada: 2-3 dias.** Tente escrever testes de jest + enzimas para o seu aplicativo REACT + Redux!
 
-#### Study Links
+#### Links de estudo
 
-- [Jest Homepage](http://facebook.github.io/jest/)
-- [Testing React Applications with Jest](https://auth0.com/blog/testing-react-applications-with-jest/)
-- [Enzyme Homepage](http://airbnb.io/enzyme/)
-- [Enzyme: JavaScript Testing utilities for React](https://medium.com/airbnb-engineering/enzyme-javascript-testing-utilities-for-react-a417e5e5090f)
+- [Jest Pagina inicial](http://facebook.github.io/jest/)
+- [Testando aplicativos de reação com JEST](https://auth0.com/blog/testing-react-applications-with-jest/)
+- [Enzyme Pagina inicial](http://airbnb.io/enzyme/)
+- [Enzyme: Utilitários de teste de javascript para reagir](https://medium.com/airbnb-engineering/enzyme-javascript-testing-utilities-for-react-a417e5e5090f)
 
-#### Alternatives
+#### Alternativas
 
 - [AVA](https://github.com/avajs/ava)
 - [Karma](https://karma-runner.github.io/)
 
-## Linting JavaScript - ESLint
+## JavaScript - Eslint
 
 <img alt="ESLint Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/eslint-logo.svg" width="256px" />
 
-A linter is a tool to statically analyze code and finds problems with them, potentially preventing bugs/runtime errors and at the same time, enforcing a coding style. Time is saved during pull request reviews when reviewers do not have to leave nitpicky comments on coding style. [ESLint](http://eslint.org/) is a tool for linting JavaScript code that is highly extensible and customizable. Teams can write their own lint rules to enforce their custom styles. At Grab, we use Airbnb's [`eslint-config-airbnb`](https://www.npmjs.com/package/eslint-config-airbnb) preset, that has already been configured with the common good coding style in the [Airbnb JavaScript style guide](https://github.com/airbnb/javascript).
+Um Linter é uma ferramenta para analisar estaticamente o código e encontra problemas com eles, potencialmente impedindo erros de bugs/tempo de execução e, ao mesmo tempo, aplicando um estilo de codificação.O tempo é salvo durante as críticas de solicitação de tração quando os revisores não precisam deixar comentários nitpicky sobre o estilo de codificação. [ESLint](http://eslint.org/) é uma ferramenta para revestir o código JavaScript que é altamente extensível e personalizável.As equipes podem escrever suas próprias regras de lint para fazer cumprir seus estilos personalizados. No Grab, usamos o Airbnb's [`eslint-config-airbnb`](https://www.npmjs.com/package/eslint-config-airbnb) predefinido, que já foi configurado com o estilo de codificação comum de bom [Guia de estilo JavaScript do Airbnb](https://github.com/airbnb/javascript).
 
-For the most part, using ESLint is as simple as tweaking a configuration file in your project folder. There's nothing much to learn about ESLint if you're not writing new rules for it. Just be aware of the errors when they surface and Google it to find out the recommended style.
+Na maioria das vezes, o uso de ESLint é tão simples quanto ajustar um arquivo de configuração na pasta do projeto.Não há muito o que aprender sobre Eslint se você não estiver escrevendo novas regras para isso.Esteja ciente dos erros quando eles aparecem e pesquisam no Google para descobrir o estilo recomendado.
 
-**Estimated Duration: 1/2 day.** Nothing much to learn here. Add ESLint to your project and fix the linting errors!
+**Duração estimada: 1/2 dia.** Nada muito para aprender aqui.Adicione Eslint ao seu projeto e corrija os erros de linha!
 
-#### Study Links
+#### Links de estudo
 
-- [ESLint Homepage](http://eslint.org/)
-- [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
+- [ESLint Pagina inicial](http://eslint.org/)
+- [Guia de estilo JavaScript do Airbnb](https://github.com/airbnb/javascript)
 
-#### Alternatives
+#### Alternativas
 
-- [Standard](https://github.com/standard/standard)
+- [Padrão](https://github.com/standard/standard)
 - [JSHint](http://jshint.com/)
 - [XO](https://github.com/xojs/xo)
 
-## Linting CSS - stylelint
+## CSS de linha - Stylelint
 
 <img alt="stylelint Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/stylelint-logo.svg" width="256px" />
 
-As mentioned earlier, good CSS is notoriously hard to write. Usage of static analysis tools on CSS can help to maintain our CSS code quality and coding style. For linting CSS, we use stylelint. Like ESLint, stylelint is designed in a very modular fashion, allowing developers to turn rules on/off and write custom plugins for it. Besides CSS, stylelint is able to parse SCSS and has experimental support for Less, which lowers the barrier for most existing code bases to adopt it.
+Como mencionado anteriormente, o Good CSS é notoriamente difícil de escrever.O uso de ferramentas de análise estática no CSS pode ajudar a manter nossa qualidade de código CSS e estilo de codificação.Para o LING CSS, usamos o Stylelint.Como o Eslint, o Stylelint foi projetado de maneira muito modular, permitindo que os desenvolvedores ativem as regras e escreva plugins personalizados.Além do CSS, o Stylelint é capaz de analisar o SCSS e possui suporte experimental para menos, o que reduz a barreira para a maioria das bases de código existentes adotá -lo.
 
 ![stylelint Demo](images/stylelint-demo.png)
 
-Once you have learnt ESLint, learning stylelint would be effortless considering their similarities. stylelint is currently being used by big companies like [Facebook](https://code.facebook.com/posts/879890885467584/improving-css-quality-at-facebook-and-beyond/), [Github](https://github.com/primer/stylelint-config-primer) and [Wordpress](https://github.com/WordPress-Coding-Standards/stylelint-config-wordpress).
+Depois de aprender Eslint, o aprendizado de Stylelint seria fácil, considerando suas semelhanças.Stylelint está atualmente sendo usado por grandes empresas como [Facebook](https://code.facebook.com/posts/879890885467584/improving-css-quality-at-facebook-and-beyond/), [Github](https://github.com/primer/stylelint-config-primer) e [Wordpress](https://github.com/WordPress-Coding-Standards/stylelint-config-wordpress).
 
-One downside of stylelint is that the autofix feature is not fully mature yet, and is only able to fix for a limited number of rules. However, this issue should improve with time.
+Uma desvantagem do Stylelint é que o recurso Autofix ainda não está totalmente maduro e só pode corrigir um número limitado de regras.No entanto, esse problema deve melhorar com o tempo.
 
-**Estimated Duration: 1/2 day.** Nothing much to learn here. Add stylelint to your project and fix the linting errors!
+**Duração estimada: 1/2 dia.** Nada muito para aprender aqui.Adicione o Stylelint ao seu projeto e corrija os erros de linha!
 
-#### Study Links
+#### Links de estudo
 
-- [stylelint Homepage](https://stylelint.io/)
-- [Lint your CSS with stylelint](https://css-tricks.com/stylelint/)
+- [stylelint Pagina inicial](https://stylelint.io/)
+- [Lint seu CSS com Stylelint](https://css-tricks.com/stylelint/)
 
-#### Alternatives
+#### Alternativas
 
 - [Sass Lint](https://github.com/sasstools/sass-lint)
 - [CSS Lint](http://csslint.net/)
 
-## Formatting Code - Prettier
+## Código de formatação - mais bonito
 
 <img alt="Prettier Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/prettier-logo.png" width="256px" />
 
-Another tool for enforcing consistent coding style for JavaScript and CSS is [Prettier](https://github.com/prettier/prettier).
+Outra ferramenta para impor estilo de codificação consistente para JavaScript e CSS é [Prettier](https://github.com/prettier/prettier).
 
-In most cases, it is recommended to setup Prettier on top of ESLint and stylelint and integrate it into the workflow. This allows the code to be formatted into consistent style automatically via commit hooks, so that developers do not need to spend time formatting the coding style manually.
+Na maioria dos casos, é recomendável configurar Prettier no topo de ESLint e Stylelint, integrem -o ao fluxo de trabalho.Isso permite que o código seja formatado em estilo consistente automaticamente por meio de ganchos de comprometimento, para que os desenvolvedores não precisem gastar tempo formatando o estilo de codificação manualmente.
 
-Note that Prettier only enforces coding style, but does not check for logic errors in the code. Hence it is not a replacement for linters.
+Observe que o Prettier aplica apenas o estilo de codificação, mas não verifica erros lógicos no código.Portanto, não é um substituto para os liners.
 
-**Estimated Duration: 1/2 day.** Nothing much to learn here. Add Prettier to your project and add hooks to enforce the coding style!
+**Duração estimada: 1/2 dia.** Nada muito para aprender aqui. Adicione Prettier ao seu projeto e adicione ganchos para aplicar o estilo de codificação!
 
-#### Study Links
+#### Links de estudo
 
-- [Prettier Homepage](https://prettier.io/)
-- [Prettier GitHub repo](https://github.com/prettier/prettier)
-- [Comparison between tools that allow you to use ESLint and Prettier together](https://gist.github.com/yangshun/318102f525ec68033bf37ac4a010eb0c)
+- [Prettier Pagina inicial](https://prettier.io/)
+- [Prettier GitHub repositório](https://github.com/prettier/prettier)
+- [Comparação entre ferramentas que permitem usar ESLint e Prettier juntas](https://gist.github.com/yangshun/318102f525ec68033bf37ac4a010eb0c)
 
-## Types - Flow
+## Tipos - Flow
 
 <img alt="Flow Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/flow-logo.png" width="256px" />
 
-Static typing brings about many benefits when writing apps. They can catch common bugs and errors in your code early. Types also serve as a form of documentation for your code and improves the readability of your code. As a code base grows larger, we see the importance of types as they gives us greater confidence when we do refactoring. It is also easier to onboard new members of the team to the project when it is clear what kind of values each object holds and what each function expects.
+A digitação estática traz muitos benefícios ao escrever aplicativos.Eles podem capturar bugs e erros comuns em seu código mais cedo.Os tipos também servem como uma forma de documentação para o seu código e melhora a legibilidade do seu código.À medida que uma base de código aumenta, vemos a importância dos tipos, pois eles nos dão maior confiança quando refatoramos.Também é mais fácil a bordo de novos membros da equipe para o projeto quando fica claro que tipo de valores cada objeto mantém e o que cada função espera.
 
-Adding types to your code comes with the trade-off of increased verbosity and a learning curve of the syntax. But this learning cost is paid upfront and amortized over time. In complex projects where the maintainability of the code matters and the people working on it change over time, adding types to the code brings about more benefits than disadvantages.
+A adição de tipos ao seu código vem com a troca de aumento da verbosidade e uma curva de aprendizado da sintaxe.Mas esse custo de aprendizado é pago antecipadamente e amortizado ao longo do tempo.Em projetos complexos em que a manutenção dos assuntos do código e das pessoas que trabalham nele mudam com o tempo, a adição de tipos ao código traz mais benefícios do que as desvantagens.
 
-Recently, I had to fix a bug in a code base that I haven’t touched in months. It was thanks to types that I could easily refresh myself on what the code was doing, and gave me confidence in the fix I made.
+Recentemente, tive que consertar um bug em uma base de código que não toquei há meses.Foi graças aos tipos que eu poderia me refrescar facilmente sobre o que o código estava fazendo e me deu confiança na correção que fiz.
 
-The two biggest contenders in adding static types to JavaScript are [Flow](https://flow.org/) (by Facebook) and [TypeScript](https://www.typescriptlang.org/) (by Microsoft). As of date, there is no clear winner in the battle. For now, we have made the choice of using Flow. We find that Flow has a lower learning curve as compared to TypeScript and it requires relatively less effort to migrate an existing code base to Flow. Being built by Facebook, Flow has better integration with the React ecosystem out of the box. [James Kyle](https://twitter.com/thejameskyle), one of the authors of Flow, has [written](http://thejameskyle.com/adopting-flow-and-typescript.html) on a comparison between adopting Flow and TypeScript.
+Os dois maiores candidatos ao adicionar tipos estáticos ao JavaScript são [Flow](https://flow.org/) (por Facebook) and [TypeScript](https://www.typescriptlang.org/) (por Microsoft). A partir de agora, não há vencedor claro na batalha.Por enquanto, fizemos a opção de usar Flow. Nós encontramos isso Flow tem uma curva de aprendizado mais baixa em comparação com o datilografado e requer relativamente menos esforço para migrar uma base de código existente para Flow. Sendo construído pelo Facebook,Flow tem melhor integração com o ecossistema React. [James Kyle](https://twitter.com/thejameskyle), um dos autores deFlow, tem [escrita](http://thejameskyle.com/adopting-flow-and-typescript.html) em uma comparação entre adotar Flow e TypeScript.
 
-Anyway, it is not extremely difficult to move from Flow to TypeScript as the syntax and semantics are quite similar, and we will re-evaluate the situation in time to come. After all, using one is better than not using any at all.
+Enfim, não é extremamente difícil passar de Flow O TypeScript como sintaxe e semântica são bastante semelhantes, e reavaliaremos a situação a tempo que está por vir.Afinal, usar um é melhor do que não usar nenhum.
 
-Flow recently revamped their homepage and it's pretty neat now!
+O Flow recentemente renovou sua página inicial e está muito legal agora!
 
-**Estimated Duration: 1 day.** Flow is pretty simple to learn as the type annotations feel like a natural extension of the JavaScript language. Add Flow annotations to your project and embrace the power of type systems.
+**Duração estimada: 1 dia.** O Flow é bastante simples de aprender, pois as anotações de tipo parecem uma extensão natural da linguagem JavaScript.Adicione as anotações de fluxo ao seu projeto e adote o poder dos sistemas de tipo.
 
-#### Study Links
+#### Links de estudo
 
-- [Flow Homepage](https://flow.org/)
+- [Flow Pagina inicial](https://flow.org/)
 - [TypeScript vs Flow](https://github.com/niieani/typescript-vs-flowtype)
 
-#### Alternatives
+#### Alternativas
 
 - [TypeScript](https://www.typescriptlang.org/)
 
-## Build System - webpack
+## Sistema de construção - webpack
 
 <img alt="webpack Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/webpack-logo.svg" width="256px" />
 
-This part will be kept short as setting up webpack can be a tedious process and might be a turn-off to developers who are already overwhelmed by the barrage of new things they have to learn for front end development. In a nutshell, [webpack](https://webpack.js.org/) is a module bundler that compiles a front end project and its dependencies into a final bundle to be served to users. Usually, projects will already have the webpack configuration set up and developers rarely have to change it. Having an understanding of webpack is still a good to have in the long run. It is due to webpack that features like hot reloading and CSS modules are made possible.
+Essa parte será mantida curta, pois a configuração do WebPack pode ser um processo tedioso e pode ser um desvio para os desenvolvedores que já estão impressionados com a enxurrada de coisas novas que eles têm para aprender para o desenvolvimento do front end.Em poucas palavras, [webpack](https://webpack.js.org/) é um pacote de módulo que compila um projeto de front -end e suas dependências em um pacote final a ser servido aos usuários.Geralmente, os projetos já têm a configuração do WebPack e os desenvolvedores raramente precisam alterá -la.Ter um entendimento do Webpack ainda é bom ter a longo prazo.É devido aos webpack que recursos como recarregamento a quente e módulos CSS são possíveis.
 
-We have found the [webpack walkthrough](https://survivejs.com/webpack/foreword/) by SurviveJS to be the best resource on learning webpack. It is a good complement to the official documentation and we recommend following the walkthrough first and referring to the documentation later when the need for further customization arises.
+Nós encontramos o [webpack walkthrough](https://survivejs.com/webpack/foreword/) por surviveJs ser o melhor recurso para aprender webpack. É um bom complemento para a documentação oficial e recomendamos seguir o passo a passo primeiro e se referir à documentação posteriormente, quando surgir a necessidade de maior personalização.
 
-**Estimated Duration: 2 days (Optional).**
+**Duração estimada: 2 dias (Opcional).**
 
-#### Study Links
+#### Links de estudo
 
-- [webpack Homepage](https://webpack.js.org/)
-- [SurviveJS - Webpack: From apprentice to master](https://survivejs.com/webpack/foreword/)
+- [webpack Pagina inicial](https://webpack.js.org/)
+- [SurviveJS - Webpack: Do aprendiz ao mestre](https://survivejs.com/webpack/foreword/)
 
-#### Alternatives
+#### Alternativas
 
 - [Rollup](https://rollupjs.org/)
 - [Browserify](http://browserify.org/)
 - [Parcel](https://parceljs.org/)
 
-## Package Management - Yarn
+## Gerenciamento de pacotes - Yarn
 
 <img alt="Yarn Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/yarn-logo.png" width="256px" />
 
-If you take a peek into your `node_modules` directory, you will be appalled by the number of directories that are contained in it. Each babel plugin, lodash function, is a package on its own. When you have multiple projects, these packages are duplicated across each project and they are largely similar. Each time you run `npm install` in a new project, these packages are downloaded over and over again even though they already exist in some other project in your computer.
+Se você dar uma olhada em seu `node_modules` Diretório, você ficará chocado com o número de diretórios que estão contidos nele.Cada plug -in Babel, função do Lodash, é um pacote por conta própria.Quando você tem vários projetos, esses pacotes são duplicados em cada projeto e são amplamente semelhantes.Cada vez que você executa `npm install` em um novo projeto, esses pacotes são baixados repetidamente, mesmo que já existam em algum outro projeto no seu computador.
 
-There was also the problem of non-determinism in the installed packages via `npm install`. Some of our CI builds fail because at the point of time when the CI server installs the dependencies, it pulled in minor updates to some packages that contained breaking changes. This would not have happened if library authors respected [semver](http://semver.org/) and engineers did not assume that API contracts would be respected all the time.
+Havia também o problema do não determinismo nos pacotes instalados via `npm install`. Algumas de nossas compilações de IC falham porque, no momento em que o servidor CI instala as dependências, ele puxou atualizações menores para alguns pacotes que continham mudanças de ruptura.Isso não teria acontecido se os autores da biblioteca respeitassem [semver](http://semver.org/) E os engenheiros não assumiram que os contratos da API seriam respeitados o tempo todo.
 
-[Yarn](https://yarnpkg.com/) solves these problems. The issue of non-determinism of installed packages is handled via a `yarn.lock` file, which ensures that every install results in the exact same file structure in `node_modules` across all machines. Yarn utilizes a global cache directory within your machine, and packages that have been downloaded before do not have to be downloaded again. This also enables offline installation of dependencies!
+[Yarn](https://yarnpkg.com/) resolve esses problemas.A questão do não determinismo dos pacotes instalados é tratada por meio de um`yarn.lock` arquivo, que garante que cada instalação resulte na mesma estrutura de arquivo em `node_modules` em todas as máquinas.O YARN utiliza um diretório de cache global em sua máquina e pacotes que foram baixados antes não precisam ser baixados novamente.Isso também permite a instalação offline de dependências!
 
-The most common Yarn commands can be found [here](https://yarnpkg.com/en/docs/usage). Most other yarn commands are similar to the `npm` equivalents and it is fine to use the `npm` versions instead. One of our favorite commands is `yarn upgrade-interactive` which makes updating dependencies a breeze especially when the modern JavaScript project requires so many dependencies these days. Do check it out!
+Os comandos de fios mais comuns podem ser encontrados [aqui](https://yarnpkg.com/en/docs/usage). A maioria dos outros comandos de fios são semelhantes aos `npm` equivalentes e é bom usar o `npm` versões em vez disso.Um dos nossos comandos favoritos é `yarn upgrade-interactive` O que torna a atualização de dependências é uma brisa, especialmente quando o moderno projeto JavaScript requer tantas dependências atualmente.Confira!
 
-npm@5.0.0 was [released in May 2017](https://github.com/npm/npm/releases/tag/v5.0.0) and it seems to address many of the issues that Yarn aims to solve. Do keep an eye on it!
+npm@5.0.0 was [Lançado em maio de 2017](https://github.com/npm/npm/releases/tag/v5.0.0) E parece abordar muitos dos problemas que o YARN pretende resolver.Fique de olho nisso!
 
-**Estimated Duration: 2 hours.**
+**Duração estimada: 2 horas.**
 
-#### Study Links
+#### Links de estudo
 
-- [Yarn Homepage](https://yarnpkg.com/)
-- [Yarn: A new package manager for JavaScript](https://code.facebook.com/posts/1840075619545360)
+- [Yarn Pagina inicial](https://yarnpkg.com/)
+- [Yarn: Um novo gerente de pacotes para JavaScript](https://code.facebook.com/posts/1840075619545360)
 
-#### Alternatives
+#### Alternativas
 
-- [Good old npm](https://github.com/npm/npm/releases/tag/v5.0.0)
+- [Bom e velho NPM](https://github.com/npm/npm/releases/tag/v5.0.0)
 
-## Continuous Integration
+## Integração contínua
 
-We used [Travis CI](https://travis-ci.com/) for our continuous integration (CI) pipeline. Travis is a highly popular CI on Github and its [build matrix](https://docs.travis-ci.com/user/customizing-the-build#Build-Matrix) feature is useful for repositories which contain multiple projects like Grab's. We configured Travis to do the following:
+Nós costumavamos [Travis CI](https://travis-ci.com/) para nosso pipeline de integração contínua (IC).Travis é um IC altamente popular no Github e seu [construir matriz](https://docs.travis-ci.com/user/customizing-the-build#Build-Matrix) o recurso é útil para repositórios que contêm vários projetos como o Grab's.Configuramos Travis para fazer o seguinte:
 
-- Run linting for the project.
-- Run unit tests for the project.
-- If the tests pass:
-  - Test coverage generated by Jest is uploaded to [Codecov](https://codecov.io/).
-  - Generate a production bundle with webpack into a `build` directory.
-  - `tar` the `build` directory as `<hash>.tar` and upload it to an S3 bucket which stores all our tar builds.
-- Post a notification to Slack to inform about the Travis build result.
+- Execute o linha para o projeto.
+- Execute testes de unidade para o projeto.
+- Se os testes passarem:
+  - A cobertura de teste gerada pelo JEST é carregada para [Codecov](https://codecov.io/).
+  - Gere um pacote de produção com webpack em um `build` diretório.
+  - `tar` a `build` diretório como `<hash>.tar` e envie -o para um balde S3 que armazena todas as nossas construções de alcatrão.
+- Publique uma notificação para relaxar para informar sobre o resultado da construção do Travis.
 
-#### Study Links
+#### Links de estudo
 
-- [Travis Homepage](https://travis-ci.com/)
-- [Codecov Homepage](https://codecov.io/)
+- [Travis Pagina inicial](https://travis-ci.com/)
+- [Codecov Pagina inicial](https://codecov.io/)
 
-#### Alternatives
+#### Alternativas
 
 - [Jenkins](https://jenkins.io/)
 - [CircleCI](https://circleci.com/)
 - [GitLab CI/CD](https://about.gitlab.com/product/continuous-integration/)
 
-## Hosting and CDN
+## Hospedagem e cdn
 
-Traditionally, web servers that receive a request for a webpage will render the contents on the server, and return a HTML page with dynamic content meant for the requester. This is known as server-side rendering. As mentioned earlier in the section on Single-page Apps, modern web applications do not involve server-side rendering, and it is sufficient to use a web server that serves static asset files. Nginx and Apache are possible options and not much configuration is required to get things up and runnning. The caveat is that the web server will have to be configured to route all requests to a single entry point and allow client-side routing to take over. The flow for front end routing goes like this:
+Tradicionalmente, os servidores da Web que recebem uma solicitação de uma página da Web renderizam o conteúdo do servidor e retornam uma página HTML com conteúdo dinâmico destinado ao solicitante.Isso é conhecido como renderização do lado do servidor.Conforme mencionado anteriormente na seção em aplicativos de página única, os aplicativos da Web modernos não envolvem a renderização do lado do servidor e é suficiente usar um servidor da Web que serve arquivos de ativos estáticos.Nginx e Apache são opções possíveis e não há muita configuração para levantar as coisas e executar.A ressalva é que o servidor da Web deverá ser configurado para rotear todas as solicitações para um único ponto de entrada e permitir que o roteamento do lado do cliente assuma o controle.O fluxo para o roteamento do front -end é assim:
 
-1. Web server receives a HTTP request for a particular route, for example `/user/john`.
-1. Regardless of which route the server receives, serve up `index.html` from the static assets directory.
-1. The `index.html` should contain scripts that load up a JavaScript framework/library that handles client-side routing.
-1. The client-side routing library reads the current route, and communicates to the MVC (or equivalent where relevant) framework about the current route.
-1. The MVC JavaScript framework renders the desired view based on the route, possibly after fetching data from an API if required. Example, load up `UsersController`, fetch user data for the username `john` as JSON, combine the data with the view, and render it on the page.
+1. O servidor da web recebe uma solicitação HTTP para uma rota específica, por exemplo `/user/john`.
+2. Independentemente de qual rota o servidor recebe, sirva `index.html` Do diretório de ativos estáticos.
+3. o `index.html` deve conter scripts que carregam uma estrutura/biblioteca JavaScript que lida com o roteamento do lado do cliente.
+4. A biblioteca de roteamento do lado do cliente lê a rota atual e se comunica com a estrutura do MVC (ou equivalente, quando relevante) sobre a rota atual.
+5. A estrutura MVC JavaScript renderiza a visualização desejada com base na rota, possivelmente depois de buscar dados de uma API, se necessário.Exemplo, carregue `UsersController`, buscar dados do usuário para o nome de usuário `john` Como JSON, misture os dados com a visualização e renderizá -los na página.
 
-A good practice for serving static content is to use caching and putting them on a CDN. We use [Amazon Simple Storage Service (S3)](https://aws.amazon.com/s3/) for hosting our static website content and [Amazon CloudFront](https://aws.amazon.com/cloudfront/) as the CDN. We find that it is an affordable and reliable solution that meets our needs.
+Uma boa prática para servir o conteúdo estático é usar o cache e colocá -los em uma CDN.Nós usamos [Serviço de armazenamento simples da Amazon (S3)](https://aws.amazon.com/s3/) para hospedar nosso conteúdo estático no site e [Amazon CloudFront](https://aws.amazon.com/cloudfront/) como o CDN.Descobrimos que é uma solução acessível e confiável que atende às nossas necessidades.
 
-S3 provides the option to "Use this bucket to host a website", which essentially directs the requests for all routes to the root of the bucket, which means we do not need our own web servers with special routing configurations.
+O S3 oferece a opção de "usar este balde para hospedar um site", que essencialmente direciona as solicitações de todas as rotas para a raiz do balde, o que significa que não precisamos de nossos próprios servidores da Web com configurações de roteamento especiais.
 
-An example of a web app that we host on S3 is [Hub](https://hub.grab.com/).
+Um exemplo de um aplicativo da web que hospedamos no S3 é [Hub](https://hub.grab.com/).
 
-Other than hosting the website, we also use S3 to host the build `.tar` files generated from each successful CI build.
+Além de hospedar o site, também usamos o S3 para hospedar a construção `.tar` arquivos gerados a partir de cada construção de IC de sucesso.
 
-#### Study Links
+#### Links de estudo
 
-- [Amazon S3 Homepage](https://aws.amazon.com/s3/)
-- [Hosting a Static Website on Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html)
+- [Amazon S3 Pagina inicial](https://aws.amazon.com/s3/)
+- [Hospedando um site estático na Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html)
 
 #### Alternatives
 
-- [Google Cloud Platform](https://cloud.google.com/storage/docs/hosting-static-website)
+- [Plataforma Google Cloud](https://cloud.google.com/storage/docs/hosting-static-website)
 - [Now](https://zeit.co/now)
 
-## Deployment
+## Implantação
 
-The last step in shipping the product to our users is deployment. We used [Ansible Tower](https://www.ansible.com/tower) which is a powerful automation software that enables us to deploy our builds easily.
+A última etapa no envio do produto para nossos usuários é a implantação.Nós costumavamos [Ansible Tower](https://www.ansible.com/tower) que é um poderoso software de automação que nos permite implantar nossas compilações facilmente.
 
-As mentioned earlier, all our commits, upon successful build, are being uploaded to a central S3 bucket for builds. We follow semver for our releases and have commands to automatically generate release notes for the latest release. When it is time to release, we run a command to tag the latest commit and push to our code hosting environment. Travis will run the CI steps on that tagged commit and upload a tar file (such as `1.0.1.tar`) with the version to our S3 bucket for builds.
+Como mencionado anteriormente, todos os nossos compromissos, após a construção bem -sucedida, estão sendo enviados para um balde central do S3 para construções.Seguimos o Semver para nossos lançamentos e temos comandos para gerar automaticamente notas de lançamento para a versão mais recente.Quando é hora de ser lançado, executamos um comando para marcar o comprimento mais recente e pressionar nosso ambiente de hospedagem de código.Travis executará as etapas do CI naquele compromete e carregará um arquivo alcalão (como `1.0.1.tar`) com a versão do nosso balde S3 para construções.
 
-On Tower, we simply have to specify the name of the `.tar` we want to deploy to our hosting bucket, and Tower does the following:
+Na torre, simplesmente temos que especificar o nome do `.tar` Queremos implantar para o nosso balde de hospedagem, e a Tower faz o seguinte:
 
-1. Download the desired `.tar` file from our builds S3 bucket.
-1. Extracts the contents and swap in the configuration file for specified environment.
-1. Upload the contents to the hosting bucket.
-1. Post a notification to Slack to inform about the successful deployment.
+1. Baixe o desejado `.tar` Arquivo do nosso balde S3 Builds.
+2. Extrai o conteúdo e a troca no arquivo de configuração para o ambiente especificado.
+3. Carregue o conteúdo no balde de hospedagem.
+4. Publique uma notificação para informar sobre a implantação bem-sucedida.
 
-This whole process is done under 30 seconds and using Tower has made deployments and rollbacks easy. If we realize that a faulty deployment has occurred, we can simply find the previous stable tag and deploy it.
+Todo esse processo é realizado em menos de 30 segundos e o uso da Tower facilitou as implantações e as reversões.Se percebermos que ocorreu uma implantação defeituosa, podemos simplesmente encontrar a tag estável anterior e implantá-la.
 
-#### Study Links
+#### Links de estudo
 
-- [Ansible Tower Homepage](https://www.ansible.com/tower)
+- [Ansible Tower Pagina inicial](https://www.ansible.com/tower)
 
-#### Alternatives
+#### Alternativas
 
 - [Jenkins](https://jenkins.io/)
 
-## Monitoring
+## Monitoramento
 
-After shipping the product, you would also want to monitor it for any errors.
+Depois de enviar o produto, você também gostaria de monitorá -lo por qualquer erro.
 
-Apart from network level monitoring from our CDN service provider and hosting provider, we use [Sentry](https://sentry.io/) to monitor errors that originates from the app logic.
+Além do monitoramento do nível da rede do nosso provedor de serviços de CDN e provedor de hospedagem, usamos [Sentry](https://sentry.io/) para monitorar erros originários da lógica do aplicativo.
 
-#### Study Links
+#### Links de estudo
 
-- [Sentry Homepage](https://sentry.io/)
+- [Sentry Pagina inicial](https://sentry.io/)
 
-### The Journey has Just Begun
+### A jornada acabou de começar
 
-Congratulations on making it this far! Front end development today is [hard](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f), but it is also more interesting than before. What we have covered so far will help any new engineer to Grab's web team to get up to speed with our technologies pretty quickly. There are many more things to be learnt, but building up a solid foundation in the essentials will aid in learning the rest of the technologies. This helpful [front end web developer roadmap](https://github.com/kamranahmedse/developer-roadmap#-front-end-roadmap) shows the alternative technologies available for each aspect.
+Parabéns por fazer isso até aqui!O desenvolvimento do front -end hoje é [hard](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f), Mas também é mais interessante do que antes.O que abordamos até agora ajudará qualquer novo engenheiro a agarrar a equipe da web a se atualizar com nossas tecnologias rapidamente.Há muito mais coisas a serem aprendidas, mas a construção de uma base sólida nos itens essenciais ajudará a aprender o restante das tecnologias.Isso útil [Roteiro do desenvolvedor da web front -end](https://github.com/kamranahmedse/developer-roadmap#-front-end-roadmap) mostra as tecnologias alternativas disponíveis para cada aspecto.
 
-We made our technical decisions based on what was important to a rapidly growing Grab Engineering team - maintainability and stability of the code base. These decisions may or may not apply to smaller teams and projects. Do evaluate what works best for you and your company.
+Tomamos nossas decisões técnicas com base no que era importante para uma equipe de engenharia de Grab em rápido crescimento - manutenção e estabilidade da base de código.Essas decisões podem ou não se aplicar a equipes e projetos menores.Avalie o que funciona melhor para você e sua empresa.
 
-As the front end ecosystem grows, we are actively exploring, experimenting and evaluating how new technologies can make us a more efficient team and improve our productivity. We hope that this post has given you insights into the front end technologies we use at Grab. If what we are doing interests you, [we are hiring](https://grab.careers)!
+À medida que o ecossistema do front end cresce, estamos explorando ativamente, experimentando e avaliando como as novas tecnologias podem nos tornar uma equipe mais eficiente e melhorar nossa produtividade.Esperamos que este post tenha lhe dado informações sobre as tecnologias de front -end que usamos no Grab.Se o que estamos fazendo interesses você, [estamos contratando](https://grab.careers)!
 
-*Many thanks to [Joel Low](https://github.com/lowjoel), [Li Kai](https://github.com/li-kai) and [Tan Wei Seng](https://github.com/xming13) who reviewed drafts of this article.*
+*Muito obrigado a [Joel Low](https://github.com/lowjoel), [Li Kai](https://github.com/li-kai) e [Tan Wei Seng](https://github.com/xming13) quem revisou os rascunhos deste artigo.*
 
-### More Reading
+### Mais leitura
 
-**General**
+**Em geral**
 
-- [State of the JavaScript Landscape: A Map for Newcomers](http://www.infoq.com/articles/state-of-javascript-2016)
-- [The Hitchhiker's guide to the modern front end development workflow](http://marcobotto.com/the-hitchhikers-guide-to-the-modern-front-end-development-workflow/)
-- [How it feels to learn JavaScript in 2016](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f#.tmy8gzgvp)
-- [Roadmap to becoming a web developer in 2017](https://github.com/kamranahmedse/developer-roadmap#-frontend-roadmap)
-- [Modern JavaScript for Ancient Web Developers](https://trackchanges.postlight.com/modern-javascript-for-ancient-web-developers-58e7cae050f9)
+- [Cenário do estado de JavaScript: um mapa para recém -chegados](http://www.infoq.com/articles/state-of-javascript-2016)
+- [O Guia do Malfiário para o Fluxo de Trabalho de Desenvolvimento de Front End moderno](http://marcobotto.com/the-hitchhikers-guide-to-the-modern-front-end-development-workflow/)
+- [Como é aprender JavaScript em 2016](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f#.tmy8gzgvp)
+- [Roteiro para se tornar um desenvolvedor da web em 2017](https://github.com/kamranahmedse/developer-roadmap#-frontend-roadmap)
+- [JavaScript moderno para desenvolvedores da Web antigos](https://trackchanges.postlight.com/modern-javascript-for-ancient-web-developers-58e7cae050f9)
 
-**Other Study Plans**
+**Outros planos de estudo**
 
-- [A Study Plan To Cure JavaScript Fatigue](https://medium.freecodecamp.com/a-study-plan-to-cure-javascript-fatigue-8ad3a54f2eb1#.c0wnrrcwd)
-- [JS Stack from Scratch](https://github.com/verekia/js-stack-from-scratch)
-- [A Beginner’s JavaScript Study Plan](https://medium.freecodecamp.com/a-beginners-javascript-study-plan-27f1d698ea5e#.bgf49xno2)
+- [Um plano de estudo para curar fadiga de JavaScript](https://medium.freecodecamp.com/a-study-plan-to-cure-javascript-fatigue-8ad3a54f2eb1#.c0wnrrcwd)
+- [JS Stack do zero](https://github.com/verekia/js-stack-from-scratch)
+- [Plano de estudo JavaScript para iniciantes](https://medium.freecodecamp.com/a-beginners-javascript-study-plan-27f1d698ea5e#.bgf49xno2)
 
-### Footnotes
+### Notas de rodapé
 
-<p id="fn1">1. This can be solved via <a href="https://webpack.js.org/guides/code-splitting/">webpack code splitting</a>. <a href="#ref1" title="Jump back to footnote 1 in the text.">↩</a></p>
+<p id="fn1">1. Isso pode ser resolvido via <a href="https://webpack.js.org/guides/code-splitting/">Webpack Code Sclitting</a>. <a href="#ref1" title="Jump back to footnote 1 in the text.">↩</a></p>
 
-<p id="fn2">2. <a href="https://medium.com/@mjackson/universal-javascript-4761051b7ae9">Universal JS</a> to the rescue! <a href="#ref2" title="Jump back to footnote 1 in the text.">↩</a></p>
+<p id="fn2">2. <a href="https://medium.com/@mjackson/universal-javascript-4761051b7ae9">Universal JS</a> para o resgate! <a href="#ref2" title="Jump back to footnote 1 in the text.">↩</a></p>
